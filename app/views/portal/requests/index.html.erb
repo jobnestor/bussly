@@ -16,7 +16,7 @@
       <table>
         <thead><tr><th><%= a("thRef") %></th><th><%= a("thTrip") %></th><th><%= a("thDate") %></th><th><%= a("thPax") %></th><th><%= a("thVeh") %></th><th style="text-align:right"><%= a("thPay") %></th><th><%= a("thStatus") %></th><th></th></tr></thead>
         <tbody>
-          <% pill = { "new" => %w[new sNew], "ok" => %w[ok sOk], "no" => %w[no sNo], "paid" => %w[paid sPaid], "src" => %w[src sSrc] } %>
+          <% pill = { "new" => %w[new sNew], "ok" => %w[ok sOk], "no" => %w[no sNo], "paid" => %w[paid sPaid], "src" => %w[src sSrc], "cx" => %w[no trip.sCancelled] } %>
           <% @rows.each do |b| %>
             <tr>
               <td class="num"><b><%= b.ref %></b></td>
@@ -25,13 +25,26 @@
               <td class="num"><%= b.pax %></td>
               <td><%= b.vehicle_count %> × <%= class_name(b.vehicle_class) %></td>
               <td class="r num"><%= nok(b.payout) %></td>
-              <td><span class="pill <%= pill[b.status][0] %>"><%= a(pill[b.status][1]) %></span></td>
+              <td><span class="pill <%= pill[b.status][0] %>"><%= b.completed? ? a("trip.stepDone") : a(pill[b.status][1]) %></span>
+                <% if b.driver_assigned? %><small class="drv"><%= b.driver_name %> · <%= b.vehicle_plate %></small><% end %></td>
               <td class="r">
                 <% if b.status == "new" %>
                   <%= button_to a("accept"), accept_portal_request_path(b.ref), method: :patch, class: "btn primary", form_class: "inline-form" %>
                   <%= button_to a("decline"), decline_portal_request_path(b.ref), method: :patch, class: "btn ghost", form_class: "inline-form" %>
                 <% elsif b.status == "src" %>
                   <%= button_to a("claim"), claim_portal_request_path(b.ref), method: :patch, class: "btn primary", form_class: "inline-form" %>
+                <% elsif b.confirmed? && !b.completed? && b.operator == current_operator %>
+                  <details class="assign"><summary class="btn"><%= b.driver_assigned? ? a("portal.change") : a("portal.assign") %></summary>
+                    <%= form_with model: b, url: assign_portal_request_path(b.ref), method: :patch, class: "assign-form" do |f| %>
+                      <%= f.text_field :driver_name, placeholder: a("portal.driver"), "aria-label": a("portal.driver") %>
+                      <%= f.telephone_field :driver_phone, placeholder: a("portal.phone"), "aria-label": a("portal.phone") %>
+                      <%= f.text_field :vehicle_plate, placeholder: a("portal.plate"), "aria-label": a("portal.plate") %>
+                      <button class="btn primary" type="submit"><%= a("portal.save") %></button>
+                    <% end %>
+                  </details>
+                  <% if b.date <= Date.current %>
+                    <%= button_to a("portal.complete"), complete_portal_request_path(b.ref), method: :patch, class: "btn ghost", form_class: "inline-form" %>
+                  <% end %>
                 <% end %>
               </td>
             </tr>

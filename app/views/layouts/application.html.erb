@@ -22,6 +22,8 @@
         <a class="logo" href="<%= root_path %>"><i aria-hidden="true"></i>Bussly</a>
         <nav>
           <%= link_to a("navBook"), root_path, **nav_current(:book) %>
+          <%= link_to a("nav.trips"), lookup_path, **nav_current(:trips) %>
+          <%= link_to a("nav.business"), business_path, **nav_current(:business) %>
           <%= link_to a("navOp"), portal_root_path, **nav_current(:operator) %>
           <%= link_to a("navPartner"), partner_path, **nav_current(:partner) %>
         </nav>

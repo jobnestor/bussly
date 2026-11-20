@@ -1,0 +1,25 @@
+<%# Live map. url = JSON position endpoint. Demo slider lets you move through the trip day. %>
+<% t = tracking %>
+<div class="track" data-controller="tracking"
+     data-tracking-url-value="<%= url %>"
+     data-tracking-start-value="<%= (t.starts_at - 30.minutes).iso8601 %>"
+     data-tracking-end-value="<%= (t.ends_at + 15.minutes).iso8601 %>"
+     data-tracking-active-value="<%= t.active? %>">
+  <div class="track-head">
+    <div>
+      <span class="live" data-tracking-target="live" <%= "hidden" unless t.moving? %>><%= a("track.live") %></span>
+      <h2 data-tracking-target="label"><%= phase_label(t.phase) %></h2>
+      <p class="muted" data-tracking-target="detail"><%= phase_detail(t) %></p>
+    </div>
+    <div class="clock num"><small><%= a("track.updated") %></small><b data-tracking-target="clock"><%= clock(t.now) %></b></div>
+  </div>
+  <div class="map" data-tracking-target="map" role="img" aria-label="<%= a("track.mapLabel") %>"
+       data-stops="<%= t.to_h[:stops].to_json %>" data-depot="<%= t.to_h[:depot].to_json %>" data-position="<%= t.position.to_json %>"></div>
+  <% if t.active? %>
+    <div class="demo-time">
+      <label for="demo-at"><%= a("track.demo") %></label>
+      <input id="demo-at" type="range" min="0" max="1000" value="0" data-tracking-target="slider" data-action="input->tracking#scrub">
+      <button type="button" class="btn ghost" data-action="tracking#live"><%= a("track.backLive") %></button>
+    </div>
+  <% end %>
+</div>

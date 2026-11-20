@@ -33,6 +33,39 @@ ops = [
     counts: { mini: 2, coach: 2, dd: 1 }, amenities: %w[WiFi USB Toalett] }
 ].map { |a| demo_operator(a) }.index_by(&:slug)
 
+# Trust stats shown on offers and operator profiles (demo values)
+{
+  "solvberg" => [ 97, "912345602", "FL-0301-0142", 1994, "Familieeid turbusselskap i Oslo med 40 sjåfører. Kjører konferanser, skiturer og flyplasstransport." ],
+  "brattli" => [ 93, "923456708", "FL-3005-0088", 1978, nil ],
+  "mjosa" => [ 95, "934567803", "FL-3403-0031", 2001, "Turbuss fra Hamar med skiboks på alle busser. Mye kjøring til Trysil, Hafjell og Kvitfjell." ],
+  "havbris" => [ 98, "945678909", "FL-4601-0217", 2009, "Bergen-basert operatør med ny flåte. Cruisekunder, fjordturer og Flåm." ],
+  "gauldal" => [ 91, "956789001", "FL-5001-0064", 1986, nil ],
+  "sunnmore" => [ 96, "967890103", "FL-1507-0019", 1999, "Fjordturer fra Ålesund og Geiranger med engelsk- og tysktalende guider." ],
+  "kystlinje" => [ 94, "978901204", "FL-1103-0102", 2012, nil ]
+}.each do |slug, (on_time, org, licence, founded, about)|
+  ops[slug].update_columns(on_time_pct: on_time, org_number: org, licence_number: licence, founded_year: founded, about: about,
+                           trips_count: ops[slug].reviews_count * 3)
+end
+
+# A few written reviews per operator. Stored directly so the seeded rating and counts above stay as they are.
+if Review.none?
+  texts = [
+    [ 5, "Ingrid", "Oslo → Hemsedal", "Presis henting og en sjåfør som kjente veien. Bussen var ren og varm." ],
+    [ 5, "Martin", "Firmatur", "Enkel bestilling og god oppfølging. Vi fikk sjåførens nummer dagen før." ],
+    [ 4, "Siri", "Skoletur", "Alt gikk fint, litt trangt med bagasje til 50 personer." ],
+    [ 5, "Jonas", "Bryllup", "Sjåføren ventet tålmodig og hjalp med pyntingen. Anbefales." ],
+    [ 3, "Kari", "Flyplass", "Kom 15 minutter for sent pga. kø, men ga beskjed underveis." ]
+  ]
+  now = Time.current
+  rows = ops.values.flat_map.with_index do |op, i|
+    texts.rotate(i).first(3).map.with_index do |(r, who, label, text), j|
+      { operator_id: op.id, rating: r, on_time: r > 3, author: who, trip_label: label, comment: text,
+        created_at: now - (j * 9 + i).days, updated_at: now }
+    end
+  end
+  Review.insert_all(rows)
+end
+
 if Booking.none?
   [
     [ "BS-7HQ9", "solvberg", "Oslo lufthavn Gardermoen", "Trysil", "2026-12-19", 110, 3, "coach", 68400, "new" ],
@@ -52,6 +85,16 @@ if Booking.none?
                     guaranteed: status == "src", contact_name: "Demo", email: "demo@example.com", phone: "+4790000000")
   end
 end
+
+# Demo trip lifecycle: one confirmed trip with a driver, one completed trip waiting for a review
+if (b = Booking.find_by(ref: "BS-3LDN")) && !b.driver_assigned?
+  b.update_columns(driver_name: "Erik Haugen", driver_phone: "+47 915 22 384", vehicle_plate: "EV 48213", time: "08:00")
+end
+if (b = Booking.find_by(ref: "BS-9TRE")) && !b.completed?
+  b.update_columns(completed_at: b.date.to_time.change(hour: 18), balance_paid_at: (b.date - 7).to_time, time: "09:00",
+                   driver_name: "Nora Lie", driver_phone: "+47 934 10 552", vehicle_plate: "EL 20871")
+end
+Booking.where(deposit_paid_at: nil).where.not(status: "src").update_all("deposit_paid_at = created_at")
 
 if !Rails.env.production? || ENV["SEED_DEMO_USERS"] == "1"
   ops.each_value do |op|

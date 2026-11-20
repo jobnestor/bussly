@@ -1,0 +1,33 @@
+<% b = @booking; t = @tracking %>
+<% content_for :title, "#{a("track.title")} · #{booking_route(b)} | Bussly" %>
+<% content_for :head do %><meta name="robots" content="noindex"><%= render "shared/leaflet" %><% end %>
+<main id="view-track">
+  <div class="wrap intro">
+    <div>
+      <p class="eyebrow"><%= a("track.title") %></p>
+      <h1><%= booking_route(b) %></h1>
+      <p><%= a("track.pickup") %>: <b><%= b.from_place %></b> · <%= fmt_date(b.date) %> <%= a("trip.at") %> <b class="num"><%= b.time.presence || "08:00" %></b></p>
+    </div>
+  </div>
+  <div class="wrap trip-grid">
+    <div class="trip-main"><section class="panel"><%= render "trips/map", tracking: t, url: track_position_path(b.share_token) %></section></div>
+    <aside class="trip-side">
+      <section class="panel">
+        <h2><%= a("trip.driverH") %></h2>
+        <% if b.driver_assigned? %>
+          <div class="driver">
+            <div class="avatar" aria-hidden="true"><%= b.driver_name.first %></div>
+            <div><b><%= b.driver_name.split.first %></b><p class="muted"><%= class_name(b.vehicle_class) %> · <span class="num"><%= b.vehicle_plate %></span></p></div>
+          </div>
+          <p class="note"><%= a("track.plateNote") %></p>
+        <% else %>
+          <p class="muted"><%= a("trip.driverSoon") %></p>
+        <% end %>
+      </section>
+      <section class="panel">
+        <h2><%= a("track.tipsH") %></h2>
+        <ul class="tips"><li><%= a("track.tip1") %></li><li><%= a("track.tip2") %></li><li><%= a("track.tip3") %></li></ul>
+      </section>
+    </aside>
+  </div>
+</main>

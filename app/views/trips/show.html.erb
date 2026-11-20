@@ -1,0 +1,124 @@
+<% b = @booking; t = @tracking; op = b.operator %>
+<% content_for :title, "#{a("trip.title")} #{b.ref} | Bussly" %>
+<% content_for :head do %><meta name="robots" content="noindex"><%= render "shared/leaflet" %><% end %>
+<% pill = { "new" => %w[new sNew], "ok" => %w[ok sOk], "no" => %w[no sNo], "paid" => %w[ok sOk], "src" => %w[src trip.sSearching], "cx" => %w[no trip.sCancelled] } %>
+<main id="view-trip">
+  <div class="wrap intro">
+    <div>
+      <p class="eyebrow"><%= a("trip.title") %> · <span class="num"><%= b.ref %></span>
+        <span class="pill <%= pill[b.status][0] %>"><%= b.completed? ? a("trip.stepDone") : a(pill[b.status][1]) %></span></p>
+      <h1><%= booking_route(b) %></h1>
+      <p><%= fmt_date(b.date) %> <%= a("trip.at") %> <%= b.time.presence || "08:00" %> · <%= b.pax %> <%= a("trip.pax") %> ·
+        <%= b.vehicle_count %> × <%= class_name(b.vehicle_class) %><%= " · #{op.name}" if op %></p>
+    </div>
+  </div>
+
+  <div class="wrap trip-grid">
+    <div class="trip-main">
+      <section class="panel">
+        <ol class="timeline" aria-label="<%= a("trip.progress") %>">
+          <% [ a("trip.stepReq"), a("trip.stepOk"), a("trip.stepDriver"), a("trip.stepDone") ].each_with_index do |label, i| %>
+            <li class="<%= "done" if i <= b.progress_step && !b.cancelled? %> <%= "now" if i == b.progress_step && !b.cancelled? %>"><span><%= i + 1 %></span><%= label %></li>
+          <% end %>
+        </ol>
+      </section>
+
+      <section class="panel"><%= render "trips/map", tracking: t, url: position_trip_path(b) %></section>
+
+      <section class="panel">
+        <h2><%= a("trip.itinerary") %></h2>
+        <ol class="itin">
+          <% t.segments.each do |s| %>
+            <% next if s.phase == :at_pickup %>
+            <li class="<%= s.phase %>"><b class="num"><%= clock(s.starts_at) %></b>
+              <div><%= a("seg.#{s.phase}", from: s.from, to: s.to) %>
+                <% if s.starts_at.to_date != b.date %><small><%= fmt_date(s.starts_at.to_date) %></small><% end %></div></li>
+          <% end %>
+          <li class="end"><b class="num"><%= clock(t.ends_at) %></b><div><%= a("seg.end") %></div></li>
+        </ol>
+        <p class="note"><%= a("trip.itinNote") %></p>
+      </section>
+
+      <section class="panel">
+        <h2><%= a("trip.driverH") %></h2>
+        <% if b.driver_assigned? %>
+          <div class="driver">
+            <div class="avatar" aria-hidden="true"><%= b.driver_name.first %></div>
+            <div><b><%= b.driver_name %></b><p class="muted"><%= class_name(b.vehicle_class) %> · <span class="num"><%= b.vehicle_plate %></span></p></div>
+            <a class="btn" href="tel:<%= b.driver_phone.to_s.gsub(/[^\d+]/, "") %>"><%= a("trip.call") %> <%= b.driver_phone %></a>
+          </div>
+        <% else %>
+          <p class="muted"><%= a("trip.driverSoon") %></p>
+        <% end %>
+        <% if op %>
+          <p class="note"><%= a("trip.operatedBy") %> <%= link_to op.name, operator_profile_path(op) %><%= " · ★ #{format('%.1f', op.rating)}" if op.rating %></p>
+        <% end %>
+      </section>
+
+      <% if b.reviewable? || b.review %>
+        <section class="panel" id="omtale">
+          <h2><%= a("trip.reviewH") %></h2>
+          <% if (r = b.review) %>
+            <p><%= stars(r.rating) %> <%= r.comment %></p>
+          <% else %>
+            <%= form_with model: @review, url: review_trip_path(b), class: "trip" do |f| %>
+              <fieldset class="rate"><legend><%= a("trip.reviewRate") %></legend>
+                <div class="stars-in"><% 5.downto(1) do |i| %><%= f.radio_button :rating, i, id: "rate-#{i}" %><label for="rate-<%= i %>" title="<%= i %>">★</label><% end %></div>
+              </fieldset>
+              <label class="check"><%= f.check_box :on_time, { checked: true }, "1", "0" %><span><%= a("trip.reviewOnTime") %></span></label>
+              <div class="f"><%= f.label :comment, a("trip.reviewComment") %><%= f.text_area :comment, rows: 3 %></div>
+              <div class="f"><%= f.label :author, a("trip.reviewName") %><%= f.text_field :author %></div>
+              <% if @review.errors.any? %><p class="err"><%= a("trip.reviewErr") %></p><% end %>
+              <button class="btn primary" type="submit"><%= a("trip.reviewSend") %></button>
+            <% end %>
+          <% end %>
+        </section>
+      <% end %>
+    </div>
+
+    <aside class="trip-side">
+      <section class="panel">
+        <h2><%= a("trip.payH") %></h2>
+        <table>
+          <tr><td><%= a("bTot") %> (<%= a("inclVat") %>)</td><td><%= nok(b.total) %></td></tr>
+          <tr><td><%= a("trip.depPaid") %></td><td><%= nok(b.deposit) %> ✓</td></tr>
+          <tr><td><%= b.balance_paid? ? a("trip.balPaid") : a("trip.balDue", date: fmt_date(b.balance_due_on)) %></td><td><%= nok(b.balance) %><%= " ✓" if b.balance_paid? %></td></tr>
+          <% if b.cancelled? %><tr class="tot"><td><%= a("trip.refunded") %></td><td><%= nok(b.refund) %></td></tr><% end %>
+        </table>
+        <% if b.balance_payable? %>
+          <%= button_to "#{a("trip.payBal")} · #{nok(b.balance)}", pay_balance_trip_path(b), method: :patch, class: "btn primary wide", form: { data: { turbo_confirm: a("trip.payConfirm") } } %>
+          <p class="note"><%= a("trip.payNote") %></p>
+        <% end %>
+        <p class="note"><%= a("trip.invoiceNote") %></p>
+      </section>
+
+      <section class="panel">
+        <h2><%= a("trip.shareH") %></h2>
+        <p class="muted"><%= a("trip.shareP") %></p>
+        <div class="copy" data-controller="copy">
+          <input readonly value="<%= track_url(b.share_token) %>" data-copy-target="source" aria-label="<%= a("trip.shareH") %>">
+          <button class="btn" type="button" data-action="copy#copy" data-copy-done-value="<%= a("trip.copied") %>"><%= a("trip.copy") %></button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2><%= a("trip.cancelH") %></h2>
+        <% if b.cancelled? %>
+          <p class="muted"><%= a("trip.cancelledOn", date: fmt_date(b.cancelled_at.to_date)) %></p>
+        <% elsif b.cancellable? %>
+          <p class="muted"><%= Date.current <= b.free_cancel_until ? a("trip.cancelFree", date: fmt_date(b.free_cancel_until)) : a("trip.cancelLate") %></p>
+          <%= button_to a("trip.cancelBtn", amount: nok(b.refund_if_cancelled)), cancel_trip_path(b), method: :patch, class: "btn ghost wide",
+                        form: { data: { turbo_confirm: a("trip.cancelConfirm", amount: nok(b.refund_if_cancelled)) } } %>
+        <% else %>
+          <p class="muted"><%= a("trip.cancelNo") %></p>
+        <% end %>
+      </section>
+
+      <section class="panel">
+        <h2><%= a("trip.helpH") %></h2>
+        <p class="muted"><%= a("trip.helpP") %></p>
+        <p><a href="tel:+4721000000">+47 21 00 00 00</a> · <a href="mailto:hjelp@bussly.no">hjelp@bussly.no</a></p>
+      </section>
+    </aside>
+  </div>
+</main>

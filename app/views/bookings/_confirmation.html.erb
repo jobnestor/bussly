@@ -2,4 +2,8 @@
 <p class="sub"><%= a("cP1") %></p>
 <p class="ref"><%= booking.ref %></p>
 <p><%= booking.guaranteed? ? a("cGuar") : "#{booking.operator.name} #{a("cP2")}" %></p>
-<div class="actions"><%= link_to a("cClose"), root_path, class: "btn primary", data: { close: true, turbo_frame: "_top" } %></div>
+<p class="note"><%= a("trip.confNote") %></p>
+<div class="actions">
+  <%= link_to a("cClose"), root_path, class: "btn ghost", data: { close: true, turbo_frame: "_top" } %>
+  <%= link_to a("trip.open"), trip_path(booking), class: "btn primary", data: { turbo_frame: "_top" } %>
+</div>

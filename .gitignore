@@ -15,3 +15,6 @@
 /config/master.key
 /config/credentials/*.key
 .env*
+
+# Local gem install
+/vendor/bundle

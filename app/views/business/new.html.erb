@@ -1,0 +1,51 @@
+<% content_for :title, "#{a("biz.title")} | Bussly" %>
+<main id="view-business">
+  <div class="wrap intro">
+    <div><p class="eyebrow"><%= a("biz.eyebrow") %></p><h1><%= a("biz.h1") %></h1><p><%= a("biz.lede") %></p></div>
+    <div class="trust">
+      <span><b>EHF</b> <span><%= a("biz.t1") %></span></span>
+      <span><b>24/7</b> <span><%= a("biz.t2") %></span></span>
+      <span><b>1</b> <span><%= a("biz.t3") %></span></span>
+    </div>
+  </div>
+  <div class="wrap partner">
+    <div>
+      <div class="biz-cards">
+        <% %w[commute event airport school].each do |s| %>
+          <div class="panel"><h3><%= a("biz.seg_#{s}") %></h3><p class="muted"><%= a("biz.segP_#{s}") %></p></div>
+        <% end %>
+      </div>
+      <h2 style="margin:28px 0 10px"><%= a("biz.featH") %></h2>
+      <ul class="checks">
+        <% 1.upto(6) do |i| %><li class="yes"><%= a("biz.f#{i}") %></li><% end %>
+      </ul>
+    </div>
+    <section class="panel" aria-labelledby="biz-form-h">
+      <h2 id="biz-form-h"><%= a("biz.formH") %></h2>
+      <%= form_with model: @lead, url: business_path, class: "trip", data: { turbo: false } do |f| %>
+        <div class="f"><%= f.label :company, a("biz.company") %><%= f.text_field :company, autocomplete: "organization" %></div>
+        <div class="row2">
+          <div class="f"><%= f.label :contact_name, a("mName") %><%= f.text_field :contact_name, autocomplete: "name" %></div>
+          <div class="f"><%= f.label :phone, a("mPhone") %><%= f.telephone_field :phone, autocomplete: "tel", placeholder: "+47" %></div>
+        </div>
+        <div class="f"><%= f.label :email, a("mEmail") %><%= f.email_field :email, autocomplete: "email" %></div>
+        <div class="f"><%= f.label :segment, a("biz.segment") %>
+          <%= f.select :segment, ShuttleRequest::SEGMENTS.map { |s| [ a("biz.seg_#{s}"), s ] } %></div>
+        <div class="f"><%= f.label :route, a("biz.route") %><%= f.text_field :route, placeholder: a("biz.routePh") %></div>
+        <div class="row2">
+          <div class="f"><%= f.label :riders, a("biz.riders") %><%= f.number_field :riders, min: 1, max: 5000 %></div>
+          <div class="f"><%= f.label :start_date, a("biz.start") %><%= f.date_field :start_date %></div>
+        </div>
+        <fieldset class="days"><legend><%= a("biz.days") %></legend>
+          <% ShuttleRequest::WEEKDAYS.each_with_index do |d, i| %>
+            <label><input type="checkbox" name="shuttle_request[weekdays][]" value="<%= d %>" <%= "checked" if i < 5 %>><span><%= a("days_short")[(i + 1) % 7] %></span></label>
+          <% end %>
+        </fieldset>
+        <div class="f"><%= f.label :notes, a("biz.notes") %><%= f.text_area :notes, rows: 3 %></div>
+        <% if @lead.errors.any? %><p class="err" role="alert"><%= a("biz.err") %></p><% end %>
+        <button class="btn primary" type="submit"><%= a("biz.submit") %></button>
+        <p class="hint"><%= a("biz.hint") %></p>
+      <% end %>
+    </section>
+  </div>
+</main>

@@ -1,4 +1,4 @@
-<% q = @query; trip = @trip; shown = @offers.first || @guarantee %>
+<% q = @query; trip = @trip; shown = @offers.first || @all_offers.first || @guarantee %>
 <div class="sum">
   <% if trip.sight? %>
     <div><small><%= a("hoursL") %></small><b class="num"><%= q.hours %> <%= a("h") %></b></div>
@@ -7,26 +7,47 @@
     <div><small><%= a("distance") %></small><b class="num"><%= trip.km.round %> km</b></div>
     <div><small><%= a("drive") %></small><b class="num"><%= hm(trip.leg) %></b></div>
   <% end %>
-  <div><small><%= a("offersN") %></small><b class="num"><%= @offers.any? ? @offers.size : "–" %></b></div>
-  <div><small><%= a("fromPrice") %></small><b class="num"><%= nok(shown.total) %></b></div>
+  <div><small><%= a("offersN") %></small><b class="num"><%= @all_offers.any? ? @all_offers.size : "–" %></b></div>
+  <div><small><%= a("fromPrice") %></small><b class="num"><%= nok((@all_offers.first || @guarantee).total) %></b></div>
 </div>
 <div class="flags">
   <% trip.flags.each do |flag| %><span class="chip <%= flag[0] %>"><%= flag_text(flag) %></span><% end %>
 </div>
 <h2 style="font-size:18px;margin-bottom:14px">
-  <%= @offers.any? ? a("offersH") : a("noOpsH") %>: <%= route_label(q) %>, <%= fmt_date(q.date) %><%= " · #{q.ship}" if q.cruise && q.ship.present? %>
+  <%= @all_offers.any? ? a("offersH") : a("noOpsH") %>: <%= route_label(q) %>, <%= fmt_date(q.date) %><%= " · #{q.ship}" if q.cruise && q.ship.present? %>
 </h2>
+<% if @all_offers.any? %>
+  <%= form_with url: root_path, method: :get, class: "filters", scope: nil, data: { controller: "autosubmit" } do %>
+    <% q.to_param_hash.each do |k, v| %><input type="hidden" name="<%= k %>" value="<%= v %>"><% end %>
+    <% if en? %><input type="hidden" name="lang" value="en"><% end %>
+    <label class="sortby"><span><%= a("res.sort") %></span>
+      <select name="sort" data-action="autosubmit#submit">
+        <% QuotesController::SORTS.each do |s| %><option value="<%= s %>" <%= "selected" if @sort == s %>><%= a("res.sort_#{s}") %></option><% end %>
+      </select></label>
+    <% QuotesController::FILTERS.each do |f| %>
+      <label class="fchip"><input type="checkbox" name="<%= f %>" value="1" <%= "checked" if @filters.include?(f) %> data-action="autosubmit#submit"><span><%= a("res.f_#{f}") %></span></label>
+    <% end %>
+    <noscript><button class="btn ghost" type="submit"><%= a("res.apply") %></button></noscript>
+    <span class="shown"><%= a("res.shown", n: @offers.size, total: @all_offers.size) %></span>
+  <% end %>
+<% end %>
 <div class="offers">
+  <% if @all_offers.any? && @offers.empty? %><p class="empty panel"><%= a("res.none") %></p><% end %>
   <% @offers.each do |r| o = r.operator; best = (r == @best) %>
     <article class="offer <%= "best" if best %>">
       <% if best %><span class="tag"><%= a("best") %></span><% end %>
       <div>
-        <h3><%= o.name %></h3>
+        <h3><%= link_to o.name, operator_profile_path(o, q.to_param_hash.slice(:from, :to, :date, :pax)), class: "oplink", data: { turbo_frame: "_top" } %></h3>
         <div class="meta">
           <% if o.rating %><span>★ <%= format("%.1f", o.rating) %> · <%= o.reviews_count %> <%= a("reviews") %></span><% else %><span class="newop"><%= a("newOp") %></span><% end %>
           <% if o.model_year %><span><%= a("year") %> <%= o.model_year %></span><% end %>
+          <% if o.on_time_pct %><span class="num"><%= a("res.onTime", pct: o.on_time_pct) %></span><% end %>
           <span><%= r.n %> × <%= class_name(r.vehicle_class.id) %></span>
           <span class="num"><%= r.depot_km.round %> <%= a("depotFrom") %> <%= o.depot %></span>
+        </div>
+        <div class="badges">
+          <% if o.instant? %><span class="badge instant"><%= a("res.instant") %></span><% else %><span class="badge"><%= a("res.confirmFast") %></span><% end %>
+          <% if o.licence_verified? %><span class="badge ok"><%= a("res.licence") %></span><% end %>
         </div>
         <div class="amen">
           <% Array(o.amenities).each do |am| %><span><%= o.amenity_label(am) %></span><% end %>
