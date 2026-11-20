@@ -57,4 +57,4 @@ group :test do
   gem "selenium-webdriver"
 end
 # json 3.x breaks ActiveSupport JSON encoding (unknown keyword: quirks_mode); stay on 2.x for now
-gem "json", "~> 2.10"
+gem "json", "~> 3.1"
