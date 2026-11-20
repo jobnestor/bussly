@@ -1,0 +1,189 @@
+en:
+  app:
+    nav:
+      trips: My trips
+      business: Business
+    res:
+      sort: Sort
+      sort_price: Lowest price
+      sort_rating: Top rated
+      sort_ontime: Most punctual
+      f_instant: Instant booking
+      f_toilet: Toilet
+      f_ev: Electric
+      apply: Apply
+      shown: "Showing %{n} of %{total}"
+      none: No offers match these filters. Remove a filter to see them all.
+      onTime: "%{pct}% on time"
+      instant: Confirmed instantly
+      confirmFast: Usually confirms within 2 h
+      licence: Licence checked
+    trip:
+      title: Your trip
+      at: at
+      pax: passengers
+      progress: Booking status
+      stepReq: Booked
+      stepOk: Confirmed
+      stepDriver: Driver assigned
+      stepDone: Completed
+      sSearching: Finding operator
+      sCancelled: Cancelled
+      itinerary: Schedule
+      itinNote: Times include driving and rest-time rules. The driver is at the pickup point 10 minutes before departure.
+      driverH: Driver and bus
+      call: Call
+      driverSoon: The operator assigns a driver and bus no later than 48 hours before departure. You'll get the name, mobile number and plate by text.
+      operatedBy: Operated by
+      reviewH: How was the trip?
+      reviewRate: Give a rating
+      reviewOnTime: The bus was on time
+      reviewComment: Comment (optional)
+      reviewName: Name to show
+      reviewErr: Pick a number of stars and enter a name.
+      reviewSend: Send review
+      reviewThanks: Thank you. Your review is shown on the operator's profile.
+      payH: Payment
+      depPaid: Deposit paid (20%)
+      balPaid: Balance paid
+      balDue: "Balance due %{date}"
+      refunded: Refunded
+      payBal: Pay balance now
+      payConfirm: "Pay the balance now? (Demo: no payment is taken.)"
+      payNote: If you don't pay it yourself, the balance is charged to your card 7 days before departure.
+      invoiceNote: Receipts and VAT invoices are sent by e-mail. Companies can get EHF invoices.
+      balancePaid: The balance is paid. A receipt has been sent by e-mail (demo).
+      shareH: Share tracking with passengers
+      shareP: The link shows the map, pickup time and driver, but not the price or your contact details.
+      copy: Copy
+      copied: Copied
+      cancelH: Cancellation
+      cancelFree: "Free cancellation until %{date}. You get the full amount back."
+      cancelLate: It's less than 14 days to departure. If you cancel now, the deposit is kept.
+      cancelBtn: "Cancel (refund %{amount})"
+      cancelConfirm: "Cancel the trip? You'll get %{amount} back."
+      cancelNo: The trip can no longer be cancelled. Contact us if something has changed.
+      cancelledOn: "Cancelled on %{date}"
+      cancelled: "The trip is cancelled. %{amount} is refunded to your card (demo)."
+      helpH: Need help?
+      helpP: We follow the trip all the way and answer around the clock on the day of travel.
+      missingH: Trip not found
+      missingP: The link is wrong or has expired. Look up the trip with your booking reference and e-mail address.
+      confNote: We've e-mailed you a link to your trip. There you can follow the bus, share tracking and pay the balance.
+      open: View your trip
+    track:
+      title: Tracking
+      pending: Waiting for confirmation
+      scheduled: Scheduled
+      to_pickup: On the way to pickup
+      at_pickup: The bus is at the pickup point
+      onboard: On the road
+      at_destination: Arrived
+      with_group: The bus is with the group
+      returning: On the way back
+      touring: Sightseeing in progress
+      done: Trip completed
+      cancelled: Cancelled
+      declined: Declined by the operator
+      live: Live
+      updated: Updated
+      mapLabel: Map showing where the bus is
+      demo: "Demo: move through the day"
+      backLive: Now
+      pickup: Pickup
+      plateNote: Look for the plate number when the bus arrives.
+      tipsH: Before you go
+      tip1: Be at the pickup point 5 minutes before departure.
+      tip2: Luggage goes in the hold. Skis and bikes must be booked in advance.
+      tip3: Seat belts are required on coaches.
+    trackD:
+      scheduled: "The bus leaves the garage in %{depot} on %{date} at %{time}. Tracking starts then."
+      pending: The operator is confirming the booking. Tracking starts once the trip is confirmed.
+      pendingGuar: We'll find a licensed operator within 24 hours.
+      next: "Next stop: %{stop}, about %{time}"
+      done: Thanks for travelling.
+      cancelled: This trip has been cancelled.
+      declined: The operator couldn't take the trip. We'll contact you with a new offer.
+    seg:
+      to_pickup: "The bus leaves the garage in %{from}"
+      onboard: "Depart %{from} → arrive %{to}"
+      at_destination: "Time in %{to}, the bus waits"
+      with_group: "The bus stays with you in %{to}"
+      returning: "Return %{from} → %{to}"
+      touring: "Sightseeing in %{from}"
+      end: Trip ends
+    lookup:
+      h: My trips
+      p: Enter your booking reference and the e-mail address you used when booking.
+      ref: Booking reference
+      submit: Find trip
+      demo: "Demo: book a trip first, or use BS-3LDN and demo@example.com."
+      notFound: No trip found with that reference and e-mail address.
+    prof:
+      title: Operator
+      aboutDefault: "Coach company based in %{depot}. Serves groups within %{radius} km."
+      onTime: on time
+      vehicles: vehicles
+      fleetH: Fleet
+      upTo: "Up to %{seats} seats"
+      inFleet: in the fleet
+      lang: "Guide in %{lang}"
+      reviewsH: Customer reviews
+      noReviews: No reviews yet.
+      late: Arrived late
+      safetyH: Safety and documents
+      licence: Coach operator licence (fellesskapsløyve)
+      org: Registered in the Brønnøysund Register
+      insurance: Valid liability insurance
+      drivers: Drivers with professional driver qualification
+      year: "Average model year %{year}"
+      bookH: Book with this operator
+      bookP: "Picks up groups within %{radius} km of %{depot}."
+    biz:
+      title: Bussly Business
+      eyebrow: Bussly Business
+      h1: Recurring shuttles and group travel for companies
+      lede: Commuter routes, event transport and airport runs with one agreement, one invoice and tracking for every rider.
+      t1: invoicing
+      t2: support on the day
+      t3: account manager
+      seg_commute: Commuter shuttles
+      seg_event: Events and conferences
+      seg_airport: Airport transfers
+      seg_school: Schools and sports
+      seg_other: Other
+      segP_commute: Fixed departures between station, office and site. Employees see the bus in the app.
+      segP_event: Shuttles between hotels and venue, with ticketing and a timetable.
+      segP_airport: Group pickups at Gardermoen, Flesland, Værnes and Sola based on flight times.
+      segP_school: Tournaments, class trips and camps with safety documentation.
+      featH: Included in the business agreement
+      f1: EHF invoices, purchase orders and cost centres
+      f2: Several users and departments on one account
+      f3: Tracking and passenger lists for every trip
+      f4: Volume pricing for fixed routes and frequent trips
+      f5: Reports on trips, cost and CO₂
+      f6: Account manager and on-call phone
+      formH: Request a quote for a fixed route
+      company: Company
+      segment: Type of transport
+      route: Route
+      routePh: E.g. Lysaker station → Fornebu, morning and afternoon
+      riders: Riders per day
+      start: Start date
+      days: Days
+      notes: Anything else we should know
+      err: Fill in company, name, e-mail and route.
+      submit: Send request
+      hint: We reply within one working day with a proposed timetable and price.
+      thanks: Thank you. We'll be in touch within one working day with a proposed timetable and price.
+    portal:
+      assign: Assign driver
+      change: Change driver
+      driver: Driver's name
+      phone: Mobile
+      plate: Plate no.
+      save: Save
+      complete: Mark completed
+      assigned: "Driver assigned to %{ref}. The customer can see it on their trip."
+      assignErr: Fill in name, mobile and plate number.
+      completed: "%{ref} is completed. The customer is asked for a review."

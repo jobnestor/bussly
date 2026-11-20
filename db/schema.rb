@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_11_20_132737) do
+ActiveRecord::Schema[8.1].define(version: 2026_11_20_160300) do
   create_table "bookings", force: :cascade do |t|
     t.string "ref", null: false
     t.integer "operator_id"
@@ -48,9 +48,21 @@ ActiveRecord::Schema[8.1].define(version: 2026_11_20_132737) do
     t.string "locale", default: "nb", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "token"
+    t.string "share_token"
+    t.string "driver_name"
+    t.string "driver_phone"
+    t.string "vehicle_plate"
+    t.datetime "deposit_paid_at"
+    t.datetime "balance_paid_at"
+    t.datetime "completed_at"
+    t.datetime "cancelled_at"
+    t.decimal "refund", precision: 12, scale: 2
     t.index ["operator_id"], name: "index_bookings_on_operator_id"
     t.index ["ref"], name: "index_bookings_on_ref", unique: true
+    t.index ["share_token"], name: "index_bookings_on_share_token", unique: true
     t.index ["status"], name: "index_bookings_on_status"
+    t.index ["token"], name: "index_bookings_on_token", unique: true
   end
 
   create_table "operators", force: :cascade do |t|
@@ -76,8 +88,26 @@ ActiveRecord::Schema[8.1].define(version: 2026_11_20_132737) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "on_time_pct"
+    t.integer "trips_count", default: 0, null: false
+    t.integer "founded_year"
+    t.text "about"
     t.index ["org_number"], name: "index_operators_on_org_number", unique: true
     t.index ["slug"], name: "index_operators_on_slug", unique: true
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "operator_id", null: false
+    t.integer "booking_id"
+    t.integer "rating", null: false
+    t.boolean "on_time", default: true, null: false
+    t.string "author", null: false
+    t.string "trip_label"
+    t.text "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["booking_id"], name: "index_reviews_on_booking_id", unique: true
+    t.index ["operator_id"], name: "index_reviews_on_operator_id"
   end
 
   create_table "sessions", force: :cascade do |t|
@@ -87,6 +117,22 @@ ActiveRecord::Schema[8.1].define(version: 2026_11_20_132737) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_sessions_on_user_id"
+  end
+
+  create_table "shuttle_requests", force: :cascade do |t|
+    t.string "company", null: false
+    t.string "contact_name", null: false
+    t.string "email", null: false
+    t.string "phone"
+    t.string "segment"
+    t.string "route", null: false
+    t.integer "riders"
+    t.string "weekdays"
+    t.date "start_date"
+    t.text "notes"
+    t.string "status", default: "new", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -101,6 +147,8 @@ ActiveRecord::Schema[8.1].define(version: 2026_11_20_132737) do
   end
 
   add_foreign_key "bookings", "operators"
+  add_foreign_key "reviews", "bookings"
+  add_foreign_key "reviews", "operators"
   add_foreign_key "sessions", "users"
   add_foreign_key "users", "operators"
 end

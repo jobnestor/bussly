@@ -1,0 +1,189 @@
+nb:
+  app:
+    nav:
+      trips: Mine turer
+      business: Bedrift
+    res:
+      sort: Sorter
+      sort_price: Lavest pris
+      sort_rating: Best vurdert
+      sort_ontime: Mest punktlig
+      f_instant: Direktebooking
+      f_toilet: Toalett
+      f_ev: Elbuss
+      apply: Bruk
+      shown: "Viser %{n} av %{total}"
+      none: Ingen tilbud passer filtrene. Fjern et filter for å se alle.
+      onTime: "%{pct} % i tide"
+      instant: Bekreftes med en gang
+      confirmFast: Bekrefter vanligvis innen 2 t
+      licence: Løyve kontrollert
+    trip:
+      title: Din tur
+      at: kl.
+      pax: passasjerer
+      progress: Status for bestillingen
+      stepReq: Bestilt
+      stepOk: Bekreftet
+      stepDriver: Sjåfør tildelt
+      stepDone: Fullført
+      sSearching: Finner operatør
+      sCancelled: Avbestilt
+      itinerary: Kjøreplan
+      itinNote: Tidene er beregnet med kjøre- og hviletid. Sjåføren er på hentestedet 10 minutter før avreise.
+      driverH: Sjåfør og buss
+      call: Ring
+      driverSoon: Operatøren tildeler sjåfør og buss senest 48 timer før avreise. Du får navn, mobilnummer og registreringsnummer på SMS.
+      operatedBy: Kjøres av
+      reviewH: Hvordan var turen?
+      reviewRate: Gi en vurdering
+      reviewOnTime: Bussen kom i tide
+      reviewComment: Kommentar (valgfritt)
+      reviewName: Navn som vises
+      reviewErr: Velg antall stjerner og skriv inn et navn.
+      reviewSend: Send vurdering
+      reviewThanks: Takk. Vurderingen din vises på operatørens profil.
+      payH: Betaling
+      depPaid: Depositum betalt (20 %)
+      balPaid: Resten betalt
+      balDue: "Resten forfaller %{date}"
+      refunded: Refundert
+      payBal: Betal resten nå
+      payConfirm: "Betale resten nå? (Demo: ingen betaling trekkes.)"
+      payNote: Betaler du ikke selv, trekkes resten automatisk fra kortet 7 dager før avreise.
+      invoiceNote: Kvittering og faktura med mva sendes på e-post. Bedrifter kan få EHF-faktura.
+      balancePaid: Resten er betalt. Kvittering er sendt på e-post (demo).
+      shareH: Del sporing med passasjerene
+      shareP: Lenken viser kart, hentetid og sjåfør, men ikke pris eller kontaktinformasjon.
+      copy: Kopier
+      copied: Kopiert
+      cancelH: Avbestilling
+      cancelFree: "Gratis avbestilling fram til %{date} – du får hele beløpet tilbake."
+      cancelLate: Det er under 14 dager til avreise. Avbestiller du nå, beholdes depositumet.
+      cancelBtn: "Avbestill (refusjon %{amount})"
+      cancelConfirm: "Avbestille turen? Du får %{amount} tilbake."
+      cancelNo: Turen kan ikke avbestilles lenger. Kontakt oss hvis noe har endret seg.
+      cancelledOn: "Avbestilt %{date}"
+      cancelled: "Turen er avbestilt. %{amount} refunderes til kortet ditt (demo)."
+      helpH: Trenger du hjelp?
+      helpP: Vi følger turen hele veien og svarer hele døgnet på reisedagen.
+      missingH: Fant ikke turen
+      missingP: Lenken er feil eller utløpt. Slå opp turen med bestillingsreferansen og e-postadressen din.
+      confNote: Vi har sendt en lenke til turen din på e-post. Der kan du følge bussen, dele sporing og betale resten.
+      open: Se turen din
+    track:
+      title: Sporing
+      pending: Venter på bekreftelse
+      scheduled: Planlagt
+      to_pickup: På vei til hentestedet
+      at_pickup: Bussen er på hentestedet
+      onboard: Underveis
+      at_destination: Fremme
+      with_group: Bussen er hos gruppen
+      returning: På vei tilbake
+      touring: Sightseeing pågår
+      done: Turen er fullført
+      cancelled: Avbestilt
+      declined: Avslått av operatøren
+      live: Live
+      updated: Oppdatert
+      mapLabel: Kart som viser hvor bussen er
+      demo: "Demo: spol gjennom dagen"
+      backLive: Nå
+      pickup: Henting
+      plateNote: Se etter registreringsnummeret når bussen kommer.
+      tipsH: Før avreise
+      tip1: Vær på hentestedet 5 minutter før avreise.
+      tip2: Bagasje legges i bagasjerommet. Ski og sykler må meldes på forhånd.
+      tip3: Bilbelte er påbudt i turbuss.
+    trackD:
+      scheduled: "Bussen kjører fra garasjen i %{depot} %{date} kl. %{time}. Sporingen starter da."
+      pending: Operatøren bekrefter bestillingen. Sporingen starter når turen er bekreftet.
+      pendingGuar: Vi finner en godkjent operatør innen 24 timer.
+      next: "Neste stopp: %{stop}, ca. kl. %{time}"
+      done: Takk for turen.
+      cancelled: Denne turen er avbestilt.
+      declined: Operatøren kunne ikke ta turen. Vi kontakter deg med et nytt tilbud.
+    seg:
+      to_pickup: "Bussen kjører fra garasjen i %{from}"
+      onboard: "Avreise %{from} → ankomst %{to}"
+      at_destination: "Tid i %{to}, bussen venter"
+      with_group: "Bussen blir hos dere i %{to}"
+      returning: "Retur %{from} → %{to}"
+      touring: "Sightseeing i %{from}"
+      end: Turen er ferdig
+    lookup:
+      h: Mine turer
+      p: Skriv inn bestillingsreferansen og e-postadressen du brukte ved bestilling.
+      ref: Bestillingsreferanse
+      submit: Finn turen
+      demo: "Demo: bestill en tur først, eller bruk BS-3LDN og demo@example.com."
+      notFound: Fant ingen tur med den referansen og e-postadressen.
+    prof:
+      title: Operatør
+      aboutDefault: "Turbusselskap med garasje i %{depot}. Kjører grupper innen %{radius} km."
+      onTime: i tide
+      vehicles: kjøretøy
+      fleetH: Flåte
+      upTo: "Opptil %{seats} seter"
+      inFleet: i flåten
+      lang: "Guide på %{lang}"
+      reviewsH: Vurderinger fra kunder
+      noReviews: Ingen vurderinger ennå.
+      late: Kom for sent
+      safetyH: Sikkerhet og dokumentasjon
+      licence: Fellesskapsløyve for turvogn
+      org: Registrert i Brønnøysundregistrene
+      insurance: Gyldig ansvarsforsikring
+      drivers: Sjåfører med yrkessjåførkompetanse
+      year: "Snitt årsmodell %{year}"
+      bookH: Bestill med denne operatøren
+      bookP: "Henter grupper innen %{radius} km fra %{depot}."
+    biz:
+      title: Bussly Bedrift
+      eyebrow: Bussly Bedrift
+      h1: Faste skyttelruter og gruppereiser for bedrifter
+      lede: Arbeidsruter, eventtransport og flyplasskjøring med én avtale, én faktura og sporing for alle reisende.
+      t1: faktura
+      t2: oppfølging på reisedagen
+      t3: fast kontaktperson
+      seg_commute: Arbeidsruter
+      seg_event: Arrangement og konferanser
+      seg_airport: Flyplasstransport
+      seg_school: Skole og idrett
+      seg_other: Annet
+      segP_commute: Faste avganger mellom stasjon, kontor og anlegg. De ansatte ser bussen i appen.
+      segP_event: Skyttelbusser mellom hotell og arena, med billettering og ruteplan.
+      segP_airport: Henting av grupper på Gardermoen, Flesland, Værnes og Sola etter flytider.
+      segP_school: Turneringer, klasseturer og leirskole med sikkerhetsdokumentasjon.
+      featH: Inkludert i bedriftsavtalen
+      f1: EHF-faktura, innkjøpsordre og kostnadssteder
+      f2: Flere brukere og avdelinger på samme konto
+      f3: Sporing og passasjerlister for alle turer
+      f4: Volumpris for faste ruter og mange turer i året
+      f5: Rapporter om reiser, kostnad og CO₂
+      f6: Fast kontaktperson og vakttelefon
+      formH: Be om tilbud på fast rute
+      company: Bedrift
+      segment: Type transport
+      route: Rute
+      routePh: F.eks. Lysaker stasjon → Fornebu, morgen og ettermiddag
+      riders: Reisende per dag
+      start: Oppstart
+      days: Dager
+      notes: Annet vi bør vite
+      err: Fyll inn bedrift, navn, e-post og rute.
+      submit: Send forespørsel
+      hint: Vi svarer innen én virkedag med forslag til ruteplan og pris.
+      thanks: Takk. Vi tar kontakt innen én virkedag med forslag til ruteplan og pris.
+    portal:
+      assign: Tildel sjåfør
+      change: Endre sjåfør
+      driver: Sjåførens navn
+      phone: Mobil
+      plate: Reg.nr.
+      save: Lagre
+      complete: Marker fullført
+      assigned: "Sjåfør er tildelt %{ref}. Kunden ser det på turen sin."
+      assignErr: Fyll inn navn, mobil og registreringsnummer.
+      completed: "%{ref} er fullført. Kunden blir bedt om en vurdering."

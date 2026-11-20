@@ -5,6 +5,7 @@ class Operator < ApplicationRecord
 
   has_many :bookings, dependent: :nullify
   has_many :users, dependent: :destroy
+  has_many :reviews, dependent: :destroy
 
   validates :name, presence: true
   validates :slug, presence: true, uniqueness: true
@@ -16,6 +17,11 @@ class Operator < ApplicationRecord
   validate :rates_not_below_floor
 
   before_validation :ensure_slug, :normalise_fleet
+
+  def to_param = slug
+  def licence_verified? = licence_number.present?
+  def has_amenity?(name) = Array(amenities).include?(name)
+  def fleet_size = fleet.values.sum { |f| f["count"].to_i }
 
   def surcharges = { weekend: sur_weekend.to_i, peak: sur_peak.to_i, night: sur_night.to_i }
   def suggested_fleet = Pricing.suggested_fleet(depot)

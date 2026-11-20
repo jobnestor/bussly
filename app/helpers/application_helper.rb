@@ -58,7 +58,9 @@ module ApplicationHelper
 
   def current_page_group
     case controller_path
-    when "quotes", "bookings" then :book
+    when "quotes", "bookings", "operator_profiles" then :book
+    when "trips", "tracks", "lookups" then :trips
+    when "business" then :business
     when %r{\Aportal/} then :operator
     when "partners" then :partner
     end

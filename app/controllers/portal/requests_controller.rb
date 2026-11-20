@@ -18,6 +18,23 @@ module Portal
       redirect_to portal_root_path, notice: n == 1 ? helpers.a("claimed") : nil, alert: n == 1 ? nil : helpers.a("claimTaken")
     end
 
+    # Assign driver and vehicle; the customer and passengers see them on the trip and tracking pages
+    def assign
+      booking = @operator.bookings.find_by!(ref: params[:ref])
+      booking.assign_attributes(params.require(:booking).permit(:driver_name, :driver_phone, :vehicle_plate))
+      if booking.confirmed? && booking.save(context: :assign_driver)
+        redirect_to portal_root_path, notice: helpers.a("portal.assigned", ref: booking.ref)
+      else
+        redirect_to portal_root_path, alert: helpers.a("portal.assignErr")
+      end
+    end
+
+    def complete
+      booking = @operator.bookings.find_by!(ref: params[:ref])
+      booking.complete!
+      redirect_to portal_root_path, notice: helpers.a("portal.completed", ref: booking.ref)
+    end
+
     private
 
     def transition(from, to)

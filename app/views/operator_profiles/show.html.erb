@@ -1,0 +1,65 @@
+<% o = @operator %>
+<% content_for :title, "#{o.name} – #{a("prof.title")} | Bussly" %>
+<main id="view-profile">
+  <div class="wrap intro">
+    <div>
+      <p class="eyebrow"><%= a("prof.title") %> · <%= o.depot %></p>
+      <h1><%= o.name %></h1>
+      <p><%= o.about.presence || a("prof.aboutDefault", depot: o.depot, radius: o.radius) %></p>
+    </div>
+    <div class="trust">
+      <% if o.rating %><span><b>★ <%= format("%.1f", o.rating) %></b> <span><%= o.reviews_count %> <%= a("reviews") %></span></span><% end %>
+      <% if o.on_time_pct %><span><b><%= o.on_time_pct %> %</b> <span><%= a("prof.onTime") %></span></span><% end %>
+      <span><b><%= o.fleet_size %></b> <span><%= a("prof.vehicles") %></span></span>
+    </div>
+  </div>
+  <div class="wrap trip-grid">
+    <div class="trip-main">
+      <section class="panel">
+        <h2><%= a("prof.fleetH") %></h2>
+        <div class="fleet-cards">
+          <% Pricing::CLASSES.each do |c| n = o.fleet.dig(c.id, "count").to_i; next if n.zero? %>
+            <div class="vcard"><div class="vpic <%= c.id %>" aria-hidden="true"></div>
+              <b><%= class_name(c.id) %></b><small><%= a("prof.upTo", seats: c.seats) %> · <%= n %> <%= a("prof.inFleet") %></small></div>
+          <% end %>
+        </div>
+        <div class="amen" style="margin-top:14px">
+          <% Array(o.amenities).each do |am| %><span><%= o.amenity_label(am) %></span><% end %>
+          <% if o.ev? %><span><%= a("evAvail") %></span><% end %>
+          <% Array(o.langs).each do |l| %><span><%= a("prof.lang", lang: l) %></span><% end %>
+        </div>
+      </section>
+      <section class="panel">
+        <h2><%= a("prof.reviewsH") %></h2>
+        <% if @reviews.empty? %>
+          <p class="muted"><%= a("prof.noReviews") %></p>
+        <% else %>
+          <ul class="reviews">
+            <% @reviews.each do |r| %>
+              <li><div class="rhead"><%= stars(r.rating) %> <b><%= r.author %></b> <small><%= r.trip_label %> · <%= fmt_date(r.created_at.to_date) %></small>
+                <% unless r.on_time %><span class="chip warn"><%= a("prof.late") %></span><% end %></div>
+                <% if r.comment.present? %><p><%= r.comment %></p><% end %></li>
+            <% end %>
+          </ul>
+        <% end %>
+      </section>
+    </div>
+    <aside class="trip-side">
+      <section class="panel">
+        <h2><%= a("prof.safetyH") %></h2>
+        <ul class="checks">
+          <li class="<%= o.licence_verified? ? "yes" : "no" %>"><%= a("prof.licence") %><% if o.licence_number %> <small class="num"><%= o.licence_number %></small><% end %></li>
+          <li class="<%= o.org_number ? "yes" : "no" %>"><%= a("prof.org") %><% if o.org_number %> <small class="num"><%= o.org_number.scan(/.{1,3}/).join(" ") %></small><% end %></li>
+          <li class="yes"><%= a("prof.insurance") %></li>
+          <li class="yes"><%= a("prof.drivers") %></li>
+          <% if o.model_year %><li class="yes"><%= a("prof.year", year: o.model_year) %></li><% end %>
+        </ul>
+      </section>
+      <section class="panel">
+        <h2><%= a("prof.bookH") %></h2>
+        <p class="muted"><%= a("prof.bookP", radius: o.radius, depot: o.depot) %></p>
+        <%= link_to a("getQuote"), root_path(from: o.depot), class: "btn primary wide" %>
+      </section>
+    </aside>
+  </div>
+</main>

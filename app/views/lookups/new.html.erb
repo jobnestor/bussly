@@ -1,0 +1,11 @@
+<% content_for :title, "#{a("lookup.h")} | Bussly" %>
+<main class="auth"><div class="panel">
+  <h1><%= a("lookup.h") %></h1>
+  <p class="muted"><%= a("lookup.p") %></p>
+  <%= form_with url: lookup_path, class: "trip", data: { turbo: false } do %>
+    <div class="f"><label for="ref"><%= a("lookup.ref") %></label><input id="ref" name="ref" placeholder="BS-XXXX" value="<%= params[:ref] %>" autocapitalize="characters" required></div>
+    <div class="f"><label for="email"><%= a("mEmail") %></label><input id="email" name="email" type="email" autocomplete="email" value="<%= params[:email] %>" required></div>
+    <button class="btn primary" type="submit"><%= a("lookup.submit") %></button>
+  <% end %>
+  <p class="note"><%= a("lookup.demo") %></p>
+</div></main>

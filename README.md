@@ -9,8 +9,14 @@ This is the Ruby on Rails version of the Bussly design prototype. The UI is Norw
 |---|---|---|
 | Booking | `/` | Trip form (one way, round trip, multi-day, sightseeing with guide and cruise pickup), instant offers from every operator that can do the trip, "best value" tag, full price breakdown. Landing-page links such as `/?from=Bergen&type=sight&hours=4&guide=EN&cruise=1&lang=en` prefill the form. |
 | Checkout | `/bestilling/new` | Opens as a sheet over the results. 20 % deposit, balance 7 days before. The price is always recomputed on the server. No real payment is taken yet. |
+| Results tools | `/` | Sort by price, rating or punctuality; filter on instant booking, toilet and electric. Each offer shows on-time %, licence check and "confirmed instantly" badges. |
+| Trip page | `/reise/:token` | Secret link from the confirmation. Status timeline (booked → confirmed → driver assigned → completed), live map, schedule with driving and rest time, driver card, payment schedule with "pay balance", self-service cancellation (free up to 14 days before, then the deposit is kept), passenger share link and a review form after the trip. |
+| Live tracking | `/spor/:share_token` | Passenger link: map, status, next stop and ETA, driver first name and plate. No prices or customer details. The position is simulated from the booked schedule (`app/models/tracking.rb`); a demo slider moves through the day. Road lines come from the public OSRM demo server, map tiles from OpenStreetMap. |
+| My trips | `/mine-turer` | Look up a trip with the booking reference and e-mail. |
+| Operator profiles | `/operatorer/:slug` | Fleet, amenities, rating, on-time %, licence and organisation number, customer reviews. |
+| Business | `/bedrift` | Recurring shuttles, events, airport and school transport. Lead form stored as `ShuttleRequest`. |
 | Price guarantee | | When no operator covers a trip, the customer gets market price + 15 %. The booking becomes an open job any operator can take at market price. |
-| Operator portal | `/operator` | Sign-in required. New requests (accept/decline), open guarantee jobs (first to claim gets it), KPIs and payout after the 12 % commission. |
+| Operator portal | `/operator` | Sign-in required. New requests (accept/decline), open guarantee jobs (first to claim gets it), assign driver, phone and plate to confirmed trips, mark trips completed (the customer is then asked for a review), KPIs and payout after the 12 % commission. |
 | Prices & fleet | `/operator/priser` | Rate-card editor: depot, radius, positioning, fleet with hourly/km/min-hours, surcharges, busy dates. Suggested rates per region, the Bussly minimum (85 % of suggested) and a live preview of price and rank for the operator's last search. |
 | Become a partner | `/bli-partner` | Checks the organisation number (MOD11), creates the operator with suggested rates and a login. |
 | SEO pages | `/leie-buss/…`, `/anledning/…`, `/en/…` | The 33 prerendered landing pages from the design, plus `sitemap.xml`, `robots.txt` and `llms.txt`, served as static files from `public/`. |
@@ -31,6 +37,9 @@ SQLite (Rails 8 "Solid" stack, no separate database server).
 
 - `Operator` holds the rate card (`fleet` JSON, surcharges and busy dates).
 - `Booking` holds the trip, the offer snapshot and the status (`new`, `ok`, `no`, `paid`, `src` for an open job).
+- `Booking` also holds the customer and passenger link tokens, driver, payment dates, completion and cancellation/refund.
+- `Review` belongs to an operator and a booking; new reviews update the operator's rating, review count and on-time %.
+- `ShuttleRequest` is a business lead for recurring transport.
 - `User` is an operator login, or an admin who can switch between operators.
 
 `db/seeds.rb` loads the seven demo operators and sample bookings.
