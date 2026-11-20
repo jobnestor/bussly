@@ -1,0 +1,5 @@
+<%= turbo_frame_tag "modal" do %>
+  <h2 id="m-h"><%= a("mH") %></h2>
+  <p class="sub"><%= a("quoteGone") %></p>
+  <div class="actions"><%= link_to a("cClose"), root_path, class: "btn primary", data: { close: true, turbo_frame: "_top" } %></div>
+<% end %>

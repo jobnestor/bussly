@@ -1,0 +1,17 @@
+<% if @query.nil? || !@query.valid? %>
+  <p class="muted"><%= a("previewNone") %></p>
+<% else %>
+  <p class="muted"><%= a("previewFor") %>: <b><%= route_label(@query) %></b>, <%= fmt_date(@query.date) %>, <%= @query.pax %> pax</p>
+  <% if !@mine.ok? %>
+    <b class="big" style="font-size:20px"><%= a("reasons.#{@mine.reason}") %></b>
+    <% if @mine.reason == :radius %><p class="muted num"><%= @mine.depot_km.round %> km &gt; <%= @draft.radius %> km</p><% end %>
+  <% else %>
+    <b class="big num"><%= nok(@mine.total) %></b>
+    <p class="muted"><%= a("inclVat") %> · <%= @mine.n %> × <%= class_name(@mine.vehicle_class.id) %></p>
+    <table style="margin-top:12px">
+      <tr><td><%= a("pvRank") %></td><td><%= @rank[0] %> <%= a("pvOf") %> <%= @rank[1] %></td></tr>
+      <tr><td><%= a("bSub") %></td><td><%= nok(@mine.sub) %></td></tr>
+      <tr class="tot"><td><%= a("pvPay") %></td><td><%= nok(@mine.payout) %></td></tr>
+    </table>
+  <% end %>
+<% end %>

@@ -1,0 +1,12 @@
+<% sug = draft.suggested_fleet; low = draft.below_floor %>
+<% Pricing::CLASSES.each do |c| f = draft.fleet[c.id] || {}; s = sug[c.id]; base = "operator[fleet][#{c.id}]" %>
+  <tr>
+    <td><b><%= class_name(c.id) %></b><small><%= c.seats %> <%= a("seats") %></small></td>
+    <td><input type="number" min="0" max="99" name="<%= base %>[count]" value="<%= f["count"] %>" data-count-for="<%= c.id %>" aria-label="<%= class_name(c.id) %> <%= a("thCount") %>"></td>
+    <td><input type="number" min="0" step="10" name="<%= base %>[hr]" value="<%= f["hr"] %>" class="<%= "low" if low.dig(c.id, "hr") %>"
+               data-rate-card-target="rate" data-cls="<%= c.id %>" data-suggested="<%= s["hr"] %>" aria-label="<%= class_name(c.id) %> <%= a("thHr") %>"><small><%= a("suggested") %> <%= s["hr"] %></small></td>
+    <td><input type="number" min="0" name="<%= base %>[km]" value="<%= f["km"] %>" class="<%= "low" if low.dig(c.id, "km") %>"
+               data-rate-card-target="rate" data-cls="<%= c.id %>" data-suggested="<%= s["km"] %>" aria-label="<%= class_name(c.id) %> <%= a("thKm") %>"><small><%= a("suggested") %> <%= s["km"] %></small></td>
+    <td><input type="number" min="1" max="12" name="<%= base %>[minH]" value="<%= f["minH"] %>" aria-label="<%= class_name(c.id) %> <%= a("thMin") %>"></td>
+  </tr>
+<% end %>

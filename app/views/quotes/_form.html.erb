@@ -1,0 +1,47 @@
+<section class="panel" aria-labelledby="trip-h">
+  <h2 id="trip-h"><%= a("tripH") %></h2>
+  <%= form_with url: root_path, method: :get, class: "trip", id: "trip", scope: nil, novalidate: true,
+                data: { controller: "trip-form", trip_form_type_value: query.type } do |f| %>
+    <% if en? %><input type="hidden" name="lang" value="en"><% end %>
+    <input type="hidden" name="type" value="<%= query.type %>" data-trip-form-target="type">
+    <div class="seg" role="group" aria-label="Trip type">
+      <% %w[oneway round multi sight].each do |ty| %>
+        <button type="button" data-type="<%= ty %>" aria-pressed="<%= query.type == ty %>"
+                data-trip-form-target="seg" data-action="trip-form#setType"><%= a(ty) %></button>
+      <% end %>
+    </div>
+    <div class="f"><label for="from"><%= a("from") %></label>
+      <input id="from" name="from" list="cities" autocomplete="off" value="<%= query.from %>" data-trip-form-target="from"></div>
+    <button class="swap" type="button" data-action="trip-form#swap" data-trip-form-target="swap" <%= "hidden" if query.sight? %>><%= a("swap") %></button>
+    <div class="f" data-trip-form-target="toField" <%= "hidden" if query.sight? %>><label for="to"><%= a("to") %></label>
+      <input id="to" name="to" list="cities" autocomplete="off" value="<%= query.sight? ? "" : query.to %>" data-trip-form-target="to"></div>
+    <datalist id="cities"><% Pricing::CITIES.each_key do |c| %><option value="<%= c %>"></option><% end %></datalist>
+    <div class="row2">
+      <div class="f"><label for="date"><%= a("date") %></label><input id="date" name="date" type="date" value="<%= query.date&.iso8601 %>"></div>
+      <div class="f"><label for="time"><%= a("time") %></label><input id="time" name="time" type="time" step="900" value="<%= query.time %>"></div>
+    </div>
+    <div class="f" data-trip-form-target="waitField" <%= "hidden" unless query.round? %>><label for="wait"><%= a("wait") %></label>
+      <select id="wait" name="wait"><% Pricing::Query::WAIT_OPTIONS.each do |h| %><option value="<%= h %>" <%= "selected" if query.wait == h %>><%= h %> <%= a("h") %></option><% end %></select></div>
+    <div class="f" data-trip-form-target="retField" <%= "hidden" unless query.multi? %>><label for="ret"><%= a("ret") %></label>
+      <input id="ret" name="ret" type="date" value="<%= query.ret&.iso8601 %>"></div>
+    <div class="trip" data-trip-form-target="sightFields" <%= "hidden" unless query.sight? %>>
+      <div class="row2">
+        <div class="f"><label for="hours"><%= a("hoursL") %></label>
+          <select id="hours" name="hours"><% Pricing::Query::HOUR_OPTIONS.each do |h| %><option value="<%= h %>" <%= "selected" if query.hours == h %>><%= h %></option><% end %></select></div>
+        <div class="f"><label for="guide"><%= a("guideL") %></label>
+          <select id="guide" name="guide"><option value=""><%= a("gNone") %></option><% Pricing::GUIDE_LANGS.each do |g| %><option <%= "selected" if query.guide == g %>><%= g %></option><% end %></select></div>
+      </div>
+      <label class="check"><input type="checkbox" id="cruise" name="cruise" value="1" <%= "checked" if query.cruise %> data-action="trip-form#toggleCruise" data-trip-form-target="cruise"><span><%= a("cruiseL") %></span></label>
+      <div class="row2" data-trip-form-target="cruiseFields" <%= "hidden" unless query.cruise %>>
+        <div class="f"><label for="ship"><%= a("shipL") %></label><input id="ship" name="ship" autocomplete="off" value="<%= query.ship %>"></div>
+        <div class="f"><label for="aboard"><%= a("aboardL") %></label><input id="aboard" name="aboard" type="time" step="900" value="<%= query.aboard || "17:30" %>"></div>
+      </div>
+    </div>
+    <div class="f"><label for="pax"><%= a("pax") %></label><input id="pax" name="pax" type="number" min="1" max="400" inputmode="numeric" value="<%= query.pax %>"></div>
+    <label class="check"><input type="checkbox" id="electric" name="electric" value="1" <%= "checked" if query.electric %>><span><%= a("electric") %></span></label>
+    <label class="check"><input type="checkbox" id="luggage" name="luggage" value="1" <%= "checked" if query.luggage %>><span><%= a("luggage") %></span></label>
+    <p class="err" id="err" role="alert"><%= query_error(query) %></p>
+    <button class="btn primary" type="submit"><%= a("getQuote") %></button>
+    <p class="hint"><%= a("tipNorth") %></p>
+  <% end %>
+</section>

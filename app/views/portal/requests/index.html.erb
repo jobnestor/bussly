@@ -1,0 +1,45 @@
+<% content_for :title, "#{a("opH")} | Bussly" %>
+<main id="view-operator">
+  <div class="wrap intro"><div><h1><%= a("opH") %></h1><p><%= a("opLede") %></p></div></div>
+  <div class="wrap" style="padding-bottom:40px">
+    <%= render "portal/subnav" %>
+    <div class="kpis">
+      <div class="kpi"><small><%= a("kNew") %></small><b class="num"><%= @new.size %></b></div>
+      <div class="kpi"><small><%= a("kAcc") %></small><b class="num"><%= @accepted.size %></b></div>
+      <div class="kpi"><small><%= a("kRev") %></small><b class="num"><%= nok(@revenue) %></b></div>
+      <div class="kpi"><small><%= a("kPay") %></small><b class="num"><%= nok(@revenue * (1 - Pricing::COMMISSION)) %></b></div>
+    </div>
+    <div class="reqs">
+      <% if @rows.empty? %>
+        <p class="empty"><%= a("noRows") %></p>
+      <% else %>
+      <table>
+        <thead><tr><th><%= a("thRef") %></th><th><%= a("thTrip") %></th><th><%= a("thDate") %></th><th><%= a("thPax") %></th><th><%= a("thVeh") %></th><th style="text-align:right"><%= a("thPay") %></th><th><%= a("thStatus") %></th><th></th></tr></thead>
+        <tbody>
+          <% pill = { "new" => %w[new sNew], "ok" => %w[ok sOk], "no" => %w[no sNo], "paid" => %w[paid sPaid], "src" => %w[src sSrc] } %>
+          <% @rows.each do |b| %>
+            <tr>
+              <td class="num"><b><%= b.ref %></b></td>
+              <td><%= b.sight? ? "#{a("sightIn")} #{b.from_place}" : "#{b.from_place} → #{b.to_place}" %></td>
+              <td><%= fmt_date(b.date) %></td>
+              <td class="num"><%= b.pax %></td>
+              <td><%= b.vehicle_count %> × <%= class_name(b.vehicle_class) %></td>
+              <td class="r num"><%= nok(b.payout) %></td>
+              <td><span class="pill <%= pill[b.status][0] %>"><%= a(pill[b.status][1]) %></span></td>
+              <td class="r">
+                <% if b.status == "new" %>
+                  <%= button_to a("accept"), accept_portal_request_path(b.ref), method: :patch, class: "btn primary", form_class: "inline-form" %>
+                  <%= button_to a("decline"), decline_portal_request_path(b.ref), method: :patch, class: "btn ghost", form_class: "inline-form" %>
+                <% elsif b.status == "src" %>
+                  <%= button_to a("claim"), claim_portal_request_path(b.ref), method: :patch, class: "btn primary", form_class: "inline-form" %>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <% end %>
+    </div>
+    <p class="note"><%= a("opNote").sub(/\A(Demo: bytt operatør øverst til høyre\. |Demo: switch operator at the top right\. )/, "") %></p>
+  </div>
+</main>

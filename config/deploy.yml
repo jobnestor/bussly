@@ -1,0 +1,61 @@
+# Kamal 2 deployment for Bussly.  Docs: https://kamal-deploy.org
+#
+#   First time:   bin/kamal setup
+#   Afterwards:   bin/kamal deploy
+#
+# Kamal connects to the server over SSH as root (your local SSH key must be authorised there),
+# installs Docker if needed, builds the image locally and pushes it through an SSH tunnel to a
+# registry running on the server itself, so no Docker Hub / GHCR account is needed.
+
+service: bussly
+image: bussly
+
+servers:
+  web:
+    - 193.243.189.77
+
+ssh:
+  user: root
+
+# kamal-proxy terminates HTTP(S) on ports 80/443 and does zero-downtime deploys.
+# Until a domain points at the server, the app answers on http://193.243.189.77.
+# When DNS is ready: set host, set ssl: true (Let's Encrypt), and set FORCE_SSL to "true" below.
+proxy:
+  ssl: false
+  # host: bussly.no
+  app_port: 80
+  healthcheck:
+    path: /up
+
+# Registry on the deploy server, reached through an SSH tunnel (Kamal ≥ 2.8)
+registry:
+  server: localhost:5555
+
+builder:
+  arch: amd64
+
+env:
+  secret:
+    - SECRET_KEY_BASE
+    - ADMIN_EMAIL
+    - ADMIN_PASSWORD
+  clear:
+    SOLID_QUEUE_IN_PUMA: true
+    FORCE_SSL: "false"
+    APP_HOST: 193.243.189.77
+    # Set to "1" to also create the demo operator logins (<slug>@demo.bussly.no / bussly-demo)
+    SEED_DEMO_USERS: "0"
+
+# SQLite databases (app, cache, queue, cable) live in this Docker volume and survive deploys
+volumes:
+  - "bussly_storage:/rails/storage"
+
+# Bridge fingerprinted assets between versions to avoid 404s during deploys
+asset_path: /rails/public/assets
+
+aliases:
+  console: app exec --interactive --reuse "bin/rails console"
+  shell: app exec --interactive --reuse "bash"
+  logs: app logs -f
+  dbc: app exec --interactive --reuse "bin/rails dbconsole"
+  seed: app exec --reuse "bin/rails db:seed"

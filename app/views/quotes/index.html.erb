@@ -1,0 +1,45 @@
+<% content_for :title, a("title") %>
+<% content_for :head do %><%= render "shared/seo_home" %><% end %>
+<main id="view-book">
+  <div class="wrap intro">
+    <div>
+      <h1><%= a("h1") %></h1>
+      <p><%= a("lede") %></p>
+    </div>
+    <div class="trust">
+      <span><b><%= @op_count %></b> <span><%= a("trustOps").sub(" (demo)", "") %></span></span>
+      <span><b>12 %</b> <span><%= a("trustVat") %></span></span>
+      <span><b>14</b> <span><%= a("trustCancel") %></span></span>
+    </div>
+  </div>
+
+  <%= turbo_frame_tag "booking", class: "wrap grid", data: { turbo_action: "advance" } do %>
+    <%= render "form", query: @query %>
+    <section aria-live="polite" id="results">
+      <%= render "results" if @trip %>
+    </section>
+  <% end %>
+
+  <div class="band"><div class="wrap">
+    <h2><%= a("howH") %></h2>
+    <div class="steps">
+      <% 1.upto(3) do |i| %>
+        <div><b>0<%= i %></b><h3><%= a("s#{i}h") %></h3><p><%= a("s#{i}p") %></p></div>
+      <% end %>
+    </div>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <h2><%= a("popH") %></h2>
+    <%= render "shared/seo_links" %>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <h2><%= a("faqH") %></h2>
+    <div class="faq">
+      <% a("faq").each do |item| %>
+        <details><summary><%= item[:q] %></summary><p><%= item[:a] %></p></details>
+      <% end %>
+    </div>
+  </div></div>
+</main>

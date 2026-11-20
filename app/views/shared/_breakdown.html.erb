@@ -1,0 +1,21 @@
+<% n = offer.n; l = offer.lines
+   muted = ->(x) { tag.span(x, class: "num", style: "color:var(--muted)") }
+   rows = [
+     [:hours, "bHours", muted.("(#{format('%.1f', offer.bill_h)} #{a('h')} × #{nok(offer.card['hr'])}#{n > 1 ? " × #{n}" : ''})")],
+     [:km, "bKm", muted.("(#{trip.trip_km.round} km × #{nok(offer.card['km'])})")],
+     [:pos, "bPos", muted.("(#{offer.pos_km.round} km)")],
+     [:wait, "bWait"], [:driver2, "bDriver2"], [:hotel, "bHotel"], [:toll, "bToll"], [:ferry, "bFerry"], [:trailer, "bTrailer"],
+     [:sur, "bSur", (muted.("(#{offer.pct} %)") if offer.pct.positive?)], [:ev, "bEv"]
+   ] %>
+<table style="margin-top:10px">
+  <% rows.each do |key, label, extra| %>
+    <% next unless l[key].to_f.positive? %>
+    <tr><td><%= a(label) %> <%= extra %></td><td><%= nok(l[key] * n) %></td></tr>
+  <% end %>
+  <tr><td><%= a("bSub") %></td><td><%= nok(offer.sub) %></td></tr>
+  <% if offer.guide_sub.positive? %>
+    <tr><td><%= a("bGuide") %> <%= muted.("(#{query.hours} #{a('h')} × #{nok(Pricing::GUIDE_HOURLY)}, 25 % #{en? ? 'VAT' : 'mva'})") %></td><td><%= nok(offer.guide_sub) %></td></tr>
+  <% end %>
+  <tr><td><%= a("bVat") %></td><td><%= nok(offer.vat) %></td></tr>
+  <tr class="tot"><td><%= a("bTot") %></td><td><%= nok(offer.total) %><%= eur(offer.total) %></td></tr>
+</table>

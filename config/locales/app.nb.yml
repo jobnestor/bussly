@@ -1,0 +1,212 @@
+---
+nb:
+  app:
+    navBook: Bestill buss
+    navOp: For operatører
+    navPartner: Bli partner
+    navReq: Forespørsler
+    navRates: Priser og flåte
+    loggedAs: Logget inn som
+    h1: Lei buss med sjåfør, med fast pris på sekunder
+    lede: Fortell oss hvor gruppen skal. Vi beregner rute, kjøre- og hviletid, bom og ferje, og viser priser fra turbusselskapene i området, satt av dem selv.
+    trustOps: operatører (demo)
+    trustVat: mva inkludert i prisen
+    trustCancel: dager gratis avbestilling
+    tripH: Din tur
+    oneway: Én vei
+    round: Tur/retur
+    multi: Flere dager
+    sight: Sightseeing
+    hoursL: Antall timer
+    guideL: Guide
+    gNone: Ingen guide
+    cruiseL: Henting ved cruiseskip
+    shipL: Skip (valgfritt)
+    aboardL: Alle om bord kl.
+    sightIn: Sightseeing i
+    fGuide: Guide på
+    fShipOk: Tilbake ved skipet minst 60 min før avgang
+    fShipBad: 'For lite tid: turen slutter under 60 min før skipet går'
+    bGuide: Guide
+    popH: Populære turer og steder
+    cityFrom: Fra
+    from: Fra
+    to: Til
+    swap: "⇅ Bytt"
+    date: Dato
+    time: Avreise
+    wait: Tid på stedet før retur
+    ret: Siste dag
+    pax: Antall passasjerer
+    electric: Foretrekk elbuss der rekkevidden tillater det
+    luggage: Ekstra bagasje (ski, utstyr) – tilhenger
+    getQuote: Vis priser
+    tipNorth: 'Demo: prøv Tromsø–Narvik for å se prisgarantien der ingen operatør dekker turen.'
+    eFrom: Velg et sted fra listen i «Fra».
+    eTo: Velg et sted fra listen i «Til».
+    eSame: Fra og til kan ikke være samme sted.
+    ePax: Skriv inn mellom 1 og 400 passasjerer.
+    eDate: Velg en avreisedato fra i morgen og fremover.
+    eRet: Siste dag må være etter avreisedato.
+    distance: Distanse
+    drive: Kjøretid per vei
+    offersN: Tilbud
+    fromPrice: Fra
+    offersH: Tilbud for turen din
+    best: Best verdi
+    book: Bestill
+    perPax: per person
+    inclVat: inkl. 12 % mva
+    year: Årsmodell
+    reviews: omtaler
+    evAvail: Elbuss
+    newOp: Ny på Bussly
+    depotFrom: km fra garasjen i
+    bdH: Slik er prisen beregnet
+    bdFor: Vist for
+    bHours: Timer
+    bKm: Kilometer på turen
+    bPos: Kjøring til/fra garasje
+    bWait: Ventetid på stedet
+    bDriver2: Ekstra sjåfør (kjøre- og hviletid)
+    bHotel: Overnatting sjåfør
+    bToll: Bompenger (estimat)
+    bFerry: Ferje (estimat)
+    bTrailer: Bagasjetilhenger
+    bSur: Tillegg
+    bEv: Elbuss-tillegg
+    bSub: Sum eks. mva
+    bVat: Mva 12 %
+    bTot: Totalt
+    bNote: Hver operatør priser turen med sine egne timepriser, km-priser og tillegg. Rute, kjøre- og hviletid, bom og ferje beregner Bussly likt for alle.
+    fBreak: Pause på 45 min lagt inn per 4,5 t kjøring
+    fTwo: Turen krever to sjåfører
+    fFerry: Ruten har ferje
+    fEvNo: For langt for elbuss
+    fMulti: bussen blir hos dere
+    noOpsH: Ingen operatør dekker denne turen ennå
+    guarH: Bussly prisgaranti
+    guarP: Vi garanterer prisen og finner en godkjent operatør innen 24 timer. Finner vi ingen, får du hele depositumet tilbake.
+    guarTag: Garantert pris
+    howH: Slik fungerer det
+    s1h: Få pris med en gang
+    s1p: Ingen skjemaer og venting på e-post. Hver operatør har lagt inn sine egne priser, så du ser ekte tilbud med en gang.
+    s2h: Velg operatør
+    s2p: Alle har turvognløyve fra Statens vegvesen. Du ser vurderinger, årsmodell og utstyr før du velger.
+    s3h: Betal 20 % nå
+    s3p: Resten trekkes 7 dager før avreise. Bussly følger opp sjåfør, rute og endringer hele veien.
+    faqH: Spørsmål
+    faq:
+    - q: Hvem bestemmer prisen?
+      a: Busselskapene. Hver operatør legger inn timepris, km-pris, minimumstid og tillegg for sine busser. Bussly beregner rute, pauser, bom og ferje, og bruker operatørens priser på turen din.
+    - q: Hva er prisgarantien?
+      a: Hvis ingen operatør i området har lagt inn priser som dekker turen, gir vi deg en garantert pris basert på markedspriser. Vi finner bussen innen 24 timer, ellers får du depositumet tilbake.
+    - q: Hvorfor er mva 12 %?
+      a: Persontransport har redusert mva-sats på 12 % i Norge. Prisene vi viser inkluderer mva.
+    - q: Hva er kjøre- og hviletid?
+      a: 'Sjåfører følger EUs regler: maks 4,5 timer før en pause på 45 minutter, og normalt maks 9 timer kjøring per dag. Lange turer får derfor pauser eller en ekstra sjåfør, og det er med i prisen.'
+    - q: Kan vi avbestille?
+      a: Gratis fram til 14 dager før avreise. Deretter beholdes depositumet på 20 %.
+    opH: Forespørsler
+    opLede: Nye bestillinger på dine priser, og åpne jobber fra prisgarantien som du kan ta.
+    kNew: Nye forespørsler
+    kAcc: Bekreftet
+    kRev: Bekreftet omsetning eks. mva
+    kPay: Din utbetaling (88 %)
+    thRef: Ref.
+    thTrip: Tur
+    thDate: Dato
+    thPax: Pass.
+    thVeh: Kjøretøy
+    thPay: Utbetaling
+    thStatus: Status
+    sNew: Ny
+    sOk: Bekreftet
+    sNo: Avslått
+    sPaid: Utbetalt
+    sSrc: Åpen jobb
+    accept: Godta
+    decline: Avslå
+    claim: Ta oppdraget
+    opNote: 'Demo: bytt operatør øverst til høyre. Åpne jobber kommer fra prisgarantien og vises for alle operatører. Den første som tar jobben får den.'
+    rcH: Priser og flåte
+    rcLede: Prisene du legger inn her brukes direkte i tilbudene kundene ser. Vi har foreslått priser for ditt område, så du trenger bare å justere.
+    rcBase: Garasje og område
+    depot: Garasje
+    radius: Henter kunder innen (km)
+    posF: Kjøring til/fra garasje
+    pos0: Ikke fakturert
+    pos50: Halv pris
+    pos100: Full pris
+    evFleet: Vi har elbuss i flåten
+    fleetH: Busser og priser (eks. mva)
+    thClass: Kjøretøy
+    thCount: Antall
+    thHr: Timepris
+    thKm: Km-pris
+    thMin: Min. timer
+    suggested: Forslag
+    floorNote: Bussly-minimum er 85 % av foreslått pris. Felter under minimum er merket med rødt.
+    surH: Tillegg (%)
+    sWeekend: Helg
+    sPeak: Høysesong (mai, juni, des.)
+    sNight: Natt (22–06)
+    blockH: Opptatte datoer
+    blockDate: Dato
+    add: Legg til
+    save: Lagre priser
+    suggest: Bruk foreslåtte priser
+    saved: Lagret. Nye tilbud bruker disse prisene nå.
+    belowMin: Noen priser er under Bussly-minimum. Juster feltene merket med rødt.
+    suggestedApplied: Foreslåtte priser er fylt inn. Lagre for å bruke dem.
+    previewH: Slik ser kunden prisen din
+    previewFor: For søket på bookingsiden
+    previewNone: Gjør et søk under «Bestill buss» for å se prisen din her.
+    rRadius: Utenfor området ditt
+    rBlocked: Datoen er merket som opptatt
+    rNoFleet: Du har ikke nok busser til denne gruppen
+    pvRank: Plass blant tilbudene
+    pvPay: Din utbetaling
+    pvOf: av
+    pH: Fyll ledige busser uten salgsjobben
+    pLede: Bussly sender betalende grupper til turbusselskaper over hele landet. Du setter egne priser og velger selv hvilke turer du tar.
+    p1: Ingen fast avgift. 12 % provisjon kun på gjennomførte turer.
+    p2: Du setter egne priser. Vi foreslår priser for området ditt, så oppsettet tar fem minutter.
+    p3: Ruteplan med kjøre- og hviletid er ferdig beregnet når forespørselen kommer.
+    p4: 'Krav: fellesskapsløyve for turvogn og gyldig ansvarsforsikring.'
+    pFormH: Registrer selskapet
+    pcName: Firmanavn
+    pcOrg: Organisasjonsnummer
+    pcLic: Løyvenummer
+    pcMini: Minibusser
+    pcCoach: Turbusser
+    pcEmail: E-post
+    pSubmit: Opprett konto og sett priser
+    peName: Skriv inn firmanavn.
+    peOrg: Organisasjonsnummeret er ugyldig. Det skal ha 9 sifre og riktig kontrollsiffer.
+    peLic: Skriv inn løyvenummeret fra Statens vegvesen.
+    peEmail: Skriv inn en gyldig e-postadresse.
+    pCreated: Kontoen er opprettet (demo). Vi har foreslått priser for området ditt. Juster og lagre.
+    mH: Fullfør bestillingen
+    mName: Kontaktperson
+    mPhone: Mobil
+    mEmail: E-post
+    mOrg: Organisasjon / anledning (valgfritt)
+    mPay: Betaling av depositum
+    mCard: Kort
+    mInvoice: Faktura (bedrift)
+    mDep: Depositum nå (20 %)
+    mRest: Resten 7 dager før
+    mCancel: Avbryt
+    mConfirm: Betal depositum
+    mErr: Fyll inn navn, mobil og e-post.
+    cH: Bestillingen er sendt
+    cP1: Bestillingsreferanse
+    cP2: 'bekrefter normalt innen kort tid. Du får beskjed på e-post og SMS. (Demo: ingen betaling er trukket.)'
+    cGuar: 'Vi finner en operatør innen 24 timer og sender deg navnet. (Demo: ingen betaling er trukket.)'
+    cClose: Ferdig
+    cOp: Se den i operatørportalen
+    days: dager
+    h: t
+    min: min
+    foot: Bussly er en klikkbar prototype. Operatører, vurderinger og priser er eksempler. Foreslåtte priser er estimater basert på typiske norske timepriser for turbuss.

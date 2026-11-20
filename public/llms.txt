@@ -1,0 +1,54 @@
+# Bussly
+
+> Bussly is a marketplace for hiring a bus or coach with a driver in Norway. Customers get fixed prices in seconds from licensed Norwegian coach companies (turvognløyve), who set their own rates. Prices include 12% VAT, road tolls and ferries.
+
+## Key facts
+- Typical 53-seat coach rate: about 1250 NOK per hour plus 21 NOK per km, excluding VAT, with a 4-hour minimum. Minibus (16 seats): about 850 NOK per hour. Double-decker (79 seats): about 1650 NOK per hour.
+- Example: Oslo to Hemsedal and back the same day for 50 people costs about 24600 NOK including VAT on an off-peak weekday.
+- Example: a 4-hour private sightseeing tour in Bergen for 16 people with an English-speaking guide costs about 9300 NOK including VAT.
+- Passenger transport in Norway has 12% VAT. Licensed guides are charged at 25%.
+- EU driving rules apply: a 45-minute break per 4.5 hours of driving, and a second driver above 9 hours of driving in a day. Bussly adds both to prices automatically.
+- Booking: 20% deposit, balance 7 days before departure, free cancellation until 14 days before.
+- Where no operator covers a trip, Bussly gives a guaranteed price and finds a bus within 24 hours, or refunds the deposit.
+- Example prices are calculated on 2026-11-18 for an off-peak weekday and change with operators' rates.
+
+## Prices
+- [Hva koster det å leie buss? (Norwegian price guide)](https://bussly.no/hva-koster-det-a-leie-buss/)
+- [Bus hire prices in Norway (English price guide)](https://bussly.no/en/bus-hire-prices-norway/)
+
+## Cities and routes (Norwegian)
+- [Leie buss med sjåfør i Oslo – fast pris på sekunder](https://bussly.no/leie-buss/oslo/)
+- [Leie buss med sjåfør i Bergen – fast pris på sekunder](https://bussly.no/leie-buss/bergen/)
+- [Leie buss med sjåfør i Trondheim – fast pris på sekunder](https://bussly.no/leie-buss/trondheim/)
+- [Leie buss med sjåfør i Stavanger – fast pris på sekunder](https://bussly.no/leie-buss/stavanger/)
+- [Leie buss med sjåfør i Kristiansand – fast pris på sekunder](https://bussly.no/leie-buss/kristiansand/)
+- [Leie buss med sjåfør i Tromsø – fast pris på sekunder](https://bussly.no/leie-buss/tromso/)
+- [Leie buss med sjåfør i Ålesund – fast pris på sekunder](https://bussly.no/leie-buss/alesund/)
+- [Leie buss med sjåfør i Drammen – fast pris på sekunder](https://bussly.no/leie-buss/drammen/)
+- [Leie buss fra Oslo til Hemsedal – pris og kjøretid](https://bussly.no/leie-buss/oslo-hemsedal/)
+- [Leie buss fra Oslo til Trysil – pris og kjøretid](https://bussly.no/leie-buss/oslo-trysil/)
+- [Leie buss fra Oslo til Lillehammer – pris og kjøretid](https://bussly.no/leie-buss/oslo-lillehammer/)
+- [Gruppetransport fra Gardermoen til Oslo – pris og kjøretid](https://bussly.no/leie-buss/gardermoen-oslo/)
+- [Leie buss fra Bergen til Flåm – pris og kjøretid](https://bussly.no/leie-buss/bergen-flam/)
+- [Leie buss fra Bergen til Voss – pris og kjøretid](https://bussly.no/leie-buss/bergen-voss/)
+- [Leie buss fra Ålesund til Geiranger – pris og kjøretid](https://bussly.no/leie-buss/alesund-geiranger/)
+- [Leie buss fra Trondheim til Røros – pris og kjøretid](https://bussly.no/leie-buss/trondheim-roros/)
+- [Leie buss med sjåfør – byer og ruter](https://bussly.no/leie-buss/)
+
+## Occasions (Norwegian)
+- [Buss til julebord – fast pris på sekunder](https://bussly.no/anledning/julebord/)
+- [Leie buss til skoletur – fast pris på sekunder](https://bussly.no/anledning/skoletur/)
+- [Buss til bryllup – fast pris på sekunder](https://bussly.no/anledning/bryllup/)
+- [Buss til julebord, skoletur og bryllup](https://bussly.no/anledning/)
+
+## Tourism (English)
+- [Bus hire prices in Norway: coach and minibus with driver](https://bussly.no/en/bus-hire-prices-norway/)
+- [Private sightseeing tour in Oslo by bus with driver](https://bussly.no/en/private-sightseeing/oslo/)
+- [Private sightseeing tour in Bergen by bus with driver](https://bussly.no/en/private-sightseeing/bergen/)
+- [Private sightseeing tour in Stavanger by bus with driver](https://bussly.no/en/private-sightseeing/stavanger/)
+- [Private sightseeing tour in Ålesund and Geiranger by bus with driver](https://bussly.no/en/private-sightseeing/alesund-geiranger/)
+- [Private sightseeing tour in Flåm by bus with driver](https://bussly.no/en/private-sightseeing/flam/)
+- [Private sightseeing tour in Tromsø by bus with driver](https://bussly.no/en/private-sightseeing/tromso/)
+- [Private shore excursions in Norway by bus with driver](https://bussly.no/en/shore-excursions/)
+- [Coach hire in Norway for tour operators and incoming agencies](https://bussly.no/en/tour-operators/)
+- [Bus and coach hire with driver in Norway](https://bussly.no/en/)

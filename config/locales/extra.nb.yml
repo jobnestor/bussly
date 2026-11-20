@@ -1,0 +1,39 @@
+nb:
+  app:
+    title: "Leie buss med sjåfør – fast pris på sekunder | Bussly"
+    description: "Lei buss, minibuss eller turbuss med sjåfør i hele Norge. Se faste priser fra godkjente busselskaper med en gang, inkl. mva, bom og ferje. Betal 20 % depositum."
+    seats: seter
+    flags:
+      multi: "%{days} dager, bussen blir hos dere"
+      two_drivers: Turen krever to sjåfører
+      break: Pause på 45 min lagt inn per 4,5 t kjøring
+      ferry: Ruten har ferje
+      ev_no: For langt for elbuss
+      guide: "Guide på %{lang}"
+      ship_ok: Tilbake ved skipet minst 60 min før avgang
+      ship_bad: "For lite tid: turen slutter under 60 min før skipet går"
+    reasons:
+      radius: Utenfor området ditt
+      blocked: Datoen er merket som opptatt
+      no_fleet: Du har ikke nok busser til denne gruppen
+    logout: Logg ut
+    login: Logg inn
+    loginH: Logg inn som operatør
+    password: Passord
+    passwordNew: Velg passord (minst 8 tegn)
+    loginFail: Feil e-post eller passord.
+    loginRate: For mange forsøk. Prøv igjen om litt.
+    forgot: Glemt passord?
+    noAccount: "Ny operatør?"
+    peEmailTaken: Det finnes allerede en konto med denne e-postadressen.
+    peOrgTaken: Dette organisasjonsnummeret er allerede registrert.
+    pePassword: Passordet må ha minst 8 tegn.
+    noOperator: Brukeren din er ikke koblet til en operatør ennå.
+    noRows: Ingen forespørsler ennå.
+    quoteGone: Tilbudet er ikke lenger tilgjengelig. Gjør et nytt søk.
+    invalidFleet: Sjekk feltene og prøv igjen.
+    days_short: [søn., man., tir., ons., tor., fre., lør.]
+    months_short: [jan., feb., mar., apr., mai, jun., jul., aug., sep., okt., nov., des.]
+    claimed: Oppdraget er ditt.
+    claimTaken: En annen operatør tok oppdraget først.
+    foot: "Bussly – leie buss med sjåfør i Norge. Operatører og vurderinger i demoen er eksempler. Foreslåtte priser er estimater basert på typiske norske timepriser for turbuss."

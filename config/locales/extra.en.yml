@@ -1,0 +1,39 @@
+en:
+  app:
+    title: "Bus hire with driver in Norway – fixed price in seconds | Bussly"
+    description: "Hire a bus, minibus or coach with a driver anywhere in Norway. See fixed prices from licensed coach companies right away, incl. VAT, tolls and ferries. Pay a 20% deposit."
+    seats: seats
+    flags:
+      multi: "%{days} days, the bus stays with you"
+      two_drivers: This trip needs two drivers
+      break: 45-min break added per 4.5 h of driving
+      ferry: Route includes a ferry
+      ev_no: Too far for an electric bus
+      guide: "Guide in %{lang}"
+      ship_ok: Back at the ship at least 60 min before departure
+      ship_bad: "Too tight: the tour ends less than 60 min before the ship leaves"
+    reasons:
+      radius: Outside your area
+      blocked: That date is marked busy
+      no_fleet: You don’t have enough buses for this group
+    logout: Sign out
+    login: Sign in
+    loginH: Operator sign in
+    password: Password
+    passwordNew: Choose a password (at least 8 characters)
+    loginFail: Wrong email or password.
+    loginRate: Too many attempts. Try again in a moment.
+    forgot: Forgot your password?
+    noAccount: "New operator?"
+    peEmailTaken: An account with this email already exists.
+    peOrgTaken: That organisation number is already registered.
+    pePassword: The password needs at least 8 characters.
+    noOperator: Your user isn’t linked to an operator yet.
+    noRows: No requests yet.
+    quoteGone: That offer is no longer available. Run a new search.
+    invalidFleet: Check the fields and try again.
+    days_short: [Sun, Mon, Tue, Wed, Thu, Fri, Sat]
+    months_short: [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+    claimed: The job is yours.
+    claimTaken: Another operator took the job first.
+    foot: "Bussly – bus hire with a driver in Norway. Operators and ratings in the demo are examples. Suggested prices are estimates based on typical Norwegian coach hourly rates."

@@ -1,0 +1,212 @@
+---
+en:
+  app:
+    navBook: Book a bus
+    navOp: For operators
+    navPartner: Become a partner
+    navReq: Requests
+    navRates: Prices & fleet
+    loggedAs: Signed in as
+    h1: Charter a bus with a driver, priced in seconds
+    lede: Tell us where your group is going. We work out the route, driving and rest time, tolls and ferries, and show prices from the coach companies in the area, set by them.
+    trustOps: operators (demo)
+    trustVat: VAT included in the price
+    trustCancel: days free cancellation
+    tripH: Your trip
+    oneway: One way
+    round: Round trip
+    multi: Multi-day
+    sight: Sightseeing
+    hoursL: Hours
+    guideL: Guide
+    gNone: No guide
+    cruiseL: Pickup at a cruise ship
+    shipL: Ship (optional)
+    aboardL: All aboard at
+    sightIn: Sightseeing in
+    fGuide: Guide in
+    fShipOk: Back at the ship at least 60 min before departure
+    fShipBad: 'Too tight: the tour ends less than 60 min before the ship leaves'
+    bGuide: Guide
+    popH: Popular trips and places
+    cityFrom: From
+    from: From
+    to: To
+    swap: "⇅ Swap"
+    date: Date
+    time: Departure
+    wait: Time at destination before return
+    ret: Last day
+    pax: Passengers
+    electric: Prefer an electric bus where range allows
+    luggage: Extra luggage (skis, gear) – trailer
+    getQuote: Show prices
+    tipNorth: 'Demo: try Tromsø–Narvik to see the price guarantee where no operator covers the trip.'
+    eFrom: Pick a place from the list in “From”.
+    eTo: Pick a place from the list in “To”.
+    eSame: From and To can’t be the same place.
+    ePax: Enter between 1 and 400 passengers.
+    eDate: Choose a departure date from tomorrow onward.
+    eRet: The last day must be after the departure date.
+    distance: Distance
+    drive: Driving time each way
+    offersN: Offers
+    fromPrice: From
+    offersH: Offers for your trip
+    best: Best value
+    book: Book
+    perPax: per person
+    inclVat: incl. 12% VAT
+    year: Model year
+    reviews: reviews
+    evAvail: Electric
+    newOp: New on Bussly
+    depotFrom: km from depot in
+    bdH: How the price is calculated
+    bdFor: Shown for
+    bHours: Hours
+    bKm: Trip kilometres
+    bPos: Driving to/from depot
+    bWait: Waiting time on site
+    bDriver2: Second driver (driving and rest rules)
+    bHotel: Driver accommodation
+    bToll: Road tolls (estimate)
+    bFerry: Ferry (estimate)
+    bTrailer: Luggage trailer
+    bSur: Surcharge
+    bEv: Electric bus premium
+    bSub: Subtotal excl. VAT
+    bVat: VAT 12%
+    bTot: Total
+    bNote: Each operator prices the trip with their own hourly rate, per-km rate and surcharges. Bussly works out route, driving and rest time, tolls and ferries the same way for everyone.
+    fBreak: 45-min break added per 4.5 h of driving
+    fTwo: This trip needs two drivers
+    fFerry: Route includes a ferry
+    fEvNo: Too far for an electric bus
+    fMulti: the bus stays with you
+    noOpsH: No operator covers this trip yet
+    guarH: Bussly price guarantee
+    guarP: We guarantee the price and find a licensed operator within 24 hours. If we can’t, you get the full deposit back.
+    guarTag: Guaranteed price
+    howH: How it works
+    s1h: Get a price right away
+    s1p: No forms and waiting for email. Every operator has entered their own prices, so you see real offers right away.
+    s2h: Choose an operator
+    s2p: Every operator holds a coach licence from the Norwegian Public Roads Administration. See ratings, model year and equipment before you choose.
+    s3h: Pay 20% now
+    s3p: The rest is charged 7 days before departure. Bussly handles driver, route and changes the whole way.
+    faqH: Questions
+    faq:
+    - q: Who sets the price?
+      a: The coach companies. Each operator enters an hourly rate, per-km rate, minimum hours and surcharges for their buses. Bussly works out route, breaks, tolls and ferries, and applies the operator’s prices to your trip.
+    - q: What is the price guarantee?
+      a: If no operator in the area has prices that cover your trip, we give you a guaranteed price based on market rates. We find the bus within 24 hours, or you get your deposit back.
+    - q: Why is VAT 12%?
+      a: Passenger transport has a reduced 12% VAT rate in Norway. The prices we show include VAT.
+    - q: What are driving and rest rules?
+      a: 'Drivers follow EU rules: at most 4.5 hours before a 45-minute break, and normally at most 9 hours of driving per day. Long trips get breaks or a second driver, and that is in the price.'
+    - q: Can we cancel?
+      a: Free until 14 days before departure. After that the 20% deposit is kept.
+    opH: Requests
+    opLede: New bookings at your prices, and open jobs from the price guarantee that you can take.
+    kNew: New requests
+    kAcc: Confirmed
+    kRev: Confirmed revenue excl. VAT
+    kPay: Your payout (88%)
+    thRef: Ref.
+    thTrip: Trip
+    thDate: Date
+    thPax: Pax
+    thVeh: Vehicles
+    thPay: Payout
+    thStatus: Status
+    sNew: New
+    sOk: Confirmed
+    sNo: Declined
+    sPaid: Paid out
+    sSrc: Open job
+    accept: Accept
+    decline: Decline
+    claim: Take the job
+    opNote: 'Demo: switch operator at the top right. Open jobs come from the price guarantee and show for every operator. The first to take one gets it.'
+    rcH: Prices & fleet
+    rcLede: The prices you enter here go straight into the offers customers see. We’ve suggested prices for your area, so you only need to adjust.
+    rcBase: Depot and area
+    depot: Depot
+    radius: Picks up customers within (km)
+    posF: Driving to/from depot
+    pos0: Not charged
+    pos50: Half rate
+    pos100: Full rate
+    evFleet: We have electric buses in the fleet
+    fleetH: Buses and prices (excl. VAT)
+    thClass: Vehicle
+    thCount: Count
+    thHr: Hourly
+    thKm: Per km
+    thMin: Min. hours
+    suggested: Suggested
+    floorNote: The Bussly minimum is 85% of the suggested rate. Fields below the minimum are marked red.
+    surH: Surcharges (%)
+    sWeekend: Weekend
+    sPeak: Peak season (May, June, Dec.)
+    sNight: Night (22–06)
+    blockH: Busy dates
+    blockDate: Date
+    add: Add
+    save: Save prices
+    suggest: Use suggested prices
+    saved: Saved. New offers use these prices now.
+    belowMin: Some prices are below the Bussly minimum. Adjust the fields marked red.
+    suggestedApplied: Suggested prices filled in. Save to use them.
+    previewH: How customers see your price
+    previewFor: For the search on the booking page
+    previewNone: Run a search under “Book a bus” to see your price here.
+    rRadius: Outside your area
+    rBlocked: That date is marked busy
+    rNoFleet: You don’t have enough buses for this group
+    pvRank: Rank among offers
+    pvPay: Your payout
+    pvOf: of
+    pH: Fill idle coaches without the sales work
+    pLede: Bussly sends paying groups to coach companies across Norway. You set your own prices and choose which trips you take.
+    p1: No fixed fee. 12% commission on completed trips only.
+    p2: You set your own prices. We suggest prices for your area, so setup takes five minutes.
+    p3: Route plan with driving and rest time is already worked out when the request arrives.
+    p4: 'Requirements: Community licence for coach transport and valid liability insurance.'
+    pFormH: Register your company
+    pcName: Company name
+    pcOrg: Organisation number
+    pcLic: Licence number
+    pcMini: Minibuses
+    pcCoach: Coaches
+    pcEmail: Email
+    pSubmit: Create account and set prices
+    peName: Enter the company name.
+    peOrg: That organisation number isn’t valid. It needs 9 digits and the right check digit.
+    peLic: Enter the licence number from the Public Roads Administration.
+    peEmail: Enter a valid email address.
+    pCreated: Account created (demo). We’ve suggested prices for your area. Adjust and save.
+    mH: Complete your booking
+    mName: Contact person
+    mPhone: Mobile
+    mEmail: Email
+    mOrg: Organisation / occasion (optional)
+    mPay: Deposit payment
+    mCard: Card
+    mInvoice: Invoice (company)
+    mDep: Deposit now (20%)
+    mRest: Balance 7 days before
+    mCancel: Cancel
+    mConfirm: Pay deposit
+    mErr: Fill in name, mobile and email.
+    cH: Booking sent
+    cP1: Booking reference
+    cP2: 'usually confirms shortly. You’ll hear by email and SMS. (Demo: no payment was taken.)'
+    cGuar: 'We’ll find an operator within 24 hours and send you their name. (Demo: no payment was taken.)'
+    cClose: Done
+    cOp: See it in the operator portal
+    days: days
+    h: h
+    min: min
+    foot: Bussly is a clickable prototype. Operators, ratings and prices are examples. Suggested prices are estimates based on typical Norwegian coach hourly rates.

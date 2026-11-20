@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="<%= en? ? "en" : "nb" %>">
+  <head>
+    <meta charset="utf-8">
+    <title><%= content_for(:title) || "Bussly" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= yield :head %>
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body data-controller="modal">
+    <header>
+      <div class="wrap bar">
+        <a class="logo" href="<%= root_path %>"><i aria-hidden="true"></i>Bussly</a>
+        <nav>
+          <%= link_to a("navBook"), root_path, **nav_current(:book) %>
+          <%= link_to a("navOp"), portal_root_path, **nav_current(:operator) %>
+          <%= link_to a("navPartner"), partner_path, **nav_current(:partner) %>
+        </nav>
+        <% if authenticated? %>
+          <%= button_to a("logout"), session_path, method: :delete, class: "btn-link", form_class: "inline-form" %>
+        <% end %>
+        <div class="lang" role="group" aria-label="Language">
+          <a href="<%= lang_url(:nb) %>" hreflang="nb" aria-current="<%= !en? %>">NO</a>
+          <a href="<%= lang_url(:en) %>" hreflang="en" aria-current="<%= en? %>">EN</a>
+        </div>
+      </div>
+    </header>
+
+    <% if notice.present? || alert.present? %>
+      <div class="flash">
+        <% if notice.present? %><p class="notice" role="status"><%= notice %></p><% end %>
+        <% if alert.present? %><p class="alert" role="alert"><%= alert %></p><% end %>
+      </div>
+    <% end %>
+
+    <%= yield %>
+
+    <footer><div class="wrap"><%= a("foot") %></div></footer>
+
+    <div class="modal" id="checkout" role="dialog" aria-modal="true" aria-labelledby="m-h"
+         data-modal-target="dialog" data-action="click->modal#backdrop keydown@window->modal#escape">
+      <div class="sheet" id="sheet"><%= turbo_frame_tag "modal", data: { action: "turbo:frame-load->modal#open" } %></div>
+    </div>
+  </body>
+</html>

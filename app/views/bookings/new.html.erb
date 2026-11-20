@@ -1,0 +1,31 @@
+<%= turbo_frame_tag "modal" do %>
+  <% q = @query; o = @offer; dep = o.deposit %>
+  <h2 id="m-h"><%= a("mH") %></h2>
+  <p class="sub"><%= o.guaranteed? ? a("guarH") : o.operator.name %> · <%= route_label(q) %> · <%= fmt_date(q.date) %> · <%= q.pax %> pax</p>
+  <%= form_with model: @booking, url: bookings_path, class: "trip", id: "co", novalidate: true do |f| %>
+    <% q.to_param_hash.each do |k, v| %><input type="hidden" name="<%= k %>" value="<%= v %>"><% end %>
+    <input type="hidden" name="op" value="<%= params[:op] %>">
+    <div class="f"><%= f.label :contact_name, a("mName") %><%= f.text_field :contact_name, autocomplete: "name" %></div>
+    <div class="row2">
+      <div class="f"><%= f.label :phone, a("mPhone") %><%= f.telephone_field :phone, autocomplete: "tel", placeholder: "+47" %></div>
+      <div class="f"><%= f.label :email, a("mEmail") %><%= f.email_field :email, autocomplete: "email" %></div>
+    </div>
+    <div class="f"><%= f.label :organisation, a("mOrg") %><%= f.text_field :organisation %></div>
+    <div class="f"><span style="font-size:13px;font-weight:600;color:var(--muted)"><%= a("mPay") %></span>
+      <div class="pay">
+        <label><%= f.radio_button :payment_method, "card" %><span><%= a("mCard") %> / Vipps</span></label>
+        <label><%= f.radio_button :payment_method, "invoice" %><span><%= a("mInvoice") %></span></label>
+      </div>
+    </div>
+    <table>
+      <tr><td><%= a("bTot") %> (<%= a("inclVat") %>)</td><td><%= nok(o.total) %></td></tr>
+      <tr><td><%= a("mRest") %></td><td><%= nok(o.total - dep) %></td></tr>
+      <tr class="tot"><td><%= a("mDep") %></td><td><%= nok(dep) %></td></tr>
+    </table>
+    <p class="err" role="alert"><%= @error %></p>
+    <div class="actions">
+      <%= link_to a("mCancel"), root_path(q.to_param_hash), class: "btn ghost", data: { close: true, turbo_frame: "_top" } %>
+      <button type="submit" class="btn primary"><%= a("mConfirm") %> · <%= nok(dep) %></button>
+    </div>
+  <% end %>
+<% end %>

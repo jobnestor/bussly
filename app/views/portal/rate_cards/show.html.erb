@@ -1,0 +1,67 @@
+<% content_for :title, "#{a("rcH")} | Bussly" %>
+<% d = @draft %>
+<main id="view-rates">
+  <div class="wrap intro"><div><h1><%= a("rcH") %></h1><p><%= a("rcLede") %></p></div></div>
+  <div class="wrap">
+    <%= render "portal/subnav" %>
+    <%= form_with model: d, url: portal_rate_card_path, method: :patch, class: "rc", id: "rcForm", novalidate: true,
+                  data: { controller: "rate-card", action: "input->rate-card#input change->rate-card#input",
+                          rate_card_preview_url_value: preview_portal_rate_card_path, rate_card_floor_value: Pricing::FLOOR } do |f| %>
+      <div>
+        <section class="panel">
+          <h2><%= a("rcBase") %></h2>
+          <div class="row3">
+            <div class="f"><%= f.label :depot, a("depot") %><%= f.select :depot, Pricing::CITIES.keys %></div>
+            <div class="f"><%= f.label :radius, a("radius") %><%= f.number_field :radius, min: 10, max: 1500, step: 10 %></div>
+            <div class="f"><%= f.label :pos_factor, a("posF") %>
+              <%= f.select :pos_factor, ::Operator::POS_OPTIONS.map { |v, k| [ a(k), v ] }, selected: d.pos_factor.to_f %></div>
+          </div>
+          <label class="check" style="margin-top:12px"><%= f.check_box :ev %><span><%= a("evFleet") %></span></label>
+        </section>
+
+        <section class="panel">
+          <h2><%= a("fleetH") %></h2>
+          <div class="fleet"><table>
+            <thead><tr><th><%= a("thClass") %></th><th><%= a("thCount") %></th><th><%= a("thHr") %></th><th><%= a("thKm") %></th><th><%= a("thMin") %></th></tr></thead>
+            <tbody id="fleet-body"><%= render "portal/rate_cards/fleet_rows", draft: d %></tbody>
+          </table></div>
+          <p class="note"><%= a("floorNote") %></p>
+        </section>
+
+        <section class="panel">
+          <h2><%= a("surH") %></h2>
+          <div class="row3">
+            <div class="f"><%= f.label :sur_weekend, a("sWeekend") %><%= f.number_field :sur_weekend, min: 0, max: 100 %></div>
+            <div class="f"><%= f.label :sur_peak, a("sPeak") %><%= f.number_field :sur_peak, min: 0, max: 100 %></div>
+            <div class="f"><%= f.label :sur_night, a("sNight") %><%= f.number_field :sur_night, min: 0, max: 100 %></div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2><%= a("blockH") %></h2>
+          <div class="inline">
+            <div class="f"><label for="rc-bdate"><%= a("blockDate") %></label><input id="rc-bdate" type="date" data-rate-card-target="blockDate"></div>
+            <button class="btn" type="button" data-action="rate-card#addBlocked"><%= a("add") %></button>
+          </div>
+          <div class="blocked" data-rate-card-target="blocked">
+            <input type="hidden" name="operator[blocked_dates][]" value="">
+            <% Array(d.blocked_dates).sort.each do |bd| %>
+              <button type="button" data-action="rate-card#removeBlocked"><%= fmt_date(bd) %> ×<input type="hidden" name="operator[blocked_dates][]" value="<%= bd %>"></button>
+            <% end %>
+          </div>
+        </section>
+
+        <div class="actions" style="justify-content:flex-start;padding-bottom:8px">
+          <button class="btn primary" type="submit"><%= a("save") %></button>
+          <button class="btn ghost" type="submit" name="suggest" value="1" data-action="rate-card#suggest" data-message="<%= a("suggestedApplied") %>"><%= a("suggest") %></button>
+        </div>
+        <p class="status <%= @status&.first %>" role="status" data-rate-card-target="status"><%= @status&.last %></p>
+      </div>
+
+      <aside class="panel prev sticky" aria-live="polite">
+        <h2><%= a("previewH") %></h2>
+        <div id="rc-preview"><%= render "portal/rate_cards/preview" %></div>
+      </aside>
+    <% end %>
+  </div>
+</main>

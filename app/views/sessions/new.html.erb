@@ -1,0 +1,10 @@
+<% content_for :title, "#{a("loginH")} | Bussly" %>
+<main class="auth">
+  <%= form_with url: session_path, class: "panel trip" do |form| %>
+    <h1><%= a("loginH") %></h1>
+    <div class="f"><%= form.label :email_address, a("mEmail") %><%= form.email_field :email_address, required: true, autofocus: true, autocomplete: "username", value: params[:email_address] %></div>
+    <div class="f"><%= form.label :password, a("password") %><%= form.password_field :password, required: true, autocomplete: "current-password", maxlength: 72 %></div>
+    <button class="btn primary" type="submit"><%= a("login") %></button>
+    <p class="hint"><%= a("noAccount") %> <%= link_to a("navPartner"), partner_path %> · <%= link_to a("forgot"), new_password_path %></p>
+  <% end %>
+</main>

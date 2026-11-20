@@ -1,0 +1,29 @@
+<% content_for :title, "#{a("navPartner")} | Bussly" %>
+<main id="view-partner">
+  <div class="wrap partner">
+    <div>
+      <h1 style="font-size:clamp(26px,3.4vw,36px)"><%= a("pH") %></h1>
+      <p style="color:var(--muted);max-width:60ch"><%= a("pLede") %></p>
+      <ul><% 1.upto(4) do |i| %><li><%= a("p#{i}") %></li><% end %></ul>
+      <p class="hint"><%= link_to a("loginH"), new_session_path, style: "color:var(--fjord)" %></p>
+    </div>
+    <%= form_with url: partner_path, class: "panel trip", id: "partnerForm", novalidate: true do %>
+      <h2><%= a("pFormH") %></h2>
+      <div class="f"><label for="name"><%= a("pcName") %></label><input id="name" name="name" autocomplete="organization" value="<%= @form[:name] %>"></div>
+      <div class="row2">
+        <div class="f"><label for="org"><%= a("pcOrg") %></label><input id="org" name="org" inputmode="numeric" placeholder="123 456 785" value="<%= @form[:org] %>"></div>
+        <div class="f"><label for="licence"><%= a("pcLic") %></label><input id="licence" name="licence" value="<%= @form[:licence] %>"></div>
+      </div>
+      <div class="f"><label for="depot"><%= a("depot") %></label>
+        <select id="depot" name="depot"><% Pricing::CITIES.keys.reject { |c| c.include?("lufthavn") }.each do |c| %><option <%= "selected" if @form[:depot] == c %>><%= c %></option><% end %></select></div>
+      <div class="row2">
+        <div class="f"><label for="mini"><%= a("pcMini") %></label><input id="mini" name="mini" type="number" min="0" value="<%= @form[:mini] %>"></div>
+        <div class="f"><label for="coach"><%= a("pcCoach") %></label><input id="coach" name="coach" type="number" min="0" value="<%= @form[:coach] %>"></div>
+      </div>
+      <div class="f"><label for="email"><%= a("pcEmail") %></label><input id="email" name="email" type="email" autocomplete="email" value="<%= @form[:email] %>"></div>
+      <div class="f"><label for="password"><%= a("passwordNew") %></label><input id="password" name="password" type="password" autocomplete="new-password" minlength="8"></div>
+      <p class="err" role="alert"><%= @error %></p>
+      <button class="btn primary" type="submit"><%= a("pSubmit") %></button>
+    <% end %>
+  </div>
+</main>

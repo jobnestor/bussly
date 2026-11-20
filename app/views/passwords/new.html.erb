@@ -1,0 +1,7 @@
+<main class="auth">
+  <%= form_with url: passwords_path, class: "panel trip" do |form| %>
+    <h1><%= a("forgot") %></h1>
+    <div class="f"><%= form.label :email_address, a("mEmail") %><%= form.email_field :email_address, required: true, autofocus: true, autocomplete: "username", value: params[:email_address] %></div>
+    <button class="btn primary" type="submit"><%= en? ? "Email reset instructions" : "Send lenke for nytt passord" %></button>
+  <% end %>
+</main>

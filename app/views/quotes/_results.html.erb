@@ -1,0 +1,59 @@
+<% q = @query; trip = @trip; shown = @offers.first || @guarantee %>
+<div class="sum">
+  <% if trip.sight? %>
+    <div><small><%= a("hoursL") %></small><b class="num"><%= q.hours %> <%= a("h") %></b></div>
+    <div><small><%= a("guideL") %></small><b><%= q.guide.presence || "–" %></b></div>
+  <% else %>
+    <div><small><%= a("distance") %></small><b class="num"><%= trip.km.round %> km</b></div>
+    <div><small><%= a("drive") %></small><b class="num"><%= hm(trip.leg) %></b></div>
+  <% end %>
+  <div><small><%= a("offersN") %></small><b class="num"><%= @offers.any? ? @offers.size : "–" %></b></div>
+  <div><small><%= a("fromPrice") %></small><b class="num"><%= nok(shown.total) %></b></div>
+</div>
+<div class="flags">
+  <% trip.flags.each do |flag| %><span class="chip <%= flag[0] %>"><%= flag_text(flag) %></span><% end %>
+</div>
+<h2 style="font-size:18px;margin-bottom:14px">
+  <%= @offers.any? ? a("offersH") : a("noOpsH") %>: <%= route_label(q) %>, <%= fmt_date(q.date) %><%= " · #{q.ship}" if q.cruise && q.ship.present? %>
+</h2>
+<div class="offers">
+  <% @offers.each do |r| o = r.operator; best = (r == @best) %>
+    <article class="offer <%= "best" if best %>">
+      <% if best %><span class="tag"><%= a("best") %></span><% end %>
+      <div>
+        <h3><%= o.name %></h3>
+        <div class="meta">
+          <% if o.rating %><span>★ <%= format("%.1f", o.rating) %> · <%= o.reviews_count %> <%= a("reviews") %></span><% else %><span class="newop"><%= a("newOp") %></span><% end %>
+          <% if o.model_year %><span><%= a("year") %> <%= o.model_year %></span><% end %>
+          <span><%= r.n %> × <%= class_name(r.vehicle_class.id) %></span>
+          <span class="num"><%= r.depot_km.round %> <%= a("depotFrom") %> <%= o.depot %></span>
+        </div>
+        <div class="amen">
+          <% Array(o.amenities).each do |am| %><span><%= o.amenity_label(am) %></span><% end %>
+          <% if o.ev? && trip.ev_ok %><span><%= a("evAvail") %></span><% end %>
+        </div>
+      </div>
+      <div class="price">
+        <div><b class="num"><%= nok(r.total) %></b><%= eur(r.total) %><small><%= a("inclVat") %> · <%= nok(r.total / q.pax) %> <%= a("perPax") %></small></div>
+        <%= link_to a("book"), new_booking_path(q.to_param_hash.merge(op: o.slug)), class: "btn #{"primary" if best}",
+                    data: { turbo_frame: "modal" } %>
+      </div>
+    </article>
+  <% end %>
+  <% if (g = @guarantee) %>
+    <article class="offer guar">
+      <span class="tag"><%= a("guarTag") %></span>
+      <div><h3><%= a("guarH") %></h3><p class="note" style="margin-top:4px"><%= a("guarP") %></p>
+        <div class="meta" style="margin-top:8px"><span><%= g.n %> × <%= class_name(g.vehicle_class.id) %></span></div></div>
+      <div class="price">
+        <div><b class="num"><%= nok(g.total) %></b><%= eur(g.total) %><small><%= a("inclVat") %> · <%= nok(g.total / q.pax) %> <%= a("perPax") %></small></div>
+        <%= link_to a("book"), new_booking_path(q.to_param_hash.merge(op: "garanti")), class: "btn primary", data: { turbo_frame: "modal" } %>
+      </div>
+    </article>
+  <% end %>
+</div>
+<details class="bd">
+  <summary><%= a("bdH") %> <span style="font-weight:400;color:var(--muted)">(<%= a("bdFor") %> <%= shown.guaranteed? ? a("guarH") : shown.operator.name %>)</span></summary>
+  <%= render "shared/breakdown", offer: shown, trip: trip, query: q %>
+  <p class="note"><%= a("bNote") %></p>
+</details>

@@ -1,0 +1,14 @@
+<div class="subnav opnav">
+  <%= link_to a("navReq"), portal_root_path, "aria-current": (controller_name == "requests" ? "page" : nil) %>
+  <%= link_to a("navRates"), portal_rate_card_path, "aria-current": (controller_name == "rate_cards" ? "page" : nil) %>
+  <% if current_user.admin? %>
+    <%= form_with url: portal_switch_path, class: "who", data: { turbo: false } do %>
+      <label for="operator_id"><%= a("loggedAs") %></label>
+      <select name="operator_id" id="operator_id" class="opSel" onchange="this.form.requestSubmit()">
+        <% ::Operator.order(:name).each do |o| %><option value="<%= o.id %>" <%= "selected" if o == current_operator %>><%= o.name %></option><% end %>
+      </select>
+    <% end %>
+  <% else %>
+    <span class="who"><%= a("loggedAs") %> <span class="who-name"><%= current_operator.name %></span></span>
+  <% end %>
+</div>
