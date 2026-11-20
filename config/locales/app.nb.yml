@@ -45,6 +45,11 @@ nb:
     eFrom: Velg et sted fra listen i «Fra».
     eTo: Velg et sted fra listen i «Til».
     eSame: Fra og til kan ikke være samme sted.
+    eStop: Velg hvert stopp fra forslagslisten.
+    stopsL: Stopp underveis
+    addStop: + Legg til stopp
+    stopPh: Sted eller adresse
+    removeStop: Fjern stopp
     ePax: Skriv inn mellom 1 og 400 passasjerer.
     eDate: Velg en avreisedato fra i morgen og fremover.
     eRet: Siste dag må være etter avreisedato.
@@ -64,8 +69,10 @@ nb:
     depotFrom: km fra garasjen i
     bdH: Slik er prisen beregnet
     bdFor: Vist for
+    bStart: Oppmøte
     bHours: Timer
-    bKm: Kilometer på turen
+    bKmNote: "over %{km} km per dag"
+    bKm: Dieseltillegg
     bPos: Kjøring til/fra garasje
     bWait: Ventetid på stedet
     bDriver2: Ekstra sjåfør (kjøre- og hviletid)
@@ -142,8 +149,9 @@ nb:
     fleetH: Busser og priser (eks. mva)
     thClass: Kjøretøy
     thCount: Antall
+    thStart: Oppmøte
     thHr: Timepris
-    thKm: Km-pris
+    thKm: Dieseltillegg/km
     thMin: Min. timer
     suggested: Forslag
     floorNote: Bussly-minimum er 85 % av foreslått pris. Felter under minimum er merket med rødt.
@@ -209,4 +217,4 @@ nb:
     days: dager
     h: t
     min: min
-    foot: Bussly er en klikkbar prototype. Operatører, vurderinger og priser er eksempler. Foreslåtte priser er estimater basert på typiske norske timepriser for turbuss.
+    foot: Bussly er en klikkbar prototype. Operatører, vurderinger og priser er eksempler. Foreslåtte priser er kalibrert mot publiserte priser fra norske busselskaper. Avstand, kjøretid og bom for tunge kjøretøy er fra Statens vegvesen.

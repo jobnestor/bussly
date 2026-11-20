@@ -1,8 +1,9 @@
 <% n = offer.n; l = offer.lines
    muted = ->(x) { tag.span(x, class: "num", style: "color:var(--muted)") }
    rows = [
+     [:start, "bStart", (muted.("(#{nok(offer.card['start'])}#{trip.days > 1 ? " × #{trip.days}" : ''}#{n > 1 ? " × #{n}" : ''})") if offer.card["start"].to_i.positive?)],
      [:hours, "bHours", muted.("(#{format('%.1f', offer.bill_h)} #{a('h')} × #{nok(offer.card['hr'])}#{n > 1 ? " × #{n}" : ''})")],
-     [:km, "bKm", muted.("(#{trip.trip_km.round} km × #{nok(offer.card['km'])})")],
+     [:km, "bKm", muted.("(#{(l[:km] / [ offer.card['km'].to_f, 1 ].max).round} km × #{nok(offer.card['km'])}, #{a('bKmNote', km: Pricing::FREE_KM)})")],
      [:pos, "bPos", muted.("(#{offer.pos_km.round} km)")],
      [:wait, "bWait"], [:driver2, "bDriver2"], [:hotel, "bHotel"], [:toll, "bToll"], [:ferry, "bFerry"], [:trailer, "bTrailer"],
      [:sur, "bSur", (muted.("(#{offer.pct} %)") if offer.pct.positive?)], [:ev, "bEv"]

@@ -9,7 +9,7 @@ def demo_operator(attrs)
   fleet = Pricing.suggested_fleet(attrs[:depot], counts)
   adj.each { |k, v| fleet[k.to_s].merge!(v.transform_keys(&:to_s)) }
   op = Operator.find_or_initialize_by(slug: attrs[:slug])
-  op.assign_attributes(pos_factor: 0.5, ev: false, instant: false, langs: [], blocked_dates: [],
+  op.assign_attributes(pos_factor: 1, ev: false, instant: false, langs: [], blocked_dates: [],
                        sur_weekend: sur[:weekend], sur_peak: sur[:peak], sur_night: sur[:night], fleet: fleet, **attrs)
   op.save!
   op
@@ -18,17 +18,17 @@ end
 ops = [
   { slug: "solvberg", name: "Sølvberg Reiser AS", depot: "Oslo", radius: 150, rating: 4.8, reviews_count: 388, model_year: 2022, ev: true, instant: true,
     counts: { mini: 2, midi: 3, coach: 6, dd: 1 }, amenities: %w[WiFi USB Toalett Kjøleskap] },
-  { slug: "brattli", name: "Brattli Busstrafikk AS", depot: "Drammen", radius: 120, rating: 4.6, reviews_count: 212, model_year: 2019, pos_factor: 0,
-    counts: { midi: 2, coach: 4 }, adj: { coach: { hr: 1150, km: 19 }, midi: { hr: 990, km: 16 } }, sur: { weekend: 5, peak: 10, night: 15 },
+  { slug: "brattli", name: "Brattli Busstrafikk AS", depot: "Drammen", radius: 120, rating: 4.6, reviews_count: 212, model_year: 2019, pos_factor: 0.5,
+    counts: { midi: 2, coach: 4 }, adj: { coach: { start: 1600, hr: 990, km: 8 }, midi: { hr: 900 } }, sur: { weekend: 5, peak: 10, night: 15 },
     amenities: %w[WiFi USB Toalett] },
   { slug: "mjosa", name: "Mjøsa Turbuss", depot: "Hamar", radius: 220, rating: 4.7, reviews_count: 96, model_year: 2021,
-    counts: { mini: 1, coach: 5 }, adj: { coach: { hr: 1220, km: 20 } }, amenities: %w[WiFi USB Toalett Skiboks] },
+    counts: { mini: 1, coach: 5 }, adj: { coach: { hr: 1080 } }, amenities: %w[WiFi USB Toalett Skiboks] },
   { slug: "havbris", name: "Havbris Turvogn", depot: "Bergen", radius: 250, rating: 4.9, reviews_count: 141, model_year: 2024, ev: true,
-    counts: { mini: 2, midi: 2, coach: 3 }, adj: { coach: { hr: 1390, km: 23 } }, amenities: %w[WiFi USB Toalett Skinnseter Mikrofon] },
+    counts: { mini: 2, midi: 2, coach: 3 }, adj: { coach: { start: 2200, hr: 1190, km: 10 } }, amenities: %w[WiFi USB Toalett Skinnseter Mikrofon] },
   { slug: "gauldal", name: "Gauldal Turbuss AS", depot: "Trondheim", radius: 200, rating: 4.5, reviews_count: 74, model_year: 2018,
     counts: { midi: 1, coach: 3 }, amenities: %w[WiFi Toalett] },
   { slug: "sunnmore", name: "Sunnmøre Fjordbuss", depot: "Ålesund", radius: 160, rating: 4.8, reviews_count: 203, model_year: 2023, ev: true,
-    counts: { mini: 3, midi: 2, coach: 3 }, adj: { midi: { hr: 1150, km: 18 } }, amenities: %w[WiFi USB Toalett Panoramavinduer], langs: %w[EN DE] },
+    counts: { mini: 3, midi: 2, coach: 3 }, adj: { midi: { hr: 1050, km: 7 } }, amenities: %w[WiFi USB Toalett Panoramavinduer], langs: %w[EN DE] },
   { slug: "kystlinje", name: "Kystlinje Buss", depot: "Stavanger", radius: 180, rating: 4.7, reviews_count: 120, model_year: 2023,
     counts: { mini: 2, coach: 2, dd: 1 }, amenities: %w[WiFi USB Toalett] }
 ].map { |a| demo_operator(a) }.index_by(&:slug)

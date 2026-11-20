@@ -3,6 +3,8 @@
   <tr>
     <td><b><%= class_name(c.id) %></b><small><%= c.seats %> <%= a("seats") %></small></td>
     <td><input type="number" min="0" max="99" name="<%= base %>[count]" value="<%= f["count"] %>" data-count-for="<%= c.id %>" aria-label="<%= class_name(c.id) %> <%= a("thCount") %>"></td>
+    <td><input type="number" min="0" step="100" name="<%= base %>[start]" value="<%= f["start"] %>" class="<%= "low" if low.dig(c.id, "start") %>"
+               data-rate-card-target="rate" data-cls="<%= c.id %>" data-suggested="<%= s["start"] %>" aria-label="<%= class_name(c.id) %> <%= a("thStart") %>"><small><%= a("suggested") %> <%= s["start"] %></small></td>
     <td><input type="number" min="0" step="10" name="<%= base %>[hr]" value="<%= f["hr"] %>" class="<%= "low" if low.dig(c.id, "hr") %>"
                data-rate-card-target="rate" data-cls="<%= c.id %>" data-suggested="<%= s["hr"] %>" aria-label="<%= class_name(c.id) %> <%= a("thHr") %>"><small><%= a("suggested") %> <%= s["hr"] %></small></td>
     <td><input type="number" min="0" name="<%= base %>[km]" value="<%= f["km"] %>" class="<%= "low" if low.dig(c.id, "km") %>"

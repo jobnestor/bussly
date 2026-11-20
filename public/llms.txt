@@ -3,14 +3,15 @@
 > Bussly is a marketplace for hiring a bus or coach with a driver in Norway. Customers get fixed prices in seconds from licensed Norwegian coach companies (turvognløyve), who set their own rates. Prices include 12% VAT, road tolls and ferries.
 
 ## Key facts
-- Typical 53-seat coach rate: about 1250 NOK per hour plus 21 NOK per km, excluding VAT, with a 4-hour minimum. Minibus (16 seats): about 850 NOK per hour. Double-decker (79 seats): about 1650 NOK per hour.
-- Example: Oslo to Hemsedal and back the same day for 50 people costs about 24600 NOK including VAT on an off-peak weekday.
-- Example: a 4-hour private sightseeing tour in Bergen for 16 people with an English-speaking guide costs about 9300 NOK including VAT.
+- Typical 53-seat coach rate: a call-out fee of about 1200 NOK plus 1100 NOK per hour, excluding VAT, with a 2-hour minimum (empty driving from the depot counts). Beyond 200 km a day: diesel surcharge of about 9 NOK per km. Minibus (16 seats): 900 NOK call-out + 850 NOK per hour. Double-decker (79 seats): 1800 NOK call-out + 1300 NOK per hour.
+- Rates are calibrated against published prices from Norwegian operators (Oslo Turbuss, Oslobuss, Tide, Trip by Nobina). Distances, driving times and heavy-vehicle tolls come from Statens vegvesen's route planner.
+- Example: Oslo to Hemsedal and back the same day for 50 people costs about 25000 NOK including VAT on an off-peak weekday.
+- Example: a 4-hour private sightseeing tour in Bergen for 16 people with an English-speaking guide costs about 9400 NOK including VAT.
 - Passenger transport in Norway has 12% VAT. Licensed guides are charged at 25%.
 - EU driving rules apply: a 45-minute break per 4.5 hours of driving, and a second driver above 9 hours of driving in a day. Bussly adds both to prices automatically.
 - Booking: 20% deposit, balance 7 days before departure, free cancellation until 14 days before.
 - Where no operator covers a trip, Bussly gives a guaranteed price and finds a bus within 24 hours, or refunds the deposit.
-- Example prices are calculated on 2026-11-18 for an off-peak weekday and change with operators' rates.
+- Example prices are calculated on 2026-11-20 for an off-peak weekday and change with operators' rates.
 
 ## Prices
 - [Hva koster det å leie buss? (Norwegian price guide)](https://bussly.no/hva-koster-det-a-leie-buss/)

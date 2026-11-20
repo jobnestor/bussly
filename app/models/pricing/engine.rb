@@ -2,7 +2,10 @@ module Pricing
   # Applies rate cards to a trip.
   #
   # A "rate card" is anything responding to: depot, radius, pos_factor, blocked_dates, ev?, surcharges, fleet
-  # (fleet is { "coach" => { "count", "hr", "km", "minH" } ... }).
+  # (fleet is { "coach" => { "count", "start", "hr", "km", "minH" } ... }).
+  #
+  # Per bus: call-out fee per day + billed hours + empty driving to/from the depot (time) + waiting +
+  # diesel surcharge per km beyond FREE_KM a day + second driver + driver hotel and allowance + tolls + ferries.
   class Engine
     MarketCard = Struct.new(:depot, :radius, :pos_factor, :blocked_dates, :ev?, :surcharges, :fleet, :id, keyword_init: true)
 
@@ -29,13 +32,18 @@ module Pricing
         blocked = Array(op.blocked_dates).map(&:to_s)
         return Rejection.new(reason: :blocked, depot_km: nil) if q.days.any? { |d| blocked.include?(d.iso8601) }
       end
+      # Empty driving. Operators: depot → pickup and back from the drop-off. Market price: a one-way bus
+      # still has to get home, so the return to the pickup point is charged (Oslo Turbuss and others do the same).
       depot_km = ignore_area ? 0.0 : Pricing.road_km(op.depot, q.from)
       return Rejection.new(reason: :radius, depot_km: depot_km) if !ignore_area && depot_km > op.radius
-      pos_km = if ignore_area then 0.0
-      elsif q.oneway? then depot_km + Pricing.road_km(q.to, op.depot)
-      else 2 * depot_km
+      back_from = q.oneway? ? q.to : q.from
+      pos = if ignore_area
+        q.oneway? ? [ Routing.route(q.to, q.from) ] : []
+      else
+        [ Routing.route(op.depot, q.from), Routing.route(back_from, op.depot) ]
       end
-      pos_h = pos_km / 65.0
+      pos_km = pos.sum(&:km); pos_h = pos.sum(&:drive_h); pos_toll = pos.sum(&:toll)
+      pos_f = ignore_area ? 1.0 : op.pos_factor.to_f
       sur = op.surcharges
       best = nil
 
@@ -44,22 +52,28 @@ module Pricing
         next if card.nil? || card["count"].to_i <= 0
         n = (q.pax.to_f / c.seats).ceil
         next if n > card["count"].to_i
-        hr = card["hr"].to_f; km = card["km"].to_f; min_h = card["minH"].to_f
-        bill_h = [ t.hours, min_h * t.days ].max
+        start = card["start"].to_f; hr = card["hr"].to_f; km = card["km"].to_f; min_h = card["minH"].to_f
+        # The minimum applies to the whole job, so empty driving counts towards it
+        pos_bill = pos_h * pos_f
+        bill_h = [ t.hours, min_h * t.days - pos_bill ].max
+        drivers = t.two_drivers ? 2 : 1
+        green = q.electric && op.ev? && t.ev_ok
         l = {}
+        l[:start]   = start * t.days
         l[:hours]   = bill_h * hr
-        l[:km]      = t.trip_km * km
-        l[:pos]     = (pos_km * km + pos_h * hr) * op.pos_factor.to_f
-        l[:wait]    = t.wait_h * hr * 0.6
-        l[:driver2] = t.two_drivers ? (t.hours + t.wait_h) * 520 : 0
-        l[:hotel]   = t.hotel_nights * 1650 * (t.two_drivers ? 2 : 1)
-        l[:toll]    = (t.trip_km + pos_km) * 1.9
-        l[:ferry]   = t.ferry_count * 1450
+        l[:km]      = [ t.trip_km + pos_km * pos_f - FREE_KM * t.days, 0 ].max * km
+        l[:pos]     = pos_bill * hr
+        l[:wait]    = t.wait_h * hr * WAIT_SHARE
+        l[:driver2] = t.two_drivers ? (t.hours + t.wait_h) * DRIVER2_HOURLY : 0
+        l[:hotel]   = t.hotel_nights * (HOTEL_ROOM + DRIVER_DIET) * drivers
+        # Large-vehicle toll rates from Statens vegvesen. Zero-emission buses pay far less (0 in Oslo's ring).
+        l[:toll]    = (t.toll + pos_toll) * (green ? EV_TOLL_SHARE : 1)
+        l[:ferry]   = t.ferry_count * c.ferry
         l[:trailer] = q.luggage ? 950 * t.days : 0
-        base = l[:hours] + l[:km] + l[:pos] + l[:wait] + l[:driver2]
+        base = l[:start] + l[:hours] + l[:km] + l[:pos] + l[:wait] + l[:driver2]
         pct = (t.weekend ? sur[:weekend] : 0) + (t.peak ? sur[:peak] : 0) + (t.night ? sur[:night] : 0)
         l[:sur] = base * pct / 100.0
-        l[:ev]  = (q.electric && op.ev? && t.ev_ok) ? base * 0.08 : 0
+        l[:ev]  = green ? base * 0.08 : 0
         per_bus = l.values.sum
         sub = per_bus * n
         guide_sub = t.guide_h * GUIDE_HOURLY * n

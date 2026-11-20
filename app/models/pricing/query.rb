@@ -23,8 +23,11 @@ module Pricing
     attribute :cruise, :boolean, default: false
     attribute :ship, :string
     attribute :aboard, :string
+    # Extra stops on the way out, "|"-separated place params (preset names or "Label~lat,lng")
+    attribute :stops, :string, default: ""
 
-    PARAMS = %i[type from to date time wait ret pax electric luggage hours guide cruise ship aboard].freeze
+    PARAMS = %i[type from to stops date time wait ret pax electric luggage hours guide cruise ship aboard].freeze
+    STOP_SEP = "|"
 
     validate :validate_trip
 
@@ -38,7 +41,9 @@ module Pricing
     def self.from_params(params, today = Date.current)
       q = default(today)
       raw = params.respond_to?(:to_unsafe_h) ? params.to_unsafe_h : params.to_h
-      p = raw.symbolize_keys.slice(*PARAMS).compact_blank
+      raw = raw.symbolize_keys
+      raw[:stops] = Array(raw[:stops]).map(&:to_s).compact_blank.join(STOP_SEP) if raw[:stops].is_a?(Array)
+      p = raw.slice(*PARAMS).compact_blank
       p.delete(:from) if p[:from] && !Pricing.city?(p[:from])
       p.delete(:to) if p[:to] && !Pricing.city?(p[:to])
       p.delete(:type) unless TYPES.include?(p[:type]) || p[:type].nil?
@@ -53,6 +58,11 @@ module Pricing
     def multi? = type == "multi"
     def round? = type == "round"
     def oneway? = type == "oneway"
+
+    def stop_list
+      return [] if sight?
+      stops.to_s.split(STOP_SEP).map(&:strip).compact_blank.first(Pricing::MAX_STOPS)
+    end
 
     def to_param_hash
       PARAMS.to_h { |k| [ k, public_send(k) ] }.compact_blank
@@ -72,6 +82,7 @@ module Pricing
       unless sight?
         return errors.add(:to, :pick_to) unless Pricing.city?(to)
         return errors.add(:to, :same) if from == to
+        return errors.add(:stops, :pick_stop) if stop_list.any? { |x| Pricing::Places.resolve(x).nil? }
       end
       return errors.add(:pax, :range) unless pax && pax.between?(1, 400)
       return errors.add(:date, :future) if date.nil? || date < tomorrow

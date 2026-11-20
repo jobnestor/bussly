@@ -1,7 +1,7 @@
 module TripsHelper
   PHASE_KEYS = %i[pending scheduled to_pickup at_pickup onboard at_destination with_group returning touring done cancelled declined].freeze
 
-  def booking_route(b) = b.sight? ? "#{a('sightIn')} #{b.from_place}" : "#{b.from_place} → #{b.to_place}"
+  def booking_route(b) = b.sight? ? "#{a('sightIn')} #{b.from_place}" : place_chain(b.from_place, b.stop_list, b.to_place)
 
   def phase_label(phase) = a("track.#{phase}")
 

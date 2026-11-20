@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Booking form: trip-type toggle, swap, cruise fields
 export default class extends Controller {
-  static targets = ["type", "seg", "from", "to", "toField", "swap", "waitField", "retField", "sightFields", "cruise", "cruiseFields"]
+  static targets = ["type", "seg", "from", "to", "toField", "swap", "waitField", "retField", "sightFields", "cruise", "cruiseFields", "stopsField"]
 
   setType(event) {
     const ty = event.currentTarget.dataset.type
@@ -13,6 +13,7 @@ export default class extends Controller {
     this.sightFieldsTarget.hidden = ty !== "sight"
     this.toFieldTarget.hidden = ty === "sight"
     this.swapTarget.hidden = ty === "sight"
+    if (this.hasStopsFieldTarget) this.stopsFieldTarget.hidden = ty === "sight"
   }
 
   swap() {

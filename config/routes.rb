@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   end
   get "spor/:share_token", to: "tracks#show", as: :track
   get "spor/:share_token/posisjon", to: "tracks#position", as: :track_position
+  get "steder", to: "places#index", as: :places, defaults: { format: :json }
   get "mine-turer", to: "lookups#new", as: :lookup
   post "mine-turer", to: "lookups#create"
 

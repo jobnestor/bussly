@@ -32,6 +32,21 @@ class FlowTest < ActionDispatch::IntegrationTest
     assert_in_delta b.total * 0.2, b.deposit, 0.02
   end
 
+  test "a trip with stops is priced, booked and keeps its stops" do
+    get root_path(search.merge(type: "oneway", stops: [ "Drammen", "" ]))
+    assert_response :success
+    assert_select "article.offer"
+    post bookings_path, params: search.merge(type: "oneway", stops: [ "Drammen" ], op: "solvberg",
+      booking: { contact_name: "Kari", phone: "+47 912 34 567", email: "kari@example.com", payment_method: "card" })
+    assert_equal [ "Drammen" ], Booking.last.stop_list
+  end
+
+  test "place search returns presets as JSON" do
+    get places_path(q: "Hems")
+    assert_response :success
+    assert_includes response.parsed_body.map { |p| p["value"] }, "Hemsedal"
+  end
+
   test "checkout requires contact details" do
     assert_no_difference -> { Booking.count } do
       post bookings_path, params: search.merge(op: "solvberg", booking: { contact_name: "" })

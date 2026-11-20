@@ -20,7 +20,7 @@
           <% @rows.each do |b| %>
             <tr>
               <td class="num"><b><%= b.ref %></b></td>
-              <td><%= b.sight? ? "#{a("sightIn")} #{b.from_place}" : "#{b.from_place} → #{b.to_place}" %></td>
+              <td><%= b.sight? ? "#{a("sightIn")} #{b.from_place}" : place_chain(b.from_place, b.stop_list, b.to_place) %></td>
               <td><%= fmt_date(b.date) %></td>
               <td class="num"><%= b.pax %></td>
               <td><%= b.vehicle_count %> × <%= class_name(b.vehicle_class) %></td>

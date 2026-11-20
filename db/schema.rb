@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_11_20_160300) do
+ActiveRecord::Schema[8.1].define(version: 2026_11_20_170000) do
   create_table "bookings", force: :cascade do |t|
     t.string "ref", null: false
     t.integer "operator_id"
@@ -58,6 +58,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_11_20_160300) do
     t.datetime "completed_at"
     t.datetime "cancelled_at"
     t.decimal "refund", precision: 12, scale: 2
+    t.string "stops", default: "", null: false
     t.index ["operator_id"], name: "index_bookings_on_operator_id"
     t.index ["ref"], name: "index_bookings_on_ref", unique: true
     t.index ["share_token"], name: "index_bookings_on_share_token", unique: true

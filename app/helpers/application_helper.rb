@@ -34,8 +34,11 @@ module ApplicationHelper
 
   def class_name(id) = CLASS_NAMES.fetch(I18n.locale, CLASS_NAMES[:nb]).fetch(id.to_s, id.to_s)
 
+  # "Oslo → Borgund stavkyrkje, Lærdal → Bergen"
+  def place_chain(from, stops, to) = [ from, *stops.map { |x| Pricing::Places.label(x) }, to ].join(" → ")
+
   def route_label(q)
-    q.sight? ? "#{a('sightIn')} #{q.from}, #{q.hours} #{a('h')}" : "#{q.from} → #{q.to}"
+    q.sight? ? "#{a('sightIn')} #{q.from}, #{q.hours} #{a('h')}" : place_chain(q.from, q.stop_list, q.to)
   end
 
   def flag_text(flag)
@@ -43,7 +46,7 @@ module ApplicationHelper
     a("flags.#{key}", **(vars || {}))
   end
 
-  QUERY_ERRORS = { pick_from: "eFrom", pick_to: "eTo", same: "eSame", range: "ePax", future: "eDate", after: "eRet" }.freeze
+  QUERY_ERRORS = { pick_from: "eFrom", pick_to: "eTo", same: "eSame", pick_stop: "eStop", range: "ePax", future: "eDate", after: "eRet" }.freeze
   def query_error(query)
     err = query.errors.first
     err && a(QUERY_ERRORS.fetch(err.type, "eFrom"))

@@ -7,7 +7,9 @@ en:
       multi: "%{days} days, the bus stays with you"
       two_drivers: This trip needs two drivers
       break: 45-min break added per 4.5 h of driving
-      ferry: Route includes a ferry
+      ferry: "Ferry: %{names}"
+      stops: "%{n} stop(s) on the way: %{list} (15 min each)"
+      route_estimate: Distance is estimated (no road route available)
       ev_no: Too far for an electric bus
       guide: "Guide in %{lang}"
       ship_ok: Back at the ship at least 60 min before departure
@@ -36,4 +38,4 @@ en:
     months_short: [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
     claimed: The job is yours.
     claimTaken: Another operator took the job first.
-    foot: "Bussly – bus hire with a driver in Norway. Operators and ratings in the demo are examples. Suggested prices are estimates based on typical Norwegian coach hourly rates."
+    foot: "Bussly – bus hire with a driver in Norway. Operators and ratings in the demo are examples. Suggested prices are calibrated against published Norwegian operator prices. Distances, driving times and heavy-vehicle tolls come from Statens vegvesen."

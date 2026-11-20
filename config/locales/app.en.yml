@@ -45,6 +45,11 @@ en:
     eFrom: Pick a place from the list in “From”.
     eTo: Pick a place from the list in “To”.
     eSame: From and To can’t be the same place.
+    eStop: Pick each stop from the suggestions.
+    stopsL: Stops on the way
+    addStop: + Add a stop
+    stopPh: Place or address
+    removeStop: Remove stop
     ePax: Enter between 1 and 400 passengers.
     eDate: Choose a departure date from tomorrow onward.
     eRet: The last day must be after the departure date.
@@ -64,8 +69,10 @@ en:
     depotFrom: km from depot in
     bdH: How the price is calculated
     bdFor: Shown for
+    bStart: Call-out fee
     bHours: Hours
-    bKm: Trip kilometres
+    bKmNote: "beyond %{km} km a day"
+    bKm: Diesel surcharge
     bPos: Driving to/from depot
     bWait: Waiting time on site
     bDriver2: Second driver (driving and rest rules)
@@ -142,8 +149,9 @@ en:
     fleetH: Buses and prices (excl. VAT)
     thClass: Vehicle
     thCount: Count
+    thStart: Call-out
     thHr: Hourly
-    thKm: Per km
+    thKm: Diesel/km
     thMin: Min. hours
     suggested: Suggested
     floorNote: The Bussly minimum is 85% of the suggested rate. Fields below the minimum are marked red.
@@ -209,4 +217,4 @@ en:
     days: days
     h: h
     min: min
-    foot: Bussly is a clickable prototype. Operators, ratings and prices are examples. Suggested prices are estimates based on typical Norwegian coach hourly rates.
+    foot: Bussly is a clickable prototype. Operators, ratings and prices are examples. Suggested prices are calibrated against published Norwegian operator prices. Distances, driving times and heavy-vehicle tolls come from Statens vegvesen.

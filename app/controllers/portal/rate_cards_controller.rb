@@ -37,7 +37,7 @@ module Portal
 
     def rate_card_params
       p = params.require(:operator).permit(:depot, :radius, :pos_factor, :ev, :sur_weekend, :sur_peak, :sur_night,
-                                           blocked_dates: [], fleet: Pricing::CLASS_IDS.index_with { %i[count hr km minH] })
+                                           blocked_dates: [], fleet: Pricing::CLASS_IDS.index_with { %i[count start hr km minH] })
       p[:blocked_dates] ||= []
       if p[:fleet]
         submitted = p[:fleet].to_h.transform_values { |v| v.to_h.transform_values(&:to_i) }

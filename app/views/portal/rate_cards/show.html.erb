@@ -22,7 +22,7 @@
         <section class="panel">
           <h2><%= a("fleetH") %></h2>
           <div class="fleet"><table>
-            <thead><tr><th><%= a("thClass") %></th><th><%= a("thCount") %></th><th><%= a("thHr") %></th><th><%= a("thKm") %></th><th><%= a("thMin") %></th></tr></thead>
+            <thead><tr><th><%= a("thClass") %></th><th><%= a("thCount") %></th><th><%= a("thStart") %></th><th><%= a("thHr") %></th><th><%= a("thKm") %></th><th><%= a("thMin") %></th></tr></thead>
             <tbody id="fleet-body"><%= render "portal/rate_cards/fleet_rows", draft: d %></tbody>
           </table></div>
           <p class="note"><%= a("floorNote") %></p>

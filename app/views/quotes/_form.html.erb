@@ -15,6 +15,16 @@
     <button class="swap" type="button" data-action="trip-form#swap" data-trip-form-target="swap" <%= "hidden" if query.sight? %>><%= a("swap") %></button>
     <div class="f" data-trip-form-target="toField" <%= "hidden" if query.sight? %>><label for="to"><%= a("to") %></label>
       <input id="to" name="to" list="cities" autocomplete="off" value="<%= query.sight? ? "" : query.to %>" data-trip-form-target="to"></div>
+    <div class="stops" data-trip-form-target="stopsField" data-controller="stops" data-stops-url-value="<%= places_path %>"
+         data-stops-max-value="<%= Pricing::MAX_STOPS %>" <%= "hidden" if query.sight? %>>
+      <span class="stops-l" <%= "hidden" if query.stop_list.empty? %> data-stops-target="label"><%= a("stopsL") %></span>
+      <ol class="stop-list" data-stops-target="list">
+        <% query.stop_list.each do |st| %><%= render "quotes/stop_row", value: st %><% end %>
+      </ol>
+      <template data-stops-target="tpl"><%= render "quotes/stop_row", value: "" %></template>
+      <button class="addstop" type="button" data-action="stops#add" data-stops-target="add"><%= a("addStop") %></button>
+      <datalist id="stop-suggest" data-stops-target="suggest"></datalist>
+    </div>
     <datalist id="cities"><% Pricing::CITIES.each_key do |c| %><option value="<%= c %>"></option><% end %></datalist>
     <div class="row2">
       <div class="f"><label for="date"><%= a("date") %></label><input id="date" name="date" type="date" value="<%= query.date&.iso8601 %>"></div>

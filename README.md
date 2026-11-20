@@ -17,19 +17,59 @@ This is the Ruby on Rails version of the Bussly design prototype. The UI is Norw
 | Business | `/bedrift` | Recurring shuttles, events, airport and school transport. Lead form stored as `ShuttleRequest`. |
 | Price guarantee | | When no operator covers a trip, the customer gets market price + 15 %. The booking becomes an open job any operator can take at market price. |
 | Operator portal | `/operator` | Sign-in required. New requests (accept/decline), open guarantee jobs (first to claim gets it), assign driver, phone and plate to confirmed trips, mark trips completed (the customer is then asked for a review), KPIs and payout after the 12 % commission. |
-| Prices & fleet | `/operator/priser` | Rate-card editor: depot, radius, positioning, fleet with hourly/km/min-hours, surcharges, busy dates. Suggested rates per region, the Bussly minimum (85 % of suggested) and a live preview of price and rank for the operator's last search. |
+| Prices & fleet | `/operator/priser` | Rate-card editor: depot, radius, positioning, fleet with call-out fee, hourly rate, diesel surcharge per km and minimum hours, surcharges, busy dates. Suggested rates per region, the Bussly minimum (85 % of suggested) and a live preview of price and rank for the operator's last search. |
 | Become a partner | `/bli-partner` | Checks the organisation number (MOD11), creates the operator with suggested rates and a login. |
 | SEO pages | `/leie-buss/…`, `/anledning/…`, `/en/…` | The 33 prerendered landing pages from the design, plus `sitemap.xml`, `robots.txt` and `llms.txt`, served as static files from `public/`. |
 
 ## Pricing engine
 
-`app/models/pricing*.rb` is a line-by-line port of the prototype's `trip()` and `priceOp()`:
+`app/models/pricing*.rb` prices a trip the way Norwegian coach companies quote it: a **call-out fee** (oppmøte) per
+day, an **hourly rate** for the hours the bus and driver are busy (minimum hours, empty driving to and from the depot
+counts towards it), a **diesel surcharge per km** beyond 200 km a day, plus waiting time, second driver, driver hotel
+and allowance, large-vehicle tolls and ferries.
 
-- `Pricing::Trip` works out the route facts once: distance, driving time, 45-min breaks per 4.5 h, second driver, ferries, hotel nights and EV range.
+- `Pricing::Trip` works out the route facts once: distance, driving time, 45-min breaks per 4.5 h, stops on the way
+  (15 min each), second driver above 9 h driving or 13 h duty, ferries, tolls, hotel nights and EV range.
 - `Pricing::Engine#price` applies one operator's rate card and picks the cheapest vehicle mix.
-- `#guarantee` returns the market price plus the 15 % buffer.
+- `#market_price` uses the suggested regional rates; `#guarantee` adds the 15 % buffer.
+- Suggested rates are calibrated against published Norwegian prices (Oslo Turbuss, Oslobuss, Tide, Trip by Nobina,
+  leiebusser.no, AnyBus24): airport transfers, Oslo–Hemsedal, Preikestolen, Dombås–Ålesund and hourly sightseeing come
+  out within about ±25 %. `test/models/pricing_test.rb` keeps them there.
 
-`test/models/pricing_test.rb` checks the Ruby engine against prices produced by the original JavaScript for the same trips.
+### Routes, stops and driving time
+
+`Pricing::Routing` gives distance, bus driving time, large-vehicle tolls and ferries for each leg:
+
+1. **Route table** `db/routes/routes.json` – every pair of the 33 preset places, built with
+   `THREADS=4 bin/rails routes:refresh` (only missing pairs; `ALL=1` rebuilds). Quotes between preset places need no
+   network.
+2. **Live providers** for anything else (custom stops), in `ROUTING_PROVIDERS` order, cached 30 days:
+   - `vegvesen` – [Statens vegvesen's route planner](https://dataut.vegvesen.no/en/dataservice/ruteplanlegger-for-bil-og-tungbil)
+     on the national road database (NVDB). Free (NLOD), 2 500 requests a day. We send the bus size (15 m, 19 t,
+     3.8 m), so it avoids roads a coach can't use, and it returns the large-vehicle toll (`tollLarge`) and ferries.
+   - `osrm` – OpenStreetMap routing. `OSRM_URL` points at your own server; the public demo is for testing only
+     (1 request/s). No tolls, so those are estimated per km plus city toll rings.
+   - `ROUTING_LIVE=0` turns live lookups off (default in tests).
+3. **Estimate** – great-circle distance × a regional detour factor, flagged to the customer.
+
+Bus time is the road time with every section capped at 100 km/h (the limit for class III coaches,
+[trafikkreglene § 13](https://lovdata.no/dokument/SF/forskrift/1986-03-21-747/%C2%A713)) × 1.1 for a heavy vehicle,
+plus the ferry crossing. Driving and rest rules follow
+[Statens vegvesen](https://www.vegvesen.no/kjoretoy/yrkestransport/kjore-og-hviletid/regelverk/).
+
+**Stops on the way** (up to 8): the quote form has "+ Legg til stopp" with suggestions from the preset places and
+Kartverket's open place-name and address APIs (`/steder`, `Pricing::Places`). A stop is stored as `Label~lat,lng`
+so the quote, booking and operator all see the same point. Each leg is routed separately, and 15 minutes are added per
+stop.
+
+Not used: Google's large-vehicle routing only covers the US and Japan, and OsmAnd is a navigation app without a
+server API. HERE Routing v8 (`transportMode=bus`, toll costs) would be the paid backup if needed; add it as another
+provider in `Pricing::Routing#fetch`.
+
+### Landing pages
+
+`bin/rails pages:prices` recalculates the example prices, distances and driving times on the static route and city
+pages in `public/leie-buss/` (`DRY=1` to preview). Run it after changing rates or refreshing routes.
 
 ## Data
 
@@ -89,7 +129,7 @@ Useful commands: `bin/kamal logs`, `bin/kamal console`, `bin/kamal shell`, `bin/
 
 - **Payments:** Vipps MobilePay or Stripe for the deposit and balance, and invoicing for companies.
 - **Email and SMS:** booking confirmations, and password-reset mail (needs SMTP settings in `config/environments/production.rb`).
-- **Routing:** real distances, tolls (AutoPASS) and ferry prices. Distances are currently great-circle × a regional detour factor, as in the prototype.
+- **Ferry prices per route:** ferry fares are a typical fare per vehicle size, not the exact fare for each crossing.
 - **Verification:** checking licences against Statens vegvesen and organisation numbers against Brønnøysundregistrene.
-- **Landing pages:** they are static copies from the design build. Regenerate them with the original `scripts/build.mjs` if prices change.
+- **Landing pages:** they are static copies from the design build. `bin/rails pages:prices` keeps the numbers current, but the text is not generated.
 # bussly

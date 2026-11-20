@@ -1,0 +1,4225 @@
+{
+  "Bergen lufthavn Flesland|Bodø": {
+    "km": 1371.1,
+    "h": 21.096,
+    "ferries": [
+      "Fodnes–Mannheller"
+    ],
+    "toll": 1184,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Dombås": {
+    "km": 482.1,
+    "h": 8.075,
+    "ferries": [
+      "Fodnes–Mannheller"
+    ],
+    "toll": 176,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Drammen": {
+    "km": 446.8,
+    "h": 7.546,
+    "ferries": [],
+    "toll": 723,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Flåm": {
+    "km": 171.0,
+    "h": 2.866,
+    "ferries": [],
+    "toll": 176,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Fredrikstad": {
+    "km": 559.5,
+    "h": 8.894,
+    "ferries": [],
+    "toll": 1476,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Geilo": {
+    "km": 247.4,
+    "h": 4.145,
+    "ferries": [],
+    "toll": 604,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Geiranger": {
+    "km": 379.2,
+    "h": 7.587,
+    "ferries": [
+      "Oppedal–Lavik",
+      "Anda–Lote",
+      "Hellesylt–Geiranger"
+    ],
+    "toll": 515,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Gjøvik": {
+    "km": 430.6,
+    "h": 6.776,
+    "ferries": [],
+    "toll": 230,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Hamar": {
+    "km": 479.4,
+    "h": 7.471,
+    "ferries": [],
+    "toll": 322,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Haugesund": {
+    "km": 133.0,
+    "h": 3.335,
+    "ferries": [
+      "Halhjem–Sandvikvåg"
+    ],
+    "toll": 248,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Hemsedal": {
+    "km": 280.4,
+    "h": 4.491,
+    "ferries": [],
+    "toll": 176,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Kongsberg": {
+    "km": 407.1,
+    "h": 6.907,
+    "ferries": [],
+    "toll": 604,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Kristiansand": {
+    "km": 454.9,
+    "h": 7.993,
+    "ferries": [
+      "Hatvik–Venjaneset",
+      "Gjermundshamn–Årsnes"
+    ],
+    "toll": 268,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Lillehammer": {
+    "km": 444.9,
+    "h": 7.042,
+    "ferries": [],
+    "toll": 230,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Molde": {
+    "km": 463.2,
+    "h": 8.559,
+    "ferries": [
+      "Oppedal–Lavik",
+      "Anda–Lote",
+      "Stranda–Liabygda",
+      "Furneset–Molde"
+    ],
+    "toll": 515,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Moss": {
+    "km": 527.4,
+    "h": 8.413,
+    "ferries": [],
+    "toll": 1340,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Narvik": {
+    "km": 1567.3,
+    "h": 24.407,
+    "ferries": [
+      "Fodnes–Mannheller",
+      "Bognes–Skarberget"
+    ],
+    "toll": 1136,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Oslo": {
+    "km": 467.6,
+    "h": 7.663,
+    "ferries": [],
+    "toll": 1066,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Oslo lufthavn Gardermoen": {
+    "km": 478.1,
+    "h": 7.785,
+    "ferries": [],
+    "toll": 961,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Preikestolen": {
+    "km": 240.9,
+    "h": 5.559,
+    "ferries": [
+      "Halhjem–Sandvikvåg",
+      "Arsvågen–Mortavika"
+    ],
+    "toll": 715,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Røros": {
+    "km": 659.2,
+    "h": 10.989,
+    "ferries": [
+      "Fodnes–Mannheller"
+    ],
+    "toll": 176,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Sandefjord Torp": {
+    "km": 434.5,
+    "h": 7.714,
+    "ferries": [
+      "Hatvik–Venjaneset",
+      "Gjermundshamn–Årsnes"
+    ],
+    "toll": 482,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Sarpsborg": {
+    "km": 557.6,
+    "h": 8.821,
+    "ferries": [],
+    "toll": 1408,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Stavanger": {
+    "km": 204.7,
+    "h": 4.865,
+    "ferries": [
+      "Halhjem–Sandvikvåg",
+      "Arsvågen–Mortavika"
+    ],
+    "toll": 293,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Tromsø": {
+    "km": 1799.1,
+    "h": 27.843,
+    "ferries": [
+      "Fodnes–Mannheller",
+      "Bognes–Skarberget"
+    ],
+    "toll": 1389,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Trondheim": {
+    "km": 679.3,
+    "h": 11.169,
+    "ferries": [
+      "Fodnes–Mannheller"
+    ],
+    "toll": 522,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Trondheim lufthavn Værnes": {
+    "km": 711.7,
+    "h": 11.674,
+    "ferries": [
+      "Fodnes–Mannheller"
+    ],
+    "toll": 589,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Trysil": {
+    "km": 576.1,
+    "h": 8.835,
+    "ferries": [],
+    "toll": 422,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Tønsberg": {
+    "km": 455.1,
+    "h": 8.006,
+    "ferries": [
+      "Hatvik–Venjaneset",
+      "Gjermundshamn–Årsnes"
+    ],
+    "toll": 579,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Voss": {
+    "km": 105.3,
+    "h": 1.856,
+    "ferries": [],
+    "toll": 176,
+    "src": "vegvesen"
+  },
+  "Bergen lufthavn Flesland|Ålesund": {
+    "km": 402.2,
+    "h": 7.28,
+    "ferries": [
+      "Oppedal–Lavik",
+      "Anda–Lote",
+      "Folkestad–Volda",
+      "Festøya–Solavågen"
+    ],
+    "toll": 637,
+    "src": "vegvesen"
+  },
+  "Bergen|Bergen lufthavn Flesland": {
+    "km": 20.6,
+    "h": 0.427,
+    "ferries": [],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Bergen|Bodø": {
+    "km": 1368.7,
+    "h": 20.896,
+    "ferries": [
+      "Fodnes–Mannheller"
+    ],
+    "toll": 1096,
+    "src": "vegvesen"
+  },
+  "Bergen|Dombås": {
+    "km": 479.7,
+    "h": 7.875,
+    "ferries": [
+      "Fodnes–Mannheller"
+    ],
+    "toll": 88,
+    "src": "vegvesen"
+  },
+  "Bergen|Drammen": {
+    "km": 444.4,
+    "h": 7.346,
+    "ferries": [],
+    "toll": 635,
+    "src": "vegvesen"
+  },
+  "Bergen|Flåm": {
+    "km": 168.6,
+    "h": 2.666,
+    "ferries": [],
+    "toll": 88,
+    "src": "vegvesen"
+  },
+  "Bergen|Fredrikstad": {
+    "km": 557.0,
+    "h": 8.694,
+    "ferries": [],
+    "toll": 1388,
+    "src": "vegvesen"
+  },
+  "Bergen|Geilo": {
+    "km": 245.0,
+    "h": 3.945,
+    "ferries": [],
+    "toll": 516,
+    "src": "vegvesen"
+  },
+  "Bergen|Geiranger": {
+    "km": 363.6,
+    "h": 7.286,
+    "ferries": [
+      "Oppedal–Lavik",
+      "Anda–Lote",
+      "Hellesylt–Geiranger"
+    ],
+    "toll": 163,
+    "src": "vegvesen"
+  },
+  "Bergen|Gjøvik": {
+    "km": 428.2,
+    "h": 6.576,
+    "ferries": [],
+    "toll": 142,
+    "src": "vegvesen"
+  },
+  "Bergen|Hamar": {
+    "km": 477.0,
+    "h": 7.272,
+    "ferries": [],
+    "toll": 234,
+    "src": "vegvesen"
+  },
+  "Bergen|Haugesund": {
+    "km": 137.6,
+    "h": 3.332,
+    "ferries": [
+      "Halhjem–Sandvikvåg"
+    ],
+    "toll": 160,
+    "src": "vegvesen"
+  },
+  "Bergen|Hemsedal": {
+    "km": 278.0,
+    "h": 4.291,
+    "ferries": [],
+    "toll": 88,
+    "src": "vegvesen"
+  },
+  "Bergen|Kongsberg": {
+    "km": 404.7,
+    "h": 6.707,
+    "ferries": [],
+    "toll": 516,
+    "src": "vegvesen"
+  },
+  "Bergen|Kristiansand": {
+    "km": 468.8,
+    "h": 7.984,
+    "ferries": [
+      "Tørvikbygd–Jondal"
+    ],
+    "toll": 179,
+    "src": "vegvesen"
+  },
+  "Bergen|Lillehammer": {
+    "km": 442.5,
+    "h": 6.843,
+    "ferries": [],
+    "toll": 142,
+    "src": "vegvesen"
+  },
+  "Bergen|Molde": {
+    "km": 447.6,
+    "h": 8.257,
+    "ferries": [
+      "Oppedal–Lavik",
+      "Anda–Lote",
+      "Stranda–Liabygda",
+      "Furneset–Molde"
+    ],
+    "toll": 163,
+    "src": "vegvesen"
+  },
+  "Bergen|Moss": {
+    "km": 525.0,
+    "h": 8.214,
+    "ferries": [],
+    "toll": 1252,
+    "src": "vegvesen"
+  },
+  "Bergen|Narvik": {
+    "km": 1564.9,
+    "h": 24.207,
+    "ferries": [
+      "Fodnes–Mannheller",
+      "Bognes–Skarberget"
+    ],
+    "toll": 1048,
+    "src": "vegvesen"
+  },
+  "Bergen|Oslo": {
+    "km": 465.2,
+    "h": 7.463,
+    "ferries": [],
+    "toll": 978,
+    "src": "vegvesen"
+  },
+  "Bergen|Oslo lufthavn Gardermoen": {
+    "km": 475.6,
+    "h": 7.585,
+    "ferries": [],
+    "toll": 873,
+    "src": "vegvesen"
+  },
+  "Bergen|Preikestolen": {
+    "km": 245.4,
+    "h": 5.556,
+    "ferries": [
+      "Halhjem–Sandvikvåg",
+      "Arsvågen–Mortavika"
+    ],
+    "toll": 627,
+    "src": "vegvesen"
+  },
+  "Bergen|Røros": {
+    "km": 656.8,
+    "h": 10.789,
+    "ferries": [
+      "Fodnes–Mannheller"
+    ],
+    "toll": 88,
+    "src": "vegvesen"
+  },
+  "Bergen|Sandefjord Torp": {
+    "km": 448.4,
+    "h": 7.705,
+    "ferries": [
+      "Tørvikbygd–Jondal"
+    ],
+    "toll": 393,
+    "src": "vegvesen"
+  },
+  "Bergen|Sarpsborg": {
+    "km": 555.2,
+    "h": 8.621,
+    "ferries": [],
+    "toll": 1320,
+    "src": "vegvesen"
+  },
+  "Bergen|Stavanger": {
+    "km": 209.2,
+    "h": 4.862,
+    "ferries": [
+      "Halhjem–Sandvikvåg",
+      "Arsvågen–Mortavika"
+    ],
+    "toll": 205,
+    "src": "vegvesen"
+  },
+  "Bergen|Tromsø": {
+    "km": 1796.6,
+    "h": 27.643,
+    "ferries": [
+      "Fodnes–Mannheller",
+      "Bognes–Skarberget"
+    ],
+    "toll": 1301,
+    "src": "vegvesen"
+  },
+  "Bergen|Trondheim": {
+    "km": 676.9,
+    "h": 10.969,
+    "ferries": [
+      "Fodnes–Mannheller"
+    ],
+    "toll": 434,
+    "src": "vegvesen"
+  },
+  "Bergen|Trondheim lufthavn Værnes": {
+    "km": 709.2,
+    "h": 11.475,
+    "ferries": [
+      "Fodnes–Mannheller"
+    ],
+    "toll": 501,
+    "src": "vegvesen"
+  },
+  "Bergen|Trysil": {
+    "km": 573.7,
+    "h": 8.636,
+    "ferries": [],
+    "toll": 334,
+    "src": "vegvesen"
+  },
+  "Bergen|Tønsberg": {
+    "km": 486.0,
+    "h": 8.027,
+    "ferries": [],
+    "toll": 558,
+    "src": "vegvesen"
+  },
+  "Bergen|Voss": {
+    "km": 102.8,
+    "h": 1.656,
+    "ferries": [],
+    "toll": 88,
+    "src": "vegvesen"
+  },
+  "Bergen|Ålesund": {
+    "km": 386.5,
+    "h": 6.978,
+    "ferries": [
+      "Oppedal–Lavik",
+      "Anda–Lote",
+      "Folkestad–Volda",
+      "Festøya–Solavågen"
+    ],
+    "toll": 285,
+    "src": "vegvesen"
+  },
+  "Bodø|Dombås": {
+    "km": 889.4,
+    "h": 13.012,
+    "ferries": [],
+    "toll": 1008,
+    "src": "vegvesen"
+  },
+  "Bodø|Drammen": {
+    "km": 1227.2,
+    "h": 17.602,
+    "ferries": [],
+    "toll": 1980,
+    "src": "vegvesen"
+  },
+  "Bodø|Flåm": {
+    "km": 1202.5,
+    "h": 18.304,
+    "ferries": [
+      "Mannheller–Fodnes"
+    ],
+    "toll": 1008,
+    "src": "vegvesen"
+  },
+  "Bodø|Fredrikstad": {
+    "km": 1273.1,
+    "h": 18.22,
+    "ferries": [],
+    "toll": 1890,
+    "src": "vegvesen"
+  },
+  "Bodø|Geilo": {
+    "km": 1180.9,
+    "h": 17.82,
+    "ferries": [],
+    "toll": 1008,
+    "src": "vegvesen"
+  },
+  "Bodø|Geiranger": {
+    "km": 1014.3,
+    "h": 16.111,
+    "ferries": [
+      "Halsa–Kanestraum",
+      "Molde–Furneset",
+      "Linge–Eidsdal"
+    ],
+    "toll": 900,
+    "src": "vegvesen"
+  },
+  "Bodø|Gjøvik": {
+    "km": 1086.1,
+    "h": 15.821,
+    "ferries": [],
+    "toll": 1270,
+    "src": "vegvesen"
+  },
+  "Bodø|Hamar": {
+    "km": 1074.1,
+    "h": 15.674,
+    "ferries": [],
+    "toll": 1062,
+    "src": "vegvesen"
+  },
+  "Bodø|Haugesund": {
+    "km": 1473.3,
+    "h": 22.722,
+    "ferries": [],
+    "toll": 1070,
+    "src": "vegvesen"
+  },
+  "Bodø|Hemsedal": {
+    "km": 1154.2,
+    "h": 17.375,
+    "ferries": [],
+    "toll": 1008,
+    "src": "vegvesen"
+  },
+  "Bodø|Kongsberg": {
+    "km": 1267.1,
+    "h": 18.197,
+    "ferries": [],
+    "toll": 2099,
+    "src": "vegvesen"
+  },
+  "Bodø|Kristiansand": {
+    "km": 1508.3,
+    "h": 21.208,
+    "ferries": [],
+    "toll": 2358,
+    "src": "vegvesen"
+  },
+  "Bodø|Lillehammer": {
+    "km": 1044.5,
+    "h": 15.259,
+    "ferries": [],
+    "toll": 1270,
+    "src": "vegvesen"
+  },
+  "Bodø|Molde": {
+    "km": 908.3,
+    "h": 13.488,
+    "ferries": [
+      "Halsa–Kanestraum"
+    ],
+    "toll": 900,
+    "src": "vegvesen"
+  },
+  "Bodø|Moss": {
+    "km": 1241.0,
+    "h": 17.74,
+    "ferries": [],
+    "toll": 1754,
+    "src": "vegvesen"
+  },
+  "Bodø|Narvik": {
+    "km": 301.2,
+    "h": 5.01,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 48,
+    "src": "vegvesen"
+  },
+  "Bodø|Oslo": {
+    "km": 1185.9,
+    "h": 17.04,
+    "ferries": [],
+    "toll": 1545,
+    "src": "vegvesen"
+  },
+  "Bodø|Oslo lufthavn Gardermoen": {
+    "km": 1147.4,
+    "h": 16.524,
+    "ferries": [],
+    "toll": 1158,
+    "src": "vegvesen"
+  },
+  "Bodø|Preikestolen": {
+    "km": 1555.1,
+    "h": 24.491,
+    "ferries": [
+      "Nesvik–Hjelmeland"
+    ],
+    "toll": 1008,
+    "src": "vegvesen"
+  },
+  "Bodø|Røros": {
+    "km": 847.1,
+    "h": 12.428,
+    "ferries": [],
+    "toll": 904,
+    "src": "vegvesen"
+  },
+  "Bodø|Sandefjord Torp": {
+    "km": 1306.4,
+    "h": 18.558,
+    "ferries": [],
+    "toll": 2047,
+    "src": "vegvesen"
+  },
+  "Bodø|Sarpsborg": {
+    "km": 1271.3,
+    "h": 18.147,
+    "ferries": [],
+    "toll": 1822,
+    "src": "vegvesen"
+  },
+  "Bodø|Stavanger": {
+    "km": 1534.1,
+    "h": 24.088,
+    "ferries": [
+      "Arsvågen–Mortavika"
+    ],
+    "toll": 1084,
+    "src": "vegvesen"
+  },
+  "Bodø|Tromsø": {
+    "km": 533.0,
+    "h": 8.445,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 301,
+    "src": "vegvesen"
+  },
+  "Bodø|Trondheim": {
+    "km": 695.8,
+    "h": 10.045,
+    "ferries": [],
+    "toll": 760,
+    "src": "vegvesen"
+  },
+  "Bodø|Trondheim lufthavn Værnes": {
+    "km": 665.4,
+    "h": 9.602,
+    "ferries": [],
+    "toll": 595,
+    "src": "vegvesen"
+  },
+  "Bodø|Trysil": {
+    "km": 1035.7,
+    "h": 15.309,
+    "ferries": [],
+    "toll": 904,
+    "src": "vegvesen"
+  },
+  "Bodø|Tønsberg": {
+    "km": 1287.7,
+    "h": 18.37,
+    "ferries": [],
+    "toll": 2022,
+    "src": "vegvesen"
+  },
+  "Bodø|Voss": {
+    "km": 1266.7,
+    "h": 19.301,
+    "ferries": [
+      "Mannheller–Fodnes"
+    ],
+    "toll": 1008,
+    "src": "vegvesen"
+  },
+  "Bodø|Ålesund": {
+    "km": 987.9,
+    "h": 15.294,
+    "ferries": [
+      "Halsa–Kanestraum",
+      "Molde–Furneset"
+    ],
+    "toll": 1022,
+    "src": "vegvesen"
+  },
+  "Dombås|Drammen": {
+    "km": 377.4,
+    "h": 5.089,
+    "ferries": [],
+    "toll": 1376,
+    "src": "vegvesen"
+  },
+  "Dombås|Flåm": {
+    "km": 313.3,
+    "h": 5.298,
+    "ferries": [
+      "Mannheller–Fodnes"
+    ],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Dombås|Fredrikstad": {
+    "km": 423.3,
+    "h": 5.707,
+    "ferries": [],
+    "toll": 1286,
+    "src": "vegvesen"
+  },
+  "Dombås|Geilo": {
+    "km": 291.7,
+    "h": 4.814,
+    "ferries": [],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Dombås|Geiranger": {
+    "km": 237.7,
+    "h": 3.974,
+    "ferries": [
+      "Linge–Eidsdal"
+    ],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Dombås|Gjøvik": {
+    "km": 196.8,
+    "h": 2.815,
+    "ferries": [],
+    "toll": 262,
+    "src": "vegvesen"
+  },
+  "Dombås|Hamar": {
+    "km": 212.6,
+    "h": 3.014,
+    "ferries": [],
+    "toll": 354,
+    "src": "vegvesen"
+  },
+  "Dombås|Haugesund": {
+    "km": 584.1,
+    "h": 9.716,
+    "ferries": [],
+    "toll": 62,
+    "src": "vegvesen"
+  },
+  "Dombås|Hemsedal": {
+    "km": 265.0,
+    "h": 4.37,
+    "ferries": [],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Dombås|Kongsberg": {
+    "km": 365.4,
+    "h": 5.556,
+    "ferries": [],
+    "toll": 783,
+    "src": "vegvesen"
+  },
+  "Dombås|Kristiansand": {
+    "km": 658.5,
+    "h": 8.695,
+    "ferries": [],
+    "toll": 1754,
+    "src": "vegvesen"
+  },
+  "Dombås|Lillehammer": {
+    "km": 155.3,
+    "h": 2.253,
+    "ferries": [],
+    "toll": 262,
+    "src": "vegvesen"
+  },
+  "Dombås|Molde": {
+    "km": 162.8,
+    "h": 2.678,
+    "ferries": [
+      "Åfarnes–Sølsnes"
+    ],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Dombås|Moss": {
+    "km": 391.2,
+    "h": 5.227,
+    "ferries": [],
+    "toll": 1150,
+    "src": "vegvesen"
+  },
+  "Dombås|Narvik": {
+    "km": 1085.3,
+    "h": 16.339,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 960,
+    "src": "vegvesen"
+  },
+  "Dombås|Oslo": {
+    "km": 336.1,
+    "h": 4.527,
+    "ferries": [],
+    "toll": 941,
+    "src": "vegvesen"
+  },
+  "Dombås|Oslo lufthavn Gardermoen": {
+    "km": 297.6,
+    "h": 4.011,
+    "ferries": [],
+    "toll": 554,
+    "src": "vegvesen"
+  },
+  "Dombås|Preikestolen": {
+    "km": 665.8,
+    "h": 11.486,
+    "ferries": [
+      "Nesvik–Hjelmeland"
+    ],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Dombås|Røros": {
+    "km": 177.3,
+    "h": 2.921,
+    "ferries": [],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Dombås|Sandefjord Torp": {
+    "km": 456.6,
+    "h": 6.045,
+    "ferries": [],
+    "toll": 1443,
+    "src": "vegvesen"
+  },
+  "Dombås|Sarpsborg": {
+    "km": 421.5,
+    "h": 5.634,
+    "ferries": [],
+    "toll": 1218,
+    "src": "vegvesen"
+  },
+  "Dombås|Stavanger": {
+    "km": 644.9,
+    "h": 11.083,
+    "ferries": [
+      "Arsvågen–Mortavika"
+    ],
+    "toll": 76,
+    "src": "vegvesen"
+  },
+  "Dombås|Tromsø": {
+    "km": 1317.1,
+    "h": 19.775,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1213,
+    "src": "vegvesen"
+  },
+  "Dombås|Trondheim": {
+    "km": 197.4,
+    "h": 3.101,
+    "ferries": [],
+    "toll": 346,
+    "src": "vegvesen"
+  },
+  "Dombås|Trondheim lufthavn Værnes": {
+    "km": 229.7,
+    "h": 3.607,
+    "ferries": [],
+    "toll": 413,
+    "src": "vegvesen"
+  },
+  "Dombås|Trysil": {
+    "km": 309.4,
+    "h": 4.378,
+    "ferries": [],
+    "toll": 454,
+    "src": "vegvesen"
+  },
+  "Dombås|Tønsberg": {
+    "km": 437.9,
+    "h": 5.857,
+    "ferries": [],
+    "toll": 1418,
+    "src": "vegvesen"
+  },
+  "Dombås|Voss": {
+    "km": 377.5,
+    "h": 6.296,
+    "ferries": [
+      "Mannheller–Fodnes"
+    ],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Dombås|Ålesund": {
+    "km": 211.4,
+    "h": 3.156,
+    "ferries": [],
+    "toll": 122,
+    "src": "vegvesen"
+  },
+  "Drammen|Flåm": {
+    "km": 311.4,
+    "h": 5.053,
+    "ferries": [],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Drammen|Fredrikstad": {
+    "km": 107.6,
+    "h": 1.689,
+    "ferries": [],
+    "toll": 136,
+    "src": "vegvesen"
+  },
+  "Drammen|Geilo": {
+    "km": 200.0,
+    "h": 3.424,
+    "ferries": [],
+    "toll": 119,
+    "src": "vegvesen"
+  },
+  "Drammen|Geiranger": {
+    "km": 614.5,
+    "h": 9.051,
+    "ferries": [
+      "Linge–Eidsdal"
+    ],
+    "toll": 989,
+    "src": "vegvesen"
+  },
+  "Drammen|Gjøvik": {
+    "km": 150.3,
+    "h": 2.411,
+    "ferries": [],
+    "toll": 402,
+    "src": "vegvesen"
+  },
+  "Drammen|Hamar": {
+    "km": 169.0,
+    "h": 2.231,
+    "ferries": [],
+    "toll": 589,
+    "src": "vegvesen"
+  },
+  "Drammen|Haugesund": {
+    "km": 399.8,
+    "h": 6.406,
+    "ferries": [],
+    "toll": 300,
+    "src": "vegvesen"
+  },
+  "Drammen|Hemsedal": {
+    "km": 200.0,
+    "h": 3.348,
+    "ferries": [],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Drammen|Kongsberg": {
+    "km": 38.9,
+    "h": 0.68,
+    "ferries": [],
+    "toll": 119,
+    "src": "vegvesen"
+  },
+  "Drammen|Kristiansand": {
+    "km": 284.4,
+    "h": 3.747,
+    "ferries": [],
+    "toll": 378,
+    "src": "vegvesen"
+  },
+  "Drammen|Lillehammer": {
+    "km": 225.8,
+    "h": 2.984,
+    "ferries": [],
+    "toll": 727,
+    "src": "vegvesen"
+  },
+  "Drammen|Molde": {
+    "km": 539.6,
+    "h": 7.755,
+    "ferries": [
+      "Åfarnes–Sølsnes"
+    ],
+    "toll": 989,
+    "src": "vegvesen"
+  },
+  "Drammen|Moss": {
+    "km": 75.6,
+    "h": 1.208,
+    "ferries": [],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Drammen|Narvik": {
+    "km": 1423.0,
+    "h": 20.939,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1545,
+    "src": "vegvesen"
+  },
+  "Drammen|Oslo": {
+    "km": 43.6,
+    "h": 0.662,
+    "ferries": [],
+    "toll": 161,
+    "src": "vegvesen"
+  },
+  "Drammen|Oslo lufthavn Gardermoen": {
+    "km": 91.2,
+    "h": 1.254,
+    "ferries": [],
+    "toll": 435,
+    "src": "vegvesen"
+  },
+  "Drammen|Preikestolen": {
+    "km": 441.2,
+    "h": 7.415,
+    "ferries": [
+      "Nesvik–Hjelmeland"
+    ],
+    "toll": 238,
+    "src": "vegvesen"
+  },
+  "Drammen|Røros": {
+    "km": 424.1,
+    "h": 6.012,
+    "ferries": [],
+    "toll": 585,
+    "src": "vegvesen"
+  },
+  "Drammen|Sandefjord Torp": {
+    "km": 82.5,
+    "h": 1.097,
+    "ferries": [],
+    "toll": 67,
+    "src": "vegvesen"
+  },
+  "Drammen|Sarpsborg": {
+    "km": 105.8,
+    "h": 1.615,
+    "ferries": [],
+    "toll": 68,
+    "src": "vegvesen"
+  },
+  "Drammen|Stavanger": {
+    "km": 512.2,
+    "h": 7.244,
+    "ferries": [],
+    "toll": 1029,
+    "src": "vegvesen"
+  },
+  "Drammen|Tromsø": {
+    "km": 1654.8,
+    "h": 24.375,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1798,
+    "src": "vegvesen"
+  },
+  "Drammen|Trondheim": {
+    "km": 535.1,
+    "h": 7.701,
+    "ferries": [],
+    "toll": 931,
+    "src": "vegvesen"
+  },
+  "Drammen|Trondheim lufthavn Værnes": {
+    "km": 567.4,
+    "h": 8.206,
+    "ferries": [],
+    "toll": 998,
+    "src": "vegvesen"
+  },
+  "Drammen|Trysil": {
+    "km": 253.4,
+    "h": 3.423,
+    "ferries": [],
+    "toll": 585,
+    "src": "vegvesen"
+  },
+  "Drammen|Tønsberg": {
+    "km": 63.7,
+    "h": 0.909,
+    "ferries": [],
+    "toll": 42,
+    "src": "vegvesen"
+  },
+  "Drammen|Voss": {
+    "km": 340.9,
+    "h": 5.743,
+    "ferries": [],
+    "toll": 547,
+    "src": "vegvesen"
+  },
+  "Drammen|Ålesund": {
+    "km": 588.2,
+    "h": 8.234,
+    "ferries": [],
+    "toll": 1111,
+    "src": "vegvesen"
+  },
+  "Flåm|Fredrikstad": {
+    "km": 405.4,
+    "h": 6.176,
+    "ferries": [],
+    "toll": 872,
+    "src": "vegvesen"
+  },
+  "Flåm|Geilo": {
+    "km": 115.5,
+    "h": 1.967,
+    "ferries": [],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Flåm|Geiranger": {
+    "km": 278.3,
+    "h": 5.687,
+    "ferries": [
+      "Fodnes–Mannheller",
+      "Anda–Lote",
+      "Hellesylt–Geiranger"
+    ],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Flåm|Gjøvik": {
+    "km": 261.7,
+    "h": 3.999,
+    "ferries": [],
+    "toll": 54,
+    "src": "vegvesen"
+  },
+  "Flåm|Hamar": {
+    "km": 310.5,
+    "h": 4.695,
+    "ferries": [],
+    "toll": 146,
+    "src": "vegvesen"
+  },
+  "Flåm|Haugesund": {
+    "km": 286.4,
+    "h": 4.695,
+    "ferries": [],
+    "toll": 490,
+    "src": "vegvesen"
+  },
+  "Flåm|Hemsedal": {
+    "km": 111.5,
+    "h": 1.714,
+    "ferries": [],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Flåm|Kongsberg": {
+    "km": 275.0,
+    "h": 4.731,
+    "ferries": [],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Flåm|Kristiansand": {
+    "km": 487.7,
+    "h": 7.746,
+    "ferries": [],
+    "toll": 479,
+    "src": "vegvesen"
+  },
+  "Flåm|Lillehammer": {
+    "km": 276.0,
+    "h": 4.266,
+    "ferries": [],
+    "toll": 54,
+    "src": "vegvesen"
+  },
+  "Flåm|Molde": {
+    "km": 362.4,
+    "h": 6.658,
+    "ferries": [
+      "Fodnes–Mannheller",
+      "Anda–Lote",
+      "Stranda–Liabygda",
+      "Furneset–Molde"
+    ],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Flåm|Moss": {
+    "km": 373.3,
+    "h": 5.695,
+    "ferries": [],
+    "toll": 736,
+    "src": "vegvesen"
+  },
+  "Flåm|Narvik": {
+    "km": 1398.4,
+    "h": 21.63,
+    "ferries": [
+      "Fodnes–Mannheller",
+      "Bognes–Skarberget"
+    ],
+    "toll": 960,
+    "src": "vegvesen"
+  },
+  "Flåm|Oslo": {
+    "km": 313.5,
+    "h": 4.945,
+    "ferries": [],
+    "toll": 462,
+    "src": "vegvesen"
+  },
+  "Flåm|Oslo lufthavn Gardermoen": {
+    "km": 324.0,
+    "h": 5.066,
+    "ferries": [],
+    "toll": 357,
+    "src": "vegvesen"
+  },
+  "Flåm|Preikestolen": {
+    "km": 368.1,
+    "h": 6.464,
+    "ferries": [
+      "Nesvik–Hjelmeland"
+    ],
+    "toll": 428,
+    "src": "vegvesen"
+  },
+  "Flåm|Røros": {
+    "km": 490.3,
+    "h": 8.212,
+    "ferries": [
+      "Fodnes–Mannheller"
+    ],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Flåm|Sandefjord Torp": {
+    "km": 395.7,
+    "h": 6.011,
+    "ferries": [],
+    "toll": 254,
+    "src": "vegvesen"
+  },
+  "Flåm|Sarpsborg": {
+    "km": 403.5,
+    "h": 6.103,
+    "ferries": [],
+    "toll": 804,
+    "src": "vegvesen"
+  },
+  "Flåm|Stavanger": {
+    "km": 347.2,
+    "h": 6.062,
+    "ferries": [
+      "Arsvågen–Mortavika"
+    ],
+    "toll": 504,
+    "src": "vegvesen"
+  },
+  "Flåm|Tromsø": {
+    "km": 1630.2,
+    "h": 25.066,
+    "ferries": [
+      "Fodnes–Mannheller",
+      "Bognes–Skarberget"
+    ],
+    "toll": 1213,
+    "src": "vegvesen"
+  },
+  "Flåm|Trondheim": {
+    "km": 510.4,
+    "h": 8.392,
+    "ferries": [
+      "Fodnes–Mannheller"
+    ],
+    "toll": 346,
+    "src": "vegvesen"
+  },
+  "Flåm|Trondheim lufthavn Værnes": {
+    "km": 542.8,
+    "h": 8.898,
+    "ferries": [
+      "Fodnes–Mannheller"
+    ],
+    "toll": 413,
+    "src": "vegvesen"
+  },
+  "Flåm|Trysil": {
+    "km": 407.2,
+    "h": 6.059,
+    "ferries": [],
+    "toll": 246,
+    "src": "vegvesen"
+  },
+  "Flåm|Tønsberg": {
+    "km": 376.9,
+    "h": 5.823,
+    "ferries": [],
+    "toll": 229,
+    "src": "vegvesen"
+  },
+  "Flåm|Voss": {
+    "km": 66.4,
+    "h": 1.087,
+    "ferries": [],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Flåm|Ålesund": {
+    "km": 301.3,
+    "h": 5.379,
+    "ferries": [
+      "Fodnes–Mannheller",
+      "Anda–Lote",
+      "Folkestad–Volda",
+      "Festøya–Solavågen"
+    ],
+    "toll": 122,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Geilo": {
+    "km": 309.6,
+    "h": 4.739,
+    "ferries": [],
+    "toll": 1287,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Geiranger": {
+    "km": 657.6,
+    "h": 9.618,
+    "ferries": [
+      "Linge–Eidsdal"
+    ],
+    "toll": 1218,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Gjøvik": {
+    "km": 211.9,
+    "h": 3.139,
+    "ferries": [],
+    "toll": 1105,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Hamar": {
+    "km": 212.0,
+    "h": 2.797,
+    "ferries": [],
+    "toll": 818,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Haugesund": {
+    "km": 506.7,
+    "h": 8.016,
+    "ferries": [],
+    "toll": 368,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Hemsedal": {
+    "km": 291.5,
+    "h": 4.457,
+    "ferries": [],
+    "toll": 1287,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Kongsberg": {
+    "km": 145.8,
+    "h": 2.29,
+    "ferries": [],
+    "toll": 187,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Kristiansand": {
+    "km": 288.2,
+    "h": 4.584,
+    "ferries": [
+      "Moss–Horten"
+    ],
+    "toll": 446,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Lillehammer": {
+    "km": 268.8,
+    "h": 3.55,
+    "ferries": [],
+    "toll": 956,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Molde": {
+    "km": 582.6,
+    "h": 8.322,
+    "ferries": [
+      "Åfarnes–Sølsnes"
+    ],
+    "toll": 1218,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Moss": {
+    "km": 33.4,
+    "h": 0.586,
+    "ferries": [],
+    "toll": 68,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Narvik": {
+    "km": 1466.1,
+    "h": 21.505,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1774,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Oslo": {
+    "km": 91.7,
+    "h": 1.3,
+    "ferries": [],
+    "toll": 551,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Oslo lufthavn Gardermoen": {
+    "km": 134.2,
+    "h": 1.821,
+    "ferries": [],
+    "toll": 664,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Preikestolen": {
+    "km": 551.4,
+    "h": 8.751,
+    "ferries": [
+      "Moss–Horten"
+    ],
+    "toll": 1519,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Røros": {
+    "km": 467.1,
+    "h": 6.578,
+    "ferries": [],
+    "toll": 814,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Sandefjord Torp": {
+    "km": 86.3,
+    "h": 1.934,
+    "ferries": [
+      "Moss–Horten"
+    ],
+    "toll": 135,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Sarpsborg": {
+    "km": 15.7,
+    "h": 0.358,
+    "ferries": [],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Stavanger": {
+    "km": 516.0,
+    "h": 8.08,
+    "ferries": [
+      "Moss–Horten"
+    ],
+    "toll": 1097,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Tromsø": {
+    "km": 1697.8,
+    "h": 24.941,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 2027,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Trondheim": {
+    "km": 578.1,
+    "h": 8.267,
+    "ferries": [],
+    "toll": 1160,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Trondheim lufthavn Værnes": {
+    "km": 610.4,
+    "h": 8.773,
+    "ferries": [],
+    "toll": 1227,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Trysil": {
+    "km": 296.5,
+    "h": 3.989,
+    "ferries": [],
+    "toll": 814,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Tønsberg": {
+    "km": 67.5,
+    "h": 1.746,
+    "ferries": [
+      "Moss–Horten"
+    ],
+    "toll": 110,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Voss": {
+    "km": 450.7,
+    "h": 7.074,
+    "ferries": [],
+    "toll": 1715,
+    "src": "vegvesen"
+  },
+  "Fredrikstad|Ålesund": {
+    "km": 631.2,
+    "h": 8.8,
+    "ferries": [],
+    "toll": 1340,
+    "src": "vegvesen"
+  },
+  "Geilo|Geiranger": {
+    "km": 373.9,
+    "h": 7.331,
+    "ferries": [
+      "Fodnes–Mannheller",
+      "Anda–Lote",
+      "Hellesylt–Geiranger"
+    ],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Geilo|Gjøvik": {
+    "km": 189.7,
+    "h": 3.183,
+    "ferries": [],
+    "toll": 54,
+    "src": "vegvesen"
+  },
+  "Geilo|Hamar": {
+    "km": 238.5,
+    "h": 3.879,
+    "ferries": [],
+    "toll": 146,
+    "src": "vegvesen"
+  },
+  "Geilo|Haugesund": {
+    "km": 292.5,
+    "h": 4.908,
+    "ferries": [],
+    "toll": 62,
+    "src": "vegvesen"
+  },
+  "Geilo|Hemsedal": {
+    "km": 80.8,
+    "h": 1.373,
+    "ferries": [],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Geilo|Kongsberg": {
+    "km": 160.3,
+    "h": 2.784,
+    "ferries": [],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Geilo|Kristiansand": {
+    "km": 441.8,
+    "h": 6.798,
+    "ferries": [],
+    "toll": 290,
+    "src": "vegvesen"
+  },
+  "Geilo|Lillehammer": {
+    "km": 204.0,
+    "h": 3.45,
+    "ferries": [],
+    "toll": 54,
+    "src": "vegvesen"
+  },
+  "Geilo|Molde": {
+    "km": 454.9,
+    "h": 7.515,
+    "ferries": [
+      "Åfarnes–Sølsnes"
+    ],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Geilo|Moss": {
+    "km": 280.5,
+    "h": 4.291,
+    "ferries": [],
+    "toll": 736,
+    "src": "vegvesen"
+  },
+  "Geilo|Narvik": {
+    "km": 1377.4,
+    "h": 21.176,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 960,
+    "src": "vegvesen"
+  },
+  "Geilo|Oslo": {
+    "km": 220.8,
+    "h": 3.54,
+    "ferries": [],
+    "toll": 462,
+    "src": "vegvesen"
+  },
+  "Geilo|Oslo lufthavn Gardermoen": {
+    "km": 231.2,
+    "h": 3.662,
+    "ferries": [],
+    "toll": 357,
+    "src": "vegvesen"
+  },
+  "Geilo|Preikestolen": {
+    "km": 374.3,
+    "h": 6.677,
+    "ferries": [
+      "Nesvik–Hjelmeland"
+    ],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Geilo|Røros": {
+    "km": 466.5,
+    "h": 7.601,
+    "ferries": [],
+    "toll": 54,
+    "src": "vegvesen"
+  },
+  "Geilo|Sandefjord Torp": {
+    "km": 260.3,
+    "h": 4.292,
+    "ferries": [],
+    "toll": 67,
+    "src": "vegvesen"
+  },
+  "Geilo|Sarpsborg": {
+    "km": 310.7,
+    "h": 4.698,
+    "ferries": [],
+    "toll": 804,
+    "src": "vegvesen"
+  },
+  "Geilo|Stavanger": {
+    "km": 353.3,
+    "h": 6.274,
+    "ferries": [
+      "Arsvågen–Mortavika"
+    ],
+    "toll": 76,
+    "src": "vegvesen"
+  },
+  "Geilo|Tromsø": {
+    "km": 1609.1,
+    "h": 24.611,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1213,
+    "src": "vegvesen"
+  },
+  "Geilo|Trondheim": {
+    "km": 489.4,
+    "h": 7.938,
+    "ferries": [],
+    "toll": 346,
+    "src": "vegvesen"
+  },
+  "Geilo|Trondheim lufthavn Værnes": {
+    "km": 521.8,
+    "h": 8.443,
+    "ferries": [],
+    "toll": 413,
+    "src": "vegvesen"
+  },
+  "Geilo|Trysil": {
+    "km": 335.2,
+    "h": 5.243,
+    "ferries": [],
+    "toll": 246,
+    "src": "vegvesen"
+  },
+  "Geilo|Tønsberg": {
+    "km": 241.5,
+    "h": 4.104,
+    "ferries": [],
+    "toll": 42,
+    "src": "vegvesen"
+  },
+  "Geilo|Voss": {
+    "km": 141.3,
+    "h": 2.34,
+    "ferries": [],
+    "toll": 428,
+    "src": "vegvesen"
+  },
+  "Geilo|Ålesund": {
+    "km": 396.9,
+    "h": 7.023,
+    "ferries": [
+      "Fodnes–Mannheller",
+      "Anda–Lote",
+      "Folkestad–Volda",
+      "Festøya–Solavågen"
+    ],
+    "toll": 122,
+    "src": "vegvesen"
+  },
+  "Geiranger|Gjøvik": {
+    "km": 434.4,
+    "h": 6.788,
+    "ferries": [
+      "Eidsdal–Linge"
+    ],
+    "toll": 262,
+    "src": "vegvesen"
+  },
+  "Geiranger|Hamar": {
+    "km": 450.2,
+    "h": 6.987,
+    "ferries": [
+      "Eidsdal–Linge"
+    ],
+    "toll": 354,
+    "src": "vegvesen"
+  },
+  "Geiranger|Haugesund": {
+    "km": 562.7,
+    "h": 10.317,
+    "ferries": [
+      "Geiranger–Hellesylt",
+      "Lote–Anda",
+      "Mannheller–Fodnes"
+    ],
+    "toll": 490,
+    "src": "vegvesen"
+  },
+  "Geiranger|Hemsedal": {
+    "km": 319.6,
+    "h": 6.386,
+    "ferries": [
+      "Geiranger–Hellesylt",
+      "Lote–Anda",
+      "Mannheller–Fodnes"
+    ],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Geiranger|Kongsberg": {
+    "km": 602.9,
+    "h": 9.528,
+    "ferries": [
+      "Eidsdal–Linge"
+    ],
+    "toll": 783,
+    "src": "vegvesen"
+  },
+  "Geiranger|Kristiansand": {
+    "km": 896.1,
+    "h": 12.668,
+    "ferries": [
+      "Eidsdal–Linge"
+    ],
+    "toll": 1754,
+    "src": "vegvesen"
+  },
+  "Geiranger|Lillehammer": {
+    "km": 392.8,
+    "h": 6.226,
+    "ferries": [
+      "Eidsdal–Linge"
+    ],
+    "toll": 262,
+    "src": "vegvesen"
+  },
+  "Geiranger|Molde": {
+    "km": 107.7,
+    "h": 2.677,
+    "ferries": [
+      "Eidsdal–Linge",
+      "Furneset–Molde"
+    ],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Geiranger|Moss": {
+    "km": 628.8,
+    "h": 9.199,
+    "ferries": [
+      "Eidsdal–Linge"
+    ],
+    "toll": 1150,
+    "src": "vegvesen"
+  },
+  "Geiranger|Narvik": {
+    "km": 1210.2,
+    "h": 19.459,
+    "ferries": [
+      "Eidsdal–Linge",
+      "Furneset–Molde",
+      "Kanestraum–Halsa",
+      "Bognes–Skarberget"
+    ],
+    "toll": 852,
+    "src": "vegvesen"
+  },
+  "Geiranger|Oslo": {
+    "km": 573.6,
+    "h": 8.499,
+    "ferries": [
+      "Eidsdal–Linge"
+    ],
+    "toll": 941,
+    "src": "vegvesen"
+  },
+  "Geiranger|Oslo lufthavn Gardermoen": {
+    "km": 535.2,
+    "h": 7.983,
+    "ferries": [
+      "Eidsdal–Linge"
+    ],
+    "toll": 554,
+    "src": "vegvesen"
+  },
+  "Geiranger|Preikestolen": {
+    "km": 644.4,
+    "h": 12.086,
+    "ferries": [
+      "Geiranger–Hellesylt",
+      "Lote–Anda",
+      "Mannheller–Fodnes",
+      "Nesvik–Hjelmeland"
+    ],
+    "toll": 428,
+    "src": "vegvesen"
+  },
+  "Geiranger|Røros": {
+    "km": 414.6,
+    "h": 6.887,
+    "ferries": [
+      "Eidsdal–Linge"
+    ],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Geiranger|Sandefjord Torp": {
+    "km": 694.2,
+    "h": 10.017,
+    "ferries": [
+      "Eidsdal–Linge"
+    ],
+    "toll": 1443,
+    "src": "vegvesen"
+  },
+  "Geiranger|Sarpsborg": {
+    "km": 659.0,
+    "h": 9.607,
+    "ferries": [
+      "Eidsdal–Linge"
+    ],
+    "toll": 1218,
+    "src": "vegvesen"
+  },
+  "Geiranger|Stavanger": {
+    "km": 623.5,
+    "h": 11.684,
+    "ferries": [
+      "Geiranger–Hellesylt",
+      "Lote–Anda",
+      "Mannheller–Fodnes",
+      "Arsvågen–Mortavika"
+    ],
+    "toll": 504,
+    "src": "vegvesen"
+  },
+  "Geiranger|Tromsø": {
+    "km": 1442.0,
+    "h": 22.895,
+    "ferries": [
+      "Eidsdal–Linge",
+      "Furneset–Molde",
+      "Kanestraum–Halsa",
+      "Bognes–Skarberget"
+    ],
+    "toll": 1105,
+    "src": "vegvesen"
+  },
+  "Geiranger|Trondheim": {
+    "km": 322.3,
+    "h": 6.221,
+    "ferries": [
+      "Eidsdal–Linge",
+      "Furneset–Molde",
+      "Kanestraum–Halsa"
+    ],
+    "toll": 238,
+    "src": "vegvesen"
+  },
+  "Geiranger|Trondheim lufthavn Værnes": {
+    "km": 354.6,
+    "h": 6.727,
+    "ferries": [
+      "Eidsdal–Linge",
+      "Furneset–Molde",
+      "Kanestraum–Halsa"
+    ],
+    "toll": 305,
+    "src": "vegvesen"
+  },
+  "Geiranger|Trysil": {
+    "km": 546.9,
+    "h": 8.351,
+    "ferries": [
+      "Eidsdal–Linge"
+    ],
+    "toll": 454,
+    "src": "vegvesen"
+  },
+  "Geiranger|Tønsberg": {
+    "km": 675.4,
+    "h": 9.829,
+    "ferries": [
+      "Eidsdal–Linge"
+    ],
+    "toll": 1418,
+    "src": "vegvesen"
+  },
+  "Geiranger|Voss": {
+    "km": 342.7,
+    "h": 6.709,
+    "ferries": [
+      "Geiranger–Hellesylt",
+      "Lote–Anda",
+      "Mannheller–Fodnes"
+    ],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Geiranger|Ålesund": {
+    "km": 108.1,
+    "h": 2.135,
+    "ferries": [
+      "Eidsdal–Linge"
+    ],
+    "toll": 122,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Hamar": {
+    "km": 49.4,
+    "h": 0.733,
+    "ferries": [],
+    "toll": 92,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Haugesund": {
+    "km": 481.7,
+    "h": 8.072,
+    "ferries": [],
+    "toll": 116,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Hemsedal": {
+    "km": 162.6,
+    "h": 2.726,
+    "ferries": [],
+    "toll": 54,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Kongsberg": {
+    "km": 169.2,
+    "h": 2.778,
+    "ferries": [],
+    "toll": 521,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Kristiansand": {
+    "km": 431.1,
+    "h": 6.025,
+    "ferries": [],
+    "toll": 843,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Lillehammer": {
+    "km": 45.4,
+    "h": 0.729,
+    "ferries": [],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Molde": {
+    "km": 359.3,
+    "h": 5.501,
+    "ferries": [
+      "Åfarnes–Sølsnes"
+    ],
+    "toll": 262,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Moss": {
+    "km": 182.3,
+    "h": 2.687,
+    "ferries": [],
+    "toll": 876,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Narvik": {
+    "km": 1281.8,
+    "h": 19.162,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1222,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Oslo": {
+    "km": 122.8,
+    "h": 1.962,
+    "ferries": [],
+    "toll": 715,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Oslo lufthavn Gardermoen": {
+    "km": 101.8,
+    "h": 1.531,
+    "ferries": [],
+    "toll": 232,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Preikestolen": {
+    "km": 571.5,
+    "h": 9.514,
+    "ferries": [
+      "Nesvik–Hjelmeland"
+    ],
+    "toll": 640,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Røros": {
+    "km": 316.8,
+    "h": 4.686,
+    "ferries": [],
+    "toll": 192,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Sandefjord Torp": {
+    "km": 229.2,
+    "h": 3.374,
+    "ferries": [],
+    "toll": 532,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Sarpsborg": {
+    "km": 212.5,
+    "h": 3.094,
+    "ferries": [],
+    "toll": 944,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Stavanger": {
+    "km": 578.3,
+    "h": 9.456,
+    "ferries": [
+      "Nesvik–Hjelmeland"
+    ],
+    "toll": 1062,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Tromsø": {
+    "km": 1513.5,
+    "h": 22.597,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1475,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Trondheim": {
+    "km": 393.8,
+    "h": 5.924,
+    "ferries": [],
+    "toll": 608,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Trondheim lufthavn Værnes": {
+    "km": 426.2,
+    "h": 6.429,
+    "ferries": [],
+    "toll": 675,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Trysil": {
+    "km": 146.1,
+    "h": 2.097,
+    "ferries": [],
+    "toll": 192,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Tønsberg": {
+    "km": 210.5,
+    "h": 3.186,
+    "ferries": [],
+    "toll": 507,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Voss": {
+    "km": 325.9,
+    "h": 5.001,
+    "ferries": [],
+    "toll": 54,
+    "src": "vegvesen"
+  },
+  "Gjøvik|Ålesund": {
+    "km": 407.8,
+    "h": 5.979,
+    "ferries": [],
+    "toll": 384,
+    "src": "vegvesen"
+  },
+  "Hamar|Haugesund": {
+    "km": 569.7,
+    "h": 8.553,
+    "ferries": [],
+    "toll": 1276,
+    "src": "vegvesen"
+  },
+  "Hamar|Hemsedal": {
+    "km": 211.6,
+    "h": 3.418,
+    "ferries": [],
+    "toll": 192,
+    "src": "vegvesen"
+  },
+  "Hamar|Kongsberg": {
+    "km": 208.8,
+    "h": 2.826,
+    "ferries": [],
+    "toll": 1095,
+    "src": "vegvesen"
+  },
+  "Hamar|Kristiansand": {
+    "km": 450.0,
+    "h": 5.838,
+    "ferries": [],
+    "toll": 1354,
+    "src": "vegvesen"
+  },
+  "Hamar|Lillehammer": {
+    "km": 61.3,
+    "h": 0.918,
+    "ferries": [],
+    "toll": 138,
+    "src": "vegvesen"
+  },
+  "Hamar|Molde": {
+    "km": 375.1,
+    "h": 5.69,
+    "ferries": [
+      "Åfarnes–Sølsnes"
+    ],
+    "toll": 400,
+    "src": "vegvesen"
+  },
+  "Hamar|Moss": {
+    "km": 182.8,
+    "h": 2.369,
+    "ferries": [],
+    "toll": 750,
+    "src": "vegvesen"
+  },
+  "Hamar|Narvik": {
+    "km": 1270.5,
+    "h": 19.034,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1014,
+    "src": "vegvesen"
+  },
+  "Hamar|Oslo": {
+    "km": 127.6,
+    "h": 1.67,
+    "ferries": [],
+    "toll": 541,
+    "src": "vegvesen"
+  },
+  "Hamar|Oslo lufthavn Gardermoen": {
+    "km": 89.2,
+    "h": 1.153,
+    "ferries": [],
+    "toll": 154,
+    "src": "vegvesen"
+  },
+  "Hamar|Preikestolen": {
+    "km": 611.2,
+    "h": 9.562,
+    "ferries": [
+      "Nesvik–Hjelmeland"
+    ],
+    "toll": 1214,
+    "src": "vegvesen"
+  },
+  "Hamar|Røros": {
+    "km": 271.5,
+    "h": 4.106,
+    "ferries": [],
+    "toll": 54,
+    "src": "vegvesen"
+  },
+  "Hamar|Sandefjord Torp": {
+    "km": 248.2,
+    "h": 3.187,
+    "ferries": [],
+    "toll": 1043,
+    "src": "vegvesen"
+  },
+  "Hamar|Sarpsborg": {
+    "km": 213.0,
+    "h": 2.777,
+    "ferries": [],
+    "toll": 818,
+    "src": "vegvesen"
+  },
+  "Hamar|Stavanger": {
+    "km": 677.9,
+    "h": 9.334,
+    "ferries": [],
+    "toll": 2005,
+    "src": "vegvesen"
+  },
+  "Hamar|Tromsø": {
+    "km": 1502.2,
+    "h": 22.469,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1267,
+    "src": "vegvesen"
+  },
+  "Hamar|Trondheim": {
+    "km": 382.5,
+    "h": 5.796,
+    "ferries": [],
+    "toll": 400,
+    "src": "vegvesen"
+  },
+  "Hamar|Trondheim lufthavn Værnes": {
+    "km": 414.9,
+    "h": 6.301,
+    "ferries": [],
+    "toll": 467,
+    "src": "vegvesen"
+  },
+  "Hamar|Trysil": {
+    "km": 100.9,
+    "h": 1.517,
+    "ferries": [],
+    "toll": 54,
+    "src": "vegvesen"
+  },
+  "Hamar|Tønsberg": {
+    "km": 229.4,
+    "h": 2.999,
+    "ferries": [],
+    "toll": 1018,
+    "src": "vegvesen"
+  },
+  "Hamar|Voss": {
+    "km": 374.9,
+    "h": 5.693,
+    "ferries": [],
+    "toll": 192,
+    "src": "vegvesen"
+  },
+  "Hamar|Ålesund": {
+    "km": 423.7,
+    "h": 6.168,
+    "ferries": [],
+    "toll": 522,
+    "src": "vegvesen"
+  },
+  "Haugesund|Hemsedal": {
+    "km": 372.8,
+    "h": 6.266,
+    "ferries": [],
+    "toll": 62,
+    "src": "vegvesen"
+  },
+  "Haugesund|Kongsberg": {
+    "km": 364.3,
+    "h": 5.865,
+    "ferries": [],
+    "toll": 181,
+    "src": "vegvesen"
+  },
+  "Haugesund|Kristiansand": {
+    "km": 308.7,
+    "h": 5.31,
+    "ferries": [
+      "Arsvågen–Mortavika"
+    ],
+    "toll": 789,
+    "src": "vegvesen"
+  },
+  "Haugesund|Lillehammer": {
+    "km": 496.0,
+    "h": 8.343,
+    "ferries": [],
+    "toll": 116,
+    "src": "vegvesen"
+  },
+  "Haugesund|Molde": {
+    "km": 646.6,
+    "h": 11.263,
+    "ferries": [
+      "Fodnes–Mannheller",
+      "Anda–Lote",
+      "Stranda–Liabygda",
+      "Furneset–Molde"
+    ],
+    "toll": 490,
+    "src": "vegvesen"
+  },
+  "Haugesund|Moss": {
+    "km": 478.4,
+    "h": 7.53,
+    "ferries": [],
+    "toll": 300,
+    "src": "vegvesen"
+  },
+  "Haugesund|Narvik": {
+    "km": 1669.4,
+    "h": 26.069,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1022,
+    "src": "vegvesen"
+  },
+  "Haugesund|Oslo": {
+    "km": 444.2,
+    "h": 6.944,
+    "ferries": [],
+    "toll": 461,
+    "src": "vegvesen"
+  },
+  "Haugesund|Oslo lufthavn Gardermoen": {
+    "km": 491.8,
+    "h": 7.537,
+    "ferries": [],
+    "toll": 735,
+    "src": "vegvesen"
+  },
+  "Haugesund|Preikestolen": {
+    "km": 118.8,
+    "h": 2.58,
+    "ferries": [
+      "Arsvågen–Mortavika"
+    ],
+    "toll": 560,
+    "src": "vegvesen"
+  },
+  "Haugesund|Røros": {
+    "km": 824.7,
+    "h": 12.294,
+    "ferries": [],
+    "toll": 885,
+    "src": "vegvesen"
+  },
+  "Haugesund|Sandefjord Torp": {
+    "km": 409.7,
+    "h": 6.515,
+    "ferries": [],
+    "toll": 327,
+    "src": "vegvesen"
+  },
+  "Haugesund|Sarpsborg": {
+    "km": 508.6,
+    "h": 7.938,
+    "ferries": [],
+    "toll": 368,
+    "src": "vegvesen"
+  },
+  "Haugesund|Stavanger": {
+    "km": 82.6,
+    "h": 1.886,
+    "ferries": [
+      "Arsvågen–Mortavika"
+    ],
+    "toll": 138,
+    "src": "vegvesen"
+  },
+  "Haugesund|Tromsø": {
+    "km": 1901.1,
+    "h": 29.505,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1275,
+    "src": "vegvesen"
+  },
+  "Haugesund|Trondheim": {
+    "km": 781.4,
+    "h": 12.831,
+    "ferries": [],
+    "toll": 408,
+    "src": "vegvesen"
+  },
+  "Haugesund|Trondheim lufthavn Værnes": {
+    "km": 813.8,
+    "h": 13.336,
+    "ferries": [],
+    "toll": 475,
+    "src": "vegvesen"
+  },
+  "Haugesund|Trysil": {
+    "km": 654.0,
+    "h": 9.705,
+    "ferries": [],
+    "toll": 885,
+    "src": "vegvesen"
+  },
+  "Haugesund|Tønsberg": {
+    "km": 430.4,
+    "h": 6.807,
+    "ferries": [],
+    "toll": 424,
+    "src": "vegvesen"
+  },
+  "Haugesund|Voss": {
+    "km": 223.0,
+    "h": 3.724,
+    "ferries": [],
+    "toll": 490,
+    "src": "vegvesen"
+  },
+  "Haugesund|Ålesund": {
+    "km": 585.5,
+    "h": 9.984,
+    "ferries": [
+      "Fodnes–Mannheller",
+      "Anda–Lote",
+      "Folkestad–Volda",
+      "Festøya–Solavågen"
+    ],
+    "toll": 612,
+    "src": "vegvesen"
+  },
+  "Hemsedal|Kongsberg": {
+    "km": 205.2,
+    "h": 3.409,
+    "ferries": [],
+    "toll": 119,
+    "src": "vegvesen"
+  },
+  "Hemsedal|Kristiansand": {
+    "km": 486.3,
+    "h": 6.954,
+    "ferries": [],
+    "toll": 565,
+    "src": "vegvesen"
+  },
+  "Hemsedal|Lillehammer": {
+    "km": 176.9,
+    "h": 2.982,
+    "ferries": [],
+    "toll": 54,
+    "src": "vegvesen"
+  },
+  "Hemsedal|Molde": {
+    "km": 427.7,
+    "h": 7.048,
+    "ferries": [
+      "Åfarnes–Sølsnes"
+    ],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Hemsedal|Moss": {
+    "km": 262.1,
+    "h": 3.989,
+    "ferries": [],
+    "toll": 736,
+    "src": "vegvesen"
+  },
+  "Hemsedal|Narvik": {
+    "km": 1350.2,
+    "h": 20.709,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 960,
+    "src": "vegvesen"
+  },
+  "Hemsedal|Oslo": {
+    "km": 202.3,
+    "h": 3.238,
+    "ferries": [],
+    "toll": 462,
+    "src": "vegvesen"
+  },
+  "Hemsedal|Oslo lufthavn Gardermoen": {
+    "km": 212.7,
+    "h": 3.36,
+    "ferries": [],
+    "toll": 357,
+    "src": "vegvesen"
+  },
+  "Hemsedal|Preikestolen": {
+    "km": 454.5,
+    "h": 8.018,
+    "ferries": [
+      "Nesvik–Hjelmeland"
+    ],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Hemsedal|Røros": {
+    "km": 439.4,
+    "h": 7.134,
+    "ferries": [],
+    "toll": 54,
+    "src": "vegvesen"
+  },
+  "Hemsedal|Sandefjord Torp": {
+    "km": 284.4,
+    "h": 4.304,
+    "ferries": [],
+    "toll": 254,
+    "src": "vegvesen"
+  },
+  "Hemsedal|Sarpsborg": {
+    "km": 292.3,
+    "h": 4.396,
+    "ferries": [],
+    "toll": 804,
+    "src": "vegvesen"
+  },
+  "Hemsedal|Stavanger": {
+    "km": 433.5,
+    "h": 7.615,
+    "ferries": [
+      "Arsvågen–Mortavika"
+    ],
+    "toll": 76,
+    "src": "vegvesen"
+  },
+  "Hemsedal|Tromsø": {
+    "km": 1582.0,
+    "h": 24.144,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1213,
+    "src": "vegvesen"
+  },
+  "Hemsedal|Trondheim": {
+    "km": 462.3,
+    "h": 7.471,
+    "ferries": [],
+    "toll": 346,
+    "src": "vegvesen"
+  },
+  "Hemsedal|Trondheim lufthavn Værnes": {
+    "km": 494.6,
+    "h": 7.976,
+    "ferries": [],
+    "toll": 413,
+    "src": "vegvesen"
+  },
+  "Hemsedal|Trysil": {
+    "km": 308.1,
+    "h": 4.775,
+    "ferries": [],
+    "toll": 246,
+    "src": "vegvesen"
+  },
+  "Hemsedal|Tønsberg": {
+    "km": 265.7,
+    "h": 4.116,
+    "ferries": [],
+    "toll": 229,
+    "src": "vegvesen"
+  },
+  "Hemsedal|Voss": {
+    "km": 175.8,
+    "h": 2.71,
+    "ferries": [],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Hemsedal|Ålesund": {
+    "km": 342.4,
+    "h": 6.047,
+    "ferries": [
+      "Fodnes–Mannheller",
+      "Anda–Lote",
+      "Folkestad–Volda",
+      "Festøya–Solavågen"
+    ],
+    "toll": 122,
+    "src": "vegvesen"
+  },
+  "Kongsberg|Kristiansand": {
+    "km": 281.9,
+    "h": 4.039,
+    "ferries": [],
+    "toll": 290,
+    "src": "vegvesen"
+  },
+  "Kongsberg|Lillehammer": {
+    "km": 219.8,
+    "h": 3.447,
+    "ferries": [],
+    "toll": 521,
+    "src": "vegvesen"
+  },
+  "Kongsberg|Molde": {
+    "km": 533.6,
+    "h": 8.219,
+    "ferries": [
+      "Åfarnes–Sølsnes"
+    ],
+    "toll": 783,
+    "src": "vegvesen"
+  },
+  "Kongsberg|Moss": {
+    "km": 118.8,
+    "h": 1.801,
+    "ferries": [],
+    "toll": 119,
+    "src": "vegvesen"
+  },
+  "Kongsberg|Narvik": {
+    "km": 1464.1,
+    "h": 21.492,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1664,
+    "src": "vegvesen"
+  },
+  "Kongsberg|Oslo": {
+    "km": 84.6,
+    "h": 1.215,
+    "ferries": [],
+    "toll": 280,
+    "src": "vegvesen"
+  },
+  "Kongsberg|Oslo lufthavn Gardermoen": {
+    "km": 132.3,
+    "h": 1.807,
+    "ferries": [],
+    "toll": 554,
+    "src": "vegvesen"
+  },
+  "Kongsberg|Preikestolen": {
+    "km": 405.1,
+    "h": 6.861,
+    "ferries": [
+      "Nesvik–Hjelmeland"
+    ],
+    "toll": 119,
+    "src": "vegvesen"
+  },
+  "Kongsberg|Røros": {
+    "km": 465.1,
+    "h": 6.565,
+    "ferries": [],
+    "toll": 704,
+    "src": "vegvesen"
+  },
+  "Kongsberg|Sandefjord Torp": {
+    "km": 100.4,
+    "h": 1.533,
+    "ferries": [],
+    "toll": 67,
+    "src": "vegvesen"
+  },
+  "Kongsberg|Sarpsborg": {
+    "km": 149.0,
+    "h": 2.209,
+    "ferries": [],
+    "toll": 187,
+    "src": "vegvesen"
+  },
+  "Kongsberg|Stavanger": {
+    "km": 411.9,
+    "h": 6.804,
+    "ferries": [
+      "Nesvik–Hjelmeland"
+    ],
+    "toll": 541,
+    "src": "vegvesen"
+  },
+  "Kongsberg|Tromsø": {
+    "km": 1695.9,
+    "h": 24.928,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1917,
+    "src": "vegvesen"
+  },
+  "Kongsberg|Trondheim": {
+    "km": 576.1,
+    "h": 8.254,
+    "ferries": [],
+    "toll": 1050,
+    "src": "vegvesen"
+  },
+  "Kongsberg|Trondheim lufthavn Værnes": {
+    "km": 608.5,
+    "h": 8.76,
+    "ferries": [],
+    "toll": 1117,
+    "src": "vegvesen"
+  },
+  "Kongsberg|Trysil": {
+    "km": 294.5,
+    "h": 3.976,
+    "ferries": [],
+    "toll": 704,
+    "src": "vegvesen"
+  },
+  "Kongsberg|Tønsberg": {
+    "km": 81.7,
+    "h": 1.345,
+    "ferries": [],
+    "toll": 42,
+    "src": "vegvesen"
+  },
+  "Kongsberg|Voss": {
+    "km": 301.1,
+    "h": 5.106,
+    "ferries": [],
+    "toll": 428,
+    "src": "vegvesen"
+  },
+  "Kongsberg|Ålesund": {
+    "km": 582.1,
+    "h": 8.697,
+    "ferries": [],
+    "toll": 905,
+    "src": "vegvesen"
+  },
+  "Kristiansand|Lillehammer": {
+    "km": 506.5,
+    "h": 6.569,
+    "ferries": [],
+    "toll": 1105,
+    "src": "vegvesen"
+  },
+  "Kristiansand|Molde": {
+    "km": 820.3,
+    "h": 11.341,
+    "ferries": [
+      "Åfarnes–Sølsnes"
+    ],
+    "toll": 1367,
+    "src": "vegvesen"
+  },
+  "Kristiansand|Moss": {
+    "km": 254.4,
+    "h": 3.973,
+    "ferries": [
+      "Horten–Moss"
+    ],
+    "toll": 378,
+    "src": "vegvesen"
+  },
+  "Kristiansand|Narvik": {
+    "km": 1703.8,
+    "h": 24.524,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1923,
+    "src": "vegvesen"
+  },
+  "Kristiansand|Oslo": {
+    "km": 324.3,
+    "h": 4.247,
+    "ferries": [],
+    "toll": 539,
+    "src": "vegvesen"
+  },
+  "Kristiansand|Oslo lufthavn Gardermoen": {
+    "km": 371.9,
+    "h": 4.839,
+    "ferries": [],
+    "toll": 813,
+    "src": "vegvesen"
+  },
+  "Kristiansand|Preikestolen": {
+    "km": 265.2,
+    "h": 4.226,
+    "ferries": [],
+    "toll": 1073,
+    "src": "vegvesen"
+  },
+  "Kristiansand|Røros": {
+    "km": 704.8,
+    "h": 9.597,
+    "ferries": [],
+    "toll": 963,
+    "src": "vegvesen"
+  },
+  "Kristiansand|Sandefjord Torp": {
+    "km": 208.7,
+    "h": 2.792,
+    "ferries": [],
+    "toll": 311,
+    "src": "vegvesen"
+  },
+  "Kristiansand|Sarpsborg": {
+    "km": 288.1,
+    "h": 4.503,
+    "ferries": [
+      "Horten–Moss"
+    ],
+    "toll": 446,
+    "src": "vegvesen"
+  },
+  "Kristiansand|Stavanger": {
+    "km": 229.7,
+    "h": 3.555,
+    "ferries": [],
+    "toll": 651,
+    "src": "vegvesen"
+  },
+  "Kristiansand|Tromsø": {
+    "km": 1935.5,
+    "h": 27.96,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 2176,
+    "src": "vegvesen"
+  },
+  "Kristiansand|Trondheim": {
+    "km": 815.8,
+    "h": 11.286,
+    "ferries": [],
+    "toll": 1309,
+    "src": "vegvesen"
+  },
+  "Kristiansand|Trondheim lufthavn Værnes": {
+    "km": 848.1,
+    "h": 11.792,
+    "ferries": [],
+    "toll": 1376,
+    "src": "vegvesen"
+  },
+  "Kristiansand|Trysil": {
+    "km": 534.2,
+    "h": 7.008,
+    "ferries": [],
+    "toll": 963,
+    "src": "vegvesen"
+  },
+  "Kristiansand|Tønsberg": {
+    "km": 229.3,
+    "h": 3.084,
+    "ferries": [],
+    "toll": 408,
+    "src": "vegvesen"
+  },
+  "Kristiansand|Voss": {
+    "km": 423.8,
+    "h": 6.757,
+    "ferries": [],
+    "toll": 428,
+    "src": "vegvesen"
+  },
+  "Kristiansand|Ålesund": {
+    "km": 868.9,
+    "h": 11.819,
+    "ferries": [],
+    "toll": 1489,
+    "src": "vegvesen"
+  },
+  "Lillehammer|Molde": {
+    "km": 317.1,
+    "h": 4.886,
+    "ferries": [
+      "Åfarnes–Sølsnes"
+    ],
+    "toll": 262,
+    "src": "vegvesen"
+  },
+  "Lillehammer|Moss": {
+    "km": 239.7,
+    "h": 3.111,
+    "ferries": [],
+    "toll": 888,
+    "src": "vegvesen"
+  },
+  "Lillehammer|Narvik": {
+    "km": 1239.6,
+    "h": 18.547,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1222,
+    "src": "vegvesen"
+  },
+  "Lillehammer|Oslo": {
+    "km": 184.5,
+    "h": 2.411,
+    "ferries": [],
+    "toll": 679,
+    "src": "vegvesen"
+  },
+  "Lillehammer|Oslo lufthavn Gardermoen": {
+    "km": 146.0,
+    "h": 1.895,
+    "ferries": [],
+    "toll": 292,
+    "src": "vegvesen"
+  },
+  "Lillehammer|Preikestolen": {
+    "km": 577.4,
+    "h": 10.07,
+    "ferries": [
+      "Nesvik–Hjelmeland"
+    ],
+    "toll": 54,
+    "src": "vegvesen"
+  },
+  "Lillehammer|Røros": {
+    "km": 265.7,
+    "h": 4.266,
+    "ferries": [],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Lillehammer|Sandefjord Torp": {
+    "km": 305.0,
+    "h": 3.929,
+    "ferries": [],
+    "toll": 1181,
+    "src": "vegvesen"
+  },
+  "Lillehammer|Sarpsborg": {
+    "km": 269.9,
+    "h": 3.518,
+    "ferries": [],
+    "toll": 956,
+    "src": "vegvesen"
+  },
+  "Lillehammer|Stavanger": {
+    "km": 556.5,
+    "h": 9.668,
+    "ferries": [
+      "Arsvågen–Mortavika"
+    ],
+    "toll": 130,
+    "src": "vegvesen"
+  },
+  "Lillehammer|Tromsø": {
+    "km": 1471.4,
+    "h": 21.982,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1475,
+    "src": "vegvesen"
+  },
+  "Lillehammer|Trondheim": {
+    "km": 351.6,
+    "h": 5.309,
+    "ferries": [],
+    "toll": 608,
+    "src": "vegvesen"
+  },
+  "Lillehammer|Trondheim lufthavn Værnes": {
+    "km": 384.0,
+    "h": 5.814,
+    "ferries": [],
+    "toll": 675,
+    "src": "vegvesen"
+  },
+  "Lillehammer|Trysil": {
+    "km": 157.8,
+    "h": 2.263,
+    "ferries": [],
+    "toll": 192,
+    "src": "vegvesen"
+  },
+  "Lillehammer|Tønsberg": {
+    "km": 286.3,
+    "h": 3.741,
+    "ferries": [],
+    "toll": 1156,
+    "src": "vegvesen"
+  },
+  "Lillehammer|Voss": {
+    "km": 339.9,
+    "h": 5.23,
+    "ferries": [],
+    "toll": 54,
+    "src": "vegvesen"
+  },
+  "Lillehammer|Ålesund": {
+    "km": 365.6,
+    "h": 5.364,
+    "ferries": [],
+    "toll": 384,
+    "src": "vegvesen"
+  },
+  "Molde|Moss": {
+    "km": 553.9,
+    "h": 7.905,
+    "ferries": [
+      "Sølsnes–Åfarnes"
+    ],
+    "toll": 1150,
+    "src": "vegvesen"
+  },
+  "Molde|Narvik": {
+    "km": 1104.3,
+    "h": 16.827,
+    "ferries": [
+      "Kanestraum–Halsa",
+      "Bognes–Skarberget"
+    ],
+    "toll": 852,
+    "src": "vegvesen"
+  },
+  "Molde|Oslo": {
+    "km": 498.7,
+    "h": 7.206,
+    "ferries": [
+      "Sølsnes–Åfarnes"
+    ],
+    "toll": 941,
+    "src": "vegvesen"
+  },
+  "Molde|Oslo lufthavn Gardermoen": {
+    "km": 460.3,
+    "h": 6.69,
+    "ferries": [
+      "Sølsnes–Åfarnes"
+    ],
+    "toll": 554,
+    "src": "vegvesen"
+  },
+  "Molde|Preikestolen": {
+    "km": 728.5,
+    "h": 13.048,
+    "ferries": [
+      "Molde–Furneset",
+      "Liabygda–Stranda",
+      "Lote–Anda",
+      "Mannheller–Fodnes",
+      "Nesvik–Hjelmeland"
+    ],
+    "toll": 428,
+    "src": "vegvesen"
+  },
+  "Molde|Røros": {
+    "km": 309.5,
+    "h": 4.977,
+    "ferries": [],
+    "toll": 87,
+    "src": "vegvesen"
+  },
+  "Molde|Sandefjord Torp": {
+    "km": 619.3,
+    "h": 8.723,
+    "ferries": [
+      "Sølsnes–Åfarnes"
+    ],
+    "toll": 1443,
+    "src": "vegvesen"
+  },
+  "Molde|Sarpsborg": {
+    "km": 584.1,
+    "h": 8.313,
+    "ferries": [
+      "Sølsnes–Åfarnes"
+    ],
+    "toll": 1218,
+    "src": "vegvesen"
+  },
+  "Molde|Stavanger": {
+    "km": 707.5,
+    "h": 12.645,
+    "ferries": [
+      "Molde–Furneset",
+      "Liabygda–Stranda",
+      "Lote–Anda",
+      "Mannheller–Fodnes",
+      "Arsvågen–Mortavika"
+    ],
+    "toll": 504,
+    "src": "vegvesen"
+  },
+  "Molde|Tromsø": {
+    "km": 1336.1,
+    "h": 20.263,
+    "ferries": [
+      "Kanestraum–Halsa",
+      "Bognes–Skarberget"
+    ],
+    "toll": 1105,
+    "src": "vegvesen"
+  },
+  "Molde|Trondheim": {
+    "km": 216.3,
+    "h": 3.589,
+    "ferries": [
+      "Kanestraum–Halsa"
+    ],
+    "toll": 238,
+    "src": "vegvesen"
+  },
+  "Molde|Trondheim lufthavn Værnes": {
+    "km": 248.7,
+    "h": 4.095,
+    "ferries": [
+      "Kanestraum–Halsa"
+    ],
+    "toll": 305,
+    "src": "vegvesen"
+  },
+  "Molde|Trysil": {
+    "km": 447.4,
+    "h": 7.001,
+    "ferries": [],
+    "toll": 87,
+    "src": "vegvesen"
+  },
+  "Molde|Tønsberg": {
+    "km": 600.5,
+    "h": 8.535,
+    "ferries": [
+      "Sølsnes–Åfarnes"
+    ],
+    "toll": 1418,
+    "src": "vegvesen"
+  },
+  "Molde|Voss": {
+    "km": 426.7,
+    "h": 7.671,
+    "ferries": [
+      "Molde–Furneset",
+      "Liabygda–Stranda",
+      "Lote–Anda",
+      "Mannheller–Fodnes"
+    ],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Molde|Ålesund": {
+    "km": 81.3,
+    "h": 1.851,
+    "ferries": [
+      "Molde–Furneset"
+    ],
+    "toll": 122,
+    "src": "vegvesen"
+  },
+  "Moss|Narvik": {
+    "km": 1437.4,
+    "h": 21.079,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1706,
+    "src": "vegvesen"
+  },
+  "Moss|Oslo": {
+    "km": 63.0,
+    "h": 0.874,
+    "ferries": [],
+    "toll": 483,
+    "src": "vegvesen"
+  },
+  "Moss|Oslo lufthavn Gardermoen": {
+    "km": 105.5,
+    "h": 1.394,
+    "ferries": [],
+    "toll": 596,
+    "src": "vegvesen"
+  },
+  "Moss|Preikestolen": {
+    "km": 518.1,
+    "h": 8.165,
+    "ferries": [
+      "Moss–Horten"
+    ],
+    "toll": 1451,
+    "src": "vegvesen"
+  },
+  "Moss|Røros": {
+    "km": 438.4,
+    "h": 6.151,
+    "ferries": [],
+    "toll": 746,
+    "src": "vegvesen"
+  },
+  "Moss|Sandefjord Torp": {
+    "km": 52.9,
+    "h": 1.348,
+    "ferries": [
+      "Moss–Horten"
+    ],
+    "toll": 67,
+    "src": "vegvesen"
+  },
+  "Moss|Sarpsborg": {
+    "km": 34.2,
+    "h": 0.547,
+    "ferries": [],
+    "toll": 68,
+    "src": "vegvesen"
+  },
+  "Moss|Stavanger": {
+    "km": 482.6,
+    "h": 7.494,
+    "ferries": [
+      "Moss–Horten"
+    ],
+    "toll": 1029,
+    "src": "vegvesen"
+  },
+  "Moss|Tromsø": {
+    "km": 1669.1,
+    "h": 24.514,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1959,
+    "src": "vegvesen"
+  },
+  "Moss|Trondheim": {
+    "km": 549.4,
+    "h": 7.841,
+    "ferries": [],
+    "toll": 1092,
+    "src": "vegvesen"
+  },
+  "Moss|Trondheim lufthavn Værnes": {
+    "km": 581.8,
+    "h": 8.346,
+    "ferries": [],
+    "toll": 1159,
+    "src": "vegvesen"
+  },
+  "Moss|Trysil": {
+    "km": 267.8,
+    "h": 3.562,
+    "ferries": [],
+    "toll": 746,
+    "src": "vegvesen"
+  },
+  "Moss|Tønsberg": {
+    "km": 34.2,
+    "h": 1.16,
+    "ferries": [
+      "Moss–Horten"
+    ],
+    "toll": 42,
+    "src": "vegvesen"
+  },
+  "Moss|Voss": {
+    "km": 422.1,
+    "h": 6.647,
+    "ferries": [],
+    "toll": 1647,
+    "src": "vegvesen"
+  },
+  "Moss|Ålesund": {
+    "km": 602.5,
+    "h": 8.374,
+    "ferries": [],
+    "toll": 1272,
+    "src": "vegvesen"
+  },
+  "Narvik|Oslo": {
+    "km": 1382.1,
+    "h": 20.363,
+    "ferries": [
+      "Skarberget–Bognes"
+    ],
+    "toll": 1497,
+    "src": "vegvesen"
+  },
+  "Narvik|Oslo lufthavn Gardermoen": {
+    "km": 1343.6,
+    "h": 19.847,
+    "ferries": [
+      "Skarberget–Bognes"
+    ],
+    "toll": 1110,
+    "src": "vegvesen"
+  },
+  "Narvik|Preikestolen": {
+    "km": 1751.2,
+    "h": 27.814,
+    "ferries": [
+      "Skarberget–Bognes",
+      "Nesvik–Hjelmeland"
+    ],
+    "toll": 960,
+    "src": "vegvesen"
+  },
+  "Narvik|Røros": {
+    "km": 1043.3,
+    "h": 15.751,
+    "ferries": [
+      "Skarberget–Bognes"
+    ],
+    "toll": 856,
+    "src": "vegvesen"
+  },
+  "Narvik|Sandefjord Torp": {
+    "km": 1502.6,
+    "h": 21.88,
+    "ferries": [
+      "Skarberget–Bognes"
+    ],
+    "toll": 1999,
+    "src": "vegvesen"
+  },
+  "Narvik|Sarpsborg": {
+    "km": 1467.4,
+    "h": 21.47,
+    "ferries": [
+      "Skarberget–Bognes"
+    ],
+    "toll": 1774,
+    "src": "vegvesen"
+  },
+  "Narvik|Stavanger": {
+    "km": 1730.3,
+    "h": 27.411,
+    "ferries": [
+      "Skarberget–Bognes",
+      "Arsvågen–Mortavika"
+    ],
+    "toll": 1036,
+    "src": "vegvesen"
+  },
+  "Narvik|Tromsø": {
+    "km": 231.9,
+    "h": 3.44,
+    "ferries": [],
+    "toll": 253,
+    "src": "vegvesen"
+  },
+  "Narvik|Trondheim": {
+    "km": 892.0,
+    "h": 13.368,
+    "ferries": [
+      "Skarberget–Bognes"
+    ],
+    "toll": 712,
+    "src": "vegvesen"
+  },
+  "Narvik|Trondheim lufthavn Værnes": {
+    "km": 861.6,
+    "h": 12.925,
+    "ferries": [
+      "Skarberget–Bognes"
+    ],
+    "toll": 547,
+    "src": "vegvesen"
+  },
+  "Narvik|Trysil": {
+    "km": 1231.9,
+    "h": 18.632,
+    "ferries": [
+      "Skarberget–Bognes"
+    ],
+    "toll": 856,
+    "src": "vegvesen"
+  },
+  "Narvik|Tønsberg": {
+    "km": 1483.8,
+    "h": 21.692,
+    "ferries": [
+      "Skarberget–Bognes"
+    ],
+    "toll": 1974,
+    "src": "vegvesen"
+  },
+  "Narvik|Voss": {
+    "km": 1462.9,
+    "h": 22.624,
+    "ferries": [
+      "Skarberget–Bognes",
+      "Mannheller–Fodnes"
+    ],
+    "toll": 960,
+    "src": "vegvesen"
+  },
+  "Narvik|Ålesund": {
+    "km": 1184.1,
+    "h": 18.616,
+    "ferries": [
+      "Skarberget–Bognes",
+      "Halsa–Kanestraum",
+      "Molde–Furneset"
+    ],
+    "toll": 974,
+    "src": "vegvesen"
+  },
+  "Oslo lufthavn Gardermoen|Preikestolen": {
+    "km": 533.6,
+    "h": 8.602,
+    "ferries": [
+      "Nesvik–Hjelmeland"
+    ],
+    "toll": 1060,
+    "src": "vegvesen"
+  },
+  "Oslo lufthavn Gardermoen|Røros": {
+    "km": 344.8,
+    "h": 4.958,
+    "ferries": [],
+    "toll": 150,
+    "src": "vegvesen"
+  },
+  "Oslo lufthavn Gardermoen|Sandefjord Torp": {
+    "km": 170.6,
+    "h": 2.227,
+    "ferries": [],
+    "toll": 889,
+    "src": "vegvesen"
+  },
+  "Oslo lufthavn Gardermoen|Sarpsborg": {
+    "km": 135.4,
+    "h": 1.816,
+    "ferries": [],
+    "toll": 664,
+    "src": "vegvesen"
+  },
+  "Oslo lufthavn Gardermoen|Stavanger": {
+    "km": 600.3,
+    "h": 8.374,
+    "ferries": [],
+    "toll": 1851,
+    "src": "vegvesen"
+  },
+  "Oslo lufthavn Gardermoen|Tromsø": {
+    "km": 1575.5,
+    "h": 23.321,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1363,
+    "src": "vegvesen"
+  },
+  "Oslo lufthavn Gardermoen|Trondheim": {
+    "km": 455.8,
+    "h": 6.647,
+    "ferries": [],
+    "toll": 496,
+    "src": "vegvesen"
+  },
+  "Oslo lufthavn Gardermoen|Trondheim lufthavn Værnes": {
+    "km": 488.1,
+    "h": 7.152,
+    "ferries": [],
+    "toll": 563,
+    "src": "vegvesen"
+  },
+  "Oslo lufthavn Gardermoen|Trysil": {
+    "km": 174.1,
+    "h": 2.369,
+    "ferries": [],
+    "toll": 150,
+    "src": "vegvesen"
+  },
+  "Oslo lufthavn Gardermoen|Tønsberg": {
+    "km": 151.8,
+    "h": 2.039,
+    "ferries": [],
+    "toll": 864,
+    "src": "vegvesen"
+  },
+  "Oslo lufthavn Gardermoen|Voss": {
+    "km": 373.3,
+    "h": 5.995,
+    "ferries": [],
+    "toll": 785,
+    "src": "vegvesen"
+  },
+  "Oslo lufthavn Gardermoen|Ålesund": {
+    "km": 508.9,
+    "h": 7.18,
+    "ferries": [],
+    "toll": 676,
+    "src": "vegvesen"
+  },
+  "Oslo|Oslo lufthavn Gardermoen": {
+    "km": 49.8,
+    "h": 0.676,
+    "ferries": [],
+    "toll": 274,
+    "src": "vegvesen"
+  },
+  "Oslo|Preikestolen": {
+    "km": 485.2,
+    "h": 7.964,
+    "ferries": [
+      "Nesvik–Hjelmeland"
+    ],
+    "toll": 673,
+    "src": "vegvesen"
+  },
+  "Oslo|Røros": {
+    "km": 382.7,
+    "h": 5.433,
+    "ferries": [],
+    "toll": 424,
+    "src": "vegvesen"
+  },
+  "Oslo|Sandefjord Torp": {
+    "km": 122.3,
+    "h": 1.59,
+    "ferries": [],
+    "toll": 502,
+    "src": "vegvesen"
+  },
+  "Oslo|Sarpsborg": {
+    "km": 92.1,
+    "h": 1.242,
+    "ferries": [],
+    "toll": 342,
+    "src": "vegvesen"
+  },
+  "Oslo|Stavanger": {
+    "km": 551.9,
+    "h": 7.737,
+    "ferries": [],
+    "toll": 1464,
+    "src": "vegvesen"
+  },
+  "Oslo|Tromsø": {
+    "km": 1613.4,
+    "h": 23.797,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1637,
+    "src": "vegvesen"
+  },
+  "Oslo|Trondheim": {
+    "km": 493.7,
+    "h": 7.123,
+    "ferries": [],
+    "toll": 770,
+    "src": "vegvesen"
+  },
+  "Oslo|Trondheim lufthavn Værnes": {
+    "km": 526.0,
+    "h": 7.628,
+    "ferries": [],
+    "toll": 837,
+    "src": "vegvesen"
+  },
+  "Oslo|Trysil": {
+    "km": 212.0,
+    "h": 2.845,
+    "ferries": [],
+    "toll": 424,
+    "src": "vegvesen"
+  },
+  "Oslo|Tønsberg": {
+    "km": 103.5,
+    "h": 1.402,
+    "ferries": [],
+    "toll": 477,
+    "src": "vegvesen"
+  },
+  "Oslo|Voss": {
+    "km": 360.8,
+    "h": 5.847,
+    "ferries": [],
+    "toll": 1164,
+    "src": "vegvesen"
+  },
+  "Oslo|Ålesund": {
+    "km": 546.8,
+    "h": 7.656,
+    "ferries": [],
+    "toll": 950,
+    "src": "vegvesen"
+  },
+  "Preikestolen|Røros": {
+    "km": 866.1,
+    "h": 13.241,
+    "ferries": [
+      "Hjelmeland–Nesvik"
+    ],
+    "toll": 823,
+    "src": "vegvesen"
+  },
+  "Preikestolen|Sandefjord Torp": {
+    "km": 472.2,
+    "h": 6.924,
+    "ferries": [],
+    "toll": 1384,
+    "src": "vegvesen"
+  },
+  "Preikestolen|Sarpsborg": {
+    "km": 551.7,
+    "h": 8.636,
+    "ferries": [
+      "Horten–Moss"
+    ],
+    "toll": 1519,
+    "src": "vegvesen"
+  },
+  "Preikestolen|Stavanger": {
+    "km": 39.6,
+    "h": 0.766,
+    "ferries": [],
+    "toll": 422,
+    "src": "vegvesen"
+  },
+  "Preikestolen|Tromsø": {
+    "km": 1982.9,
+    "h": 31.211,
+    "ferries": [
+      "Hjelmeland–Nesvik",
+      "Bognes–Skarberget"
+    ],
+    "toll": 1213,
+    "src": "vegvesen"
+  },
+  "Preikestolen|Trondheim": {
+    "km": 863.1,
+    "h": 14.538,
+    "ferries": [
+      "Hjelmeland–Nesvik"
+    ],
+    "toll": 346,
+    "src": "vegvesen"
+  },
+  "Preikestolen|Trondheim lufthavn Værnes": {
+    "km": 895.5,
+    "h": 15.043,
+    "ferries": [
+      "Hjelmeland–Nesvik"
+    ],
+    "toll": 413,
+    "src": "vegvesen"
+  },
+  "Preikestolen|Trysil": {
+    "km": 695.4,
+    "h": 10.652,
+    "ferries": [
+      "Hjelmeland–Nesvik"
+    ],
+    "toll": 823,
+    "src": "vegvesen"
+  },
+  "Preikestolen|Tønsberg": {
+    "km": 492.9,
+    "h": 7.216,
+    "ferries": [],
+    "toll": 1481,
+    "src": "vegvesen"
+  },
+  "Preikestolen|Voss": {
+    "km": 304.7,
+    "h": 5.43,
+    "ferries": [
+      "Hjelmeland–Nesvik"
+    ],
+    "toll": 428,
+    "src": "vegvesen"
+  },
+  "Preikestolen|Ålesund": {
+    "km": 667.2,
+    "h": 11.691,
+    "ferries": [
+      "Hjelmeland–Nesvik",
+      "Fodnes–Mannheller",
+      "Anda–Lote",
+      "Folkestad–Volda",
+      "Festøya–Solavågen"
+    ],
+    "toll": 550,
+    "src": "vegvesen"
+  },
+  "Røros|Sandefjord Torp": {
+    "km": 503.1,
+    "h": 6.953,
+    "ferries": [],
+    "toll": 1039,
+    "src": "vegvesen"
+  },
+  "Røros|Sarpsborg": {
+    "km": 467.9,
+    "h": 6.542,
+    "ferries": [],
+    "toll": 814,
+    "src": "vegvesen"
+  },
+  "Røros|Stavanger": {
+    "km": 932.8,
+    "h": 13.099,
+    "ferries": [],
+    "toll": 2001,
+    "src": "vegvesen"
+  },
+  "Røros|Tromsø": {
+    "km": 1274.5,
+    "h": 19.2,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1109,
+    "src": "vegvesen"
+  },
+  "Røros|Trondheim": {
+    "km": 154.8,
+    "h": 2.527,
+    "ferries": [],
+    "toll": 242,
+    "src": "vegvesen"
+  },
+  "Røros|Trondheim lufthavn Værnes": {
+    "km": 187.1,
+    "h": 3.032,
+    "ferries": [],
+    "toll": 309,
+    "src": "vegvesen"
+  },
+  "Røros|Trysil": {
+    "km": 188.9,
+    "h": 2.896,
+    "ferries": [],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Røros|Tønsberg": {
+    "km": 484.3,
+    "h": 6.765,
+    "ferries": [],
+    "toll": 1014,
+    "src": "vegvesen"
+  },
+  "Røros|Voss": {
+    "km": 554.3,
+    "h": 9.191,
+    "ferries": [
+      "Mannheller–Fodnes"
+    ],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Røros|Ålesund": {
+    "km": 387.8,
+    "h": 6.04,
+    "ferries": [],
+    "toll": 122,
+    "src": "vegvesen"
+  },
+  "Sandefjord Torp|Sarpsborg": {
+    "km": 86.2,
+    "h": 1.851,
+    "ferries": [
+      "Horten–Moss"
+    ],
+    "toll": 135,
+    "src": "vegvesen"
+  },
+  "Sandefjord Torp|Stavanger": {
+    "km": 437.0,
+    "h": 6.311,
+    "ferries": [],
+    "toll": 962,
+    "src": "vegvesen"
+  },
+  "Sandefjord Torp|Tromsø": {
+    "km": 1733.6,
+    "h": 25.308,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1865,
+    "src": "vegvesen"
+  },
+  "Sandefjord Torp|Trondheim": {
+    "km": 613.9,
+    "h": 8.634,
+    "ferries": [],
+    "toll": 998,
+    "src": "vegvesen"
+  },
+  "Sandefjord Torp|Trondheim lufthavn Værnes": {
+    "km": 646.2,
+    "h": 9.14,
+    "ferries": [],
+    "toll": 1065,
+    "src": "vegvesen"
+  },
+  "Sandefjord Torp|Trysil": {
+    "km": 332.2,
+    "h": 4.356,
+    "ferries": [],
+    "toll": 652,
+    "src": "vegvesen"
+  },
+  "Sandefjord Torp|Tønsberg": {
+    "km": 27.4,
+    "h": 0.432,
+    "ferries": [],
+    "toll": 97,
+    "src": "vegvesen"
+  },
+  "Sandefjord Torp|Voss": {
+    "km": 404.1,
+    "h": 6.491,
+    "ferries": [],
+    "toll": 735,
+    "src": "vegvesen"
+  },
+  "Sandefjord Torp|Ålesund": {
+    "km": 667.0,
+    "h": 9.167,
+    "ferries": [],
+    "toll": 1178,
+    "src": "vegvesen"
+  },
+  "Sarpsborg|Stavanger": {
+    "km": 516.3,
+    "h": 8.002,
+    "ferries": [
+      "Moss–Horten"
+    ],
+    "toll": 1029,
+    "src": "vegvesen"
+  },
+  "Sarpsborg|Tromsø": {
+    "km": 1698.1,
+    "h": 24.863,
+    "ferries": [
+      "Bognes–Skarberget"
+    ],
+    "toll": 1959,
+    "src": "vegvesen"
+  },
+  "Sarpsborg|Trondheim": {
+    "km": 578.4,
+    "h": 8.19,
+    "ferries": [],
+    "toll": 1092,
+    "src": "vegvesen"
+  },
+  "Sarpsborg|Trondheim lufthavn Værnes": {
+    "km": 610.7,
+    "h": 8.695,
+    "ferries": [],
+    "toll": 1159,
+    "src": "vegvesen"
+  },
+  "Sarpsborg|Trysil": {
+    "km": 296.8,
+    "h": 3.911,
+    "ferries": [],
+    "toll": 746,
+    "src": "vegvesen"
+  },
+  "Sarpsborg|Tønsberg": {
+    "km": 67.8,
+    "h": 1.668,
+    "ferries": [
+      "Moss–Horten"
+    ],
+    "toll": 42,
+    "src": "vegvesen"
+  },
+  "Sarpsborg|Voss": {
+    "km": 451.1,
+    "h": 6.996,
+    "ferries": [],
+    "toll": 1647,
+    "src": "vegvesen"
+  },
+  "Sarpsborg|Ålesund": {
+    "km": 631.5,
+    "h": 8.722,
+    "ferries": [],
+    "toll": 1272,
+    "src": "vegvesen"
+  },
+  "Stavanger|Tromsø": {
+    "km": 1961.9,
+    "h": 30.868,
+    "ferries": [
+      "Mortavika–Arsvågen",
+      "Bognes–Skarberget"
+    ],
+    "toll": 1289,
+    "src": "vegvesen"
+  },
+  "Stavanger|Trondheim": {
+    "km": 842.2,
+    "h": 14.194,
+    "ferries": [
+      "Mortavika–Arsvågen"
+    ],
+    "toll": 422,
+    "src": "vegvesen"
+  },
+  "Stavanger|Trondheim lufthavn Værnes": {
+    "km": 874.5,
+    "h": 14.7,
+    "ferries": [
+      "Mortavika–Arsvågen"
+    ],
+    "toll": 489,
+    "src": "vegvesen"
+  },
+  "Stavanger|Trysil": {
+    "km": 762.1,
+    "h": 10.516,
+    "ferries": [],
+    "toll": 1690,
+    "src": "vegvesen"
+  },
+  "Stavanger|Tønsberg": {
+    "km": 457.2,
+    "h": 6.592,
+    "ferries": [],
+    "toll": 1135,
+    "src": "vegvesen"
+  },
+  "Stavanger|Voss": {
+    "km": 283.7,
+    "h": 5.087,
+    "ferries": [
+      "Mortavika–Arsvågen"
+    ],
+    "toll": 504,
+    "src": "vegvesen"
+  },
+  "Stavanger|Ålesund": {
+    "km": 646.3,
+    "h": 11.347,
+    "ferries": [
+      "Mortavika–Arsvågen",
+      "Fodnes–Mannheller",
+      "Anda–Lote",
+      "Folkestad–Volda",
+      "Festøya–Solavågen"
+    ],
+    "toll": 626,
+    "src": "vegvesen"
+  },
+  "Tromsø|Trondheim": {
+    "km": 1123.8,
+    "h": 16.801,
+    "ferries": [
+      "Skarberget–Bognes"
+    ],
+    "toll": 965,
+    "src": "vegvesen"
+  },
+  "Tromsø|Trondheim lufthavn Værnes": {
+    "km": 1093.4,
+    "h": 16.358,
+    "ferries": [
+      "Skarberget–Bognes"
+    ],
+    "toll": 800,
+    "src": "vegvesen"
+  },
+  "Tromsø|Trysil": {
+    "km": 1548.8,
+    "h": 21.946,
+    "ferries": [],
+    "toll": 28,
+    "src": "vegvesen"
+  },
+  "Tromsø|Tønsberg": {
+    "km": 1715.7,
+    "h": 25.125,
+    "ferries": [
+      "Skarberget–Bognes"
+    ],
+    "toll": 2227,
+    "src": "vegvesen"
+  },
+  "Tromsø|Voss": {
+    "km": 1694.7,
+    "h": 26.057,
+    "ferries": [
+      "Skarberget–Bognes",
+      "Mannheller–Fodnes"
+    ],
+    "toll": 1213,
+    "src": "vegvesen"
+  },
+  "Tromsø|Ålesund": {
+    "km": 1415.9,
+    "h": 22.049,
+    "ferries": [
+      "Skarberget–Bognes",
+      "Halsa–Kanestraum",
+      "Molde–Furneset"
+    ],
+    "toll": 1227,
+    "src": "vegvesen"
+  },
+  "Trondheim lufthavn Værnes|Trysil": {
+    "km": 371.8,
+    "h": 5.917,
+    "ferries": [],
+    "toll": 0,
+    "src": "vegvesen"
+  },
+  "Trondheim lufthavn Værnes|Tønsberg": {
+    "km": 628.2,
+    "h": 8.989,
+    "ferries": [],
+    "toll": 1427,
+    "src": "vegvesen"
+  },
+  "Trondheim lufthavn Værnes|Voss": {
+    "km": 607.3,
+    "h": 9.92,
+    "ferries": [
+      "Mannheller–Fodnes"
+    ],
+    "toll": 413,
+    "src": "vegvesen"
+  },
+  "Trondheim lufthavn Værnes|Ålesund": {
+    "km": 328.5,
+    "h": 5.913,
+    "ferries": [
+      "Halsa–Kanestraum",
+      "Molde–Furneset"
+    ],
+    "toll": 427,
+    "src": "vegvesen"
+  },
+  "Trondheim|Trondheim lufthavn Værnes": {
+    "km": 36.0,
+    "h": 0.651,
+    "ferries": [],
+    "toll": 165,
+    "src": "vegvesen"
+  },
+  "Trondheim|Trysil": {
+    "km": 343.8,
+    "h": 5.41,
+    "ferries": [],
+    "toll": 242,
+    "src": "vegvesen"
+  },
+  "Trondheim|Tønsberg": {
+    "km": 595.7,
+    "h": 8.471,
+    "ferries": [],
+    "toll": 1360,
+    "src": "vegvesen"
+  },
+  "Trondheim|Voss": {
+    "km": 574.7,
+    "h": 9.402,
+    "ferries": [
+      "Mannheller–Fodnes"
+    ],
+    "toll": 346,
+    "src": "vegvesen"
+  },
+  "Trondheim|Ålesund": {
+    "km": 295.9,
+    "h": 5.395,
+    "ferries": [
+      "Halsa–Kanestraum",
+      "Molde–Furneset"
+    ],
+    "toll": 360,
+    "src": "vegvesen"
+  },
+  "Trysil|Tønsberg": {
+    "km": 314.2,
+    "h": 4.215,
+    "ferries": [],
+    "toll": 1014,
+    "src": "vegvesen"
+  },
+  "Trysil|Voss": {
+    "km": 471.0,
+    "h": 7.05,
+    "ferries": [],
+    "toll": 246,
+    "src": "vegvesen"
+  },
+  "Trysil|Ålesund": {
+    "km": 519.8,
+    "h": 7.525,
+    "ferries": [],
+    "toll": 576,
+    "src": "vegvesen"
+  },
+  "Tønsberg|Voss": {
+    "km": 382.2,
+    "h": 6.415,
+    "ferries": [],
+    "toll": 470,
+    "src": "vegvesen"
+  },
+  "Tønsberg|Ålesund": {
+    "km": 648.2,
+    "h": 8.98,
+    "ferries": [],
+    "toll": 1153,
+    "src": "vegvesen"
+  },
+  "Voss|Ålesund": {
+    "km": 365.5,
+    "h": 6.373,
+    "ferries": [
+      "Fodnes–Mannheller",
+      "Anda–Lote",
+      "Folkestad–Volda",
+      "Festøya–Solavågen"
+    ],
+    "toll": 122,
+    "src": "vegvesen"
+  }
+}

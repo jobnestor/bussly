@@ -11,8 +11,4 @@ module Pricing
     def payout = operator_sub * (1 - COMMISSION)
     def operator_id = operator&.id
   end
-
-  Rejection = Data.define(:reason, :depot_km) do
-    def ok? = false
-  end
 end

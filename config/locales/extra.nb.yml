@@ -7,7 +7,9 @@ nb:
       multi: "%{days} dager, bussen blir hos dere"
       two_drivers: Turen krever to sjåfører
       break: Pause på 45 min lagt inn per 4,5 t kjøring
-      ferry: Ruten har ferje
+      ferry: "Ferje: %{names}"
+      stops: "%{n} stopp underveis: %{list} (15 min per stopp)"
+      route_estimate: Avstand er anslått (ingen kjørerute tilgjengelig)
       ev_no: For langt for elbuss
       guide: "Guide på %{lang}"
       ship_ok: Tilbake ved skipet minst 60 min før avgang
@@ -36,4 +38,4 @@ nb:
     months_short: [jan., feb., mar., apr., mai, jun., jul., aug., sep., okt., nov., des.]
     claimed: Oppdraget er ditt.
     claimTaken: En annen operatør tok oppdraget først.
-    foot: "Bussly – leie buss med sjåfør i Norge. Operatører og vurderinger i demoen er eksempler. Foreslåtte priser er estimater basert på typiske norske timepriser for turbuss."
+    foot: "Bussly – leie buss med sjåfør i Norge. Operatører og vurderinger i demoen er eksempler. Foreslåtte priser er kalibrert mot publiserte priser fra norske busselskaper. Avstand, kjøretid og bom for tunge kjøretøy er fra Statens vegvesen."

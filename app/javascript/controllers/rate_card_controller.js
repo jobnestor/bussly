@@ -37,7 +37,7 @@ export default class extends Controller {
   suggest(event) {
     event.preventDefault()
     this.rateTargets.forEach(i => { i.value = i.dataset.suggested })
-    this.element.querySelectorAll('input[name$="[minH]"]').forEach(i => { i.value = 4 })
+    this.element.querySelectorAll('input[name$="[minH]"]').forEach(i => { i.value = 2 })
     const sur = { sur_weekend: 10, sur_peak: 12, sur_night: 15 }
     Object.entries(sur).forEach(([k, v]) => { const el = this.element.querySelector(`[name="operator[${k}]"]`); if (el) el.value = v })
     this.markLow()

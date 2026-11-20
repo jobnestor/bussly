@@ -23,7 +23,8 @@ class Booking < ApplicationRecord
 
   def self.build_from_offer(query, offer, attrs = {})
     new(
-      trip_type: query.type, from_place: query.from, to_place: query.to, date: query.date, time: query.time,
+      trip_type: query.type, from_place: query.from, to_place: query.to, stops: query.stop_list.join(Pricing::Query::STOP_SEP),
+      date: query.date, time: query.time,
       return_date: (query.ret if query.multi?), wait_hours: (query.wait if query.round?), pax: query.pax,
       electric: query.electric, luggage: query.luggage, hours: (query.hours if query.sight?), guide: query.guide.presence,
       cruise: query.cruise, ship: query.ship, aboard: query.aboard,
@@ -105,8 +106,10 @@ class Booking < ApplicationRecord
   def to_query
     Pricing::Query.new(type: trip_type, from: from_place, to: to_place, date: date, time: time, wait: wait_hours || 0,
                        ret: return_date, pax: pax, electric: electric, luggage: luggage, hours: hours || 4,
-                       guide: guide.to_s, cruise: cruise, ship: ship, aboard: aboard)
+                       guide: guide.to_s, cruise: cruise, ship: ship, aboard: aboard, stops: stops.to_s)
   end
+
+  def stop_list = stops.to_s.split(Pricing::Query::STOP_SEP).compact_blank
 
   def tracking(now = Time.current) = Tracking.new(self, now)
 

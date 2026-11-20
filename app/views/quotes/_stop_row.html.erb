@@ -1,0 +1,7 @@
+<li class="stop">
+  <input type="text" class="stop-in" list="stop-suggest" autocomplete="off" placeholder="<%= a("stopPh") %>"
+         aria-label="<%= a("stopsL") %>" value="<%= Pricing::Places.label(value) %>"
+         data-action="input->stops#suggest change->stops#pick">
+  <input type="hidden" name="stops[]" value="<%= value %>">
+  <button type="button" class="stop-x" aria-label="<%= a("removeStop") %>" data-action="stops#remove">×</button>
+</li>

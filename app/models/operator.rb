@@ -38,7 +38,7 @@ class Operator < ApplicationRecord
     Pricing::CLASS_IDS.each_with_object({}) do |id, out|
       f = fleet[id] || {}
       next unless f["count"].to_i > 0
-      %w[hr km].each { |k| (out[id] ||= {})[k] = true if f[k].to_f < sug[id][k] * Pricing::FLOOR }
+      %w[start hr km].each { |k| (out[id] ||= {})[k] = true if f[k].to_f < sug[id][k] * Pricing::FLOOR }
     end
   end
 
@@ -70,8 +70,11 @@ class Operator < ApplicationRecord
   def normalise_fleet
     sug = depot.present? && Pricing.city?(depot) ? suggested_fleet : {}
     self.fleet = Pricing::CLASS_IDS.to_h do |id|
-      f = (fleet || {})[id] || sug[id] || { "count" => 0, "hr" => 0, "km" => 0, "minH" => 4 }
-      [ id, { "count" => f["count"].to_i.clamp(0, 99), "hr" => f["hr"].to_i, "km" => f["km"].to_i, "minH" => f["minH"].to_i.clamp(1, 12) } ]
+      f = (fleet || {})[id] || sug[id] || { "count" => 0, "start" => 0, "hr" => 0, "km" => 0, "minH" => 2 }
+      # Rate cards saved before the call-out fee existed get the suggested fee for their depot
+      start = f["start"].nil? ? sug.dig(id, "start").to_i : f["start"].to_i
+      [ id, { "count" => f["count"].to_i.clamp(0, 99), "start" => start, "hr" => f["hr"].to_i, "km" => f["km"].to_i,
+              "minH" => f["minH"].to_i.clamp(1, 12) } ]
     end
     self.blocked_dates = Array(blocked_dates).map(&:to_s).select { |d| d.match?(/\A\d{4}-\d{2}-\d{2}\z/) }.uniq.sort
   end
